@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/购物车.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i><em>购物车</em>
+    </div>
+  </header>
+  <section>
+    <div class="content">
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>脂老虎营养餐</i><u>删除</u>
+          <em>￥228</em>
+          <b>
+            <div class="gw_num">
+              <em class="jian">-</em>
+              <input type="text" value="1" class="num"/>
+              <em class="add">+</em>
+            </div>
+          </b>
+        </span>
+      </div>
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>脂老虎营养餐</i><u>删除</u>
+          <em>￥228</em>
+          <b>
+            <div class="gw_num">
+              <em class="jian">-</em>
+              <input type="text" value="1" class="num"/>
+              <em class="add">+</em>
+            </div>
+          </b>
+        </span>
+      </div>
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>脂老虎营养餐</i><u>删除</u>
+          <em>￥228</em>
+          <b>
+            <div class="gw_num">
+              <em class="jian">-</em>
+              <input type="text" value="1" class="num"/>
+              <em class="add">+</em>
+            </div>
+          </b>
+        </span>
+      </div>
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>脂老虎营养餐</i><u>删除</u>
+          <em>￥228</em>
+          <b>
+            <div class="gw_num">
+              <em class="jian">-</em>
+              <input type="text" value="1" class="num"/>
+              <em class="add">+</em>
+            </div>
+          </b>
+        </span>
+      </div>
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>脂老虎营养餐</i><u>删除</u>
+          <em>￥228</em>
+          <b>
+            <div class="gw_num">
+              <em class="jian">-</em>
+              <input type="text" value="1" class="num"/>
+              <em class="add">+</em>
+            </div>
+          </b>
+        </span>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <span>
+      <i>合计：</i><em>￥12.50</em>
+    </span>
+    <em><a href="确认订单.html">立即购买</a></em>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //加的效果
+    $(".add").click(function() {
+      var n = $(this).prev().val();
+      var num = parseInt(n)+1;
+      if( num == 0) {
+        return;
+      }
+      $(this).prev().val(num);
+    });
+    //减的效果
+    $(".jian").click(function() {
+      var n = $(this).next().val();
+      var num = parseInt(n)-1;
+      if( num == 0 ){
+        return;
+      }
+      $(this).next().val(num);
+    });
+  })
+</script>
+</html>

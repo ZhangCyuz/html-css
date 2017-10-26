@@ -1,0 +1,163 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav em {
+  text-align: center;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2%;
+}
+section {
+  width: 100%;
+}
+.sec-d {
+  width: 100%;
+  height: 6rem;
+  margin: 40% auto;
+  text-align: center;
+}
+.sec-d img {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+}
+.sec-d i {
+  display: block;
+  width: 100%;
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+
+
+.sec-s1 {
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s3 {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s4 {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s5 {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+.left {
+  margin-top: 0.2rem;
+  float: left;
+  width: 25%;
+  text-align: right;
+}
+@media (min-width:400px) and (max-width:414px) {
+  .left {
+    margin-top: 0.2rem;
+    float: left;
+    width: 23%;
+    text-align: right;
+  }
+}
+.right {
+  margin-top: 0.2rem;
+  float: left;
+  width: 70%;
+  height: 100%;
+  margin-left: 2%;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.right>i {
+  float: left;
+  width: 100%;
+  height: 1rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+.right-bottom {
+  margin-top: 2rem;
+  float: left;
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+@media (min-width:320px) and (max-width:360px) {
+  .right-bottom {
+    margin-top: 1.5rem;
+    float: left;
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}
+
+.right-bottom i {
+  float: left;
+  width: 37%;
+  font-size: 0.6rem;
+  color: #c1c1c1;
+}
+.sec-neirong {
+  width: 100%;
+  border-bottom: 1px solid #f4f4f4;
+  background: #fff;
+  height: 5rem;
+}
+.right-bottom i:first-child {
+  text-align: left;
+  width: 25%;
+}
+.right-bottom  em {
+  float: left;
+  width: 20%;
+  height: 1rem;
+  margin-top: 0.22rem;
+  border-radius: 1rem;
+  background: orange;
+  color: #fff;
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 1rem;
+}
+.right-bottom i img {
+  vertical-align: middle;
+  width: 10%;
+}
+.left img {
+  width: 90%;
+}
+.sec-s2 {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+
+.item_cell{
+  width: 33.33%;
+  height: 100%;
+  display: inline-block;
+  margin: 0px 5px;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+}

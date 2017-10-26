@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>口碑-我的</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/口碑-我的.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="head">
+      <div class="head-left">
+        <img src="images/index/1.png" alt="">
+        <i>阿雅</i>
+      </div>
+      <div class="head-right">
+        <i>编辑</i>
+        <em>></em>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="sec-1">
+      <a href="口碑-我的-详情.html">
+        <div class="sec-1-left sec1">
+          <i>我的日记</i>
+          <em>记录减脂过程</em>
+        </div>
+      </a>
+      <div class="sec-1-right sec1" onclick="a()">
+        <i>团队日记</i>
+        <em>团队减脂荣誉</em>
+      </div>
+    </div>
+    <div class="sec-2">
+      <span>
+        <div class="sec-2-left">
+          <img src="images/index/1.png" alt="">
+          <i>我的奖章</i>
+        </div>
+        <div class="sec-2-right">
+          <em>去获取</em>
+          <b>></b>
+        </div>
+      </span>
+      <span>
+        <div class="sec-2-left">
+          <img src="images/index/1.png" alt="">
+          <i>意见反馈</i>
+        </div>
+        <div class="sec-2-right">
+          <em></em>
+          <b>></b>
+        </div>
+      </span>
+    </div>
+  </section>
+  <div class="dalog" id="dalog">
+    <div class="dalog-con">
+      <span></span>
+      <i>很抱歉，团队日记暂未上线，<br>程序员加班加点开发中，尽情期待！</i>
+      <em onclick="b()">我知道了</em>
+    </div>
+  </div>
+  <footer>
+    <div class="foot-left">
+      <img src="images/index/1.png" alt="">
+      <i><a href="口碑.html">口碑</a></i>
+    </div>
+    <img src="images/index/1.png" alt="" class="foot-img">
+    <div class="foot-right">
+      <img src="images/index/1.png" alt="">
+      <i><a href="口碑-我的.html">我的</a></i>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript">
+  function a() {
+    document.getElementById('dalog').style.display = 'block';
+  }
+  function b() {
+    document.getElementById('dalog').style.display = 'none';
+  }
+</script>
+</html>

@@ -1,0 +1,61 @@
+section {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  background: #f6f6f6;
+  position: relative;
+}
+.sound-countent {
+  background: #fff;
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 100%;
+  height: 17rem;
+  overflow: hidden;
+}
+.sound-countent h1 {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  color: #666666;
+}
+.sound-countent>img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 60%;
+}
+.sound-countent>span {
+  display: block;
+  width: 60%;
+  height: 3rem;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  margin: 0 auto;
+  color: #969595
+}
+.countent-bottom {
+  position: absolute;
+  left: 0%;
+  bottom: 2%;
+  width: 100%;
+  height: 2rem;
+  background: #fff;
+}
+.countent-bottom a {
+  float: right;
+  width: 30%;
+  height: 100%;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4e4e4e;
+}
+.countent-bottom a img {
+  width: 0.8rem;
+  height: 0.8rem;
+}

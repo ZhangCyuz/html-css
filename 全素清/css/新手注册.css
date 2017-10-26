@@ -1,0 +1,74 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav em {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  margin-left: 30%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2%;
+}
+section {
+  width: 100%;
+  height: 33rem;
+  background: #fff;
+}
+.dl_top{width:100%;padding:30px 0px 90px 0px;position:relative;
+background-image: -moz-linear-gradient(top, #8eca2c, #6fae09);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#8eca2c), to(#6fae09));
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8eca2c,endColorstr=#6fae09);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#8eca2c,endColorstr=#6fae09)";
+}
+.dl_top .head{width:100px;height:100px;overflow:hidden;margin:0px auto;border:3px solid #fff;
+border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;}
+.dl_top .head img{width:100%;}
+.dl_top .DBG{position:absolute;z-index:1;bottom:0px;width:100%;height:75px;background:url(../images/dl_top_bottom.png) no-repeat top center;background-size:cover;}
+.dl_top .DBG img{width:100%;}
+
+.user-reg-logoin{width:100%;overflow:hidden;}
+.url-logo{width:100%;background-color:#37373a;padding:30px 0px;position:relative;}
+.url-logo h1{width:100px;height:100px;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;background-color:#fff;overflow:hidden;margin:0px auto;}
+.url-logo h1 img{width:100px;height:100%;}
+.url-logo p{position:absolute;color:#afafb0;right:10px;font-size:1.1em;}
+.url-logo a{color:#afafb0}
+
+.Login-Form{width:100%;overflow:hidden;}
+.Login-Form ul{width:80%;margin:10px auto;overflow:hidden;}
+.Login-Form ul li{width:100%;float:left;}
+.Login-Form span{display:block;float:left;border:1px solid #c8c8c8;width:99%;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;height:40px;background-color:#fff;position:relative;}
+.Login-Form input[type="text"], .Login-Form input[type="password"], .Login-Form select{-webkit-appearance:none;width:100%;height:100%;border:none;background-color:transparent;text-indent:45px;}
+.Login-Form input[placeholder]{font-size:0.7em;}
+.Login-Form .input1{background:url(../images/icon/icon13.png) no-repeat 10px center #fff;}
+.Login-Form .input2, .Login-Form .input5{outline: none;background:url(../images/icon/icon14.png) no-repeat 10px center #fff;}
+.Login-Form .input3{background:url(../images/icon/icon15.png) no-repeat 10px center #fff;}
+.Login-Form .input4{background:url(../images/icon11.png) no-repeat 10px center;}
+.Login-Form .error-message{color:#f00;font-size:0.85em;width:96%;height:16px;line-height:16px;float:left;display:block;padding-left:18px;}
+.Login-Form .select-sj{outline: none;display:block;position:absolute;width:20px;height:100%;background:url(../images/icon/select_icon.png) center center no-repeat;top:0px;right:15px;}
+.Login-Form input{outline: none}
+.Login-Form .spe-input{overflow:hidden;}
+.Login-Form .spe-input input[type="text"]{width:65%;float:left;}
+.Login-Form .yzm-btn{display:block;width:34%;float:right;height:100%;background-color:#fafafa;border:none;border-left:1px solid #c8c8c8;}
+.Login-Form .yzm-btn input{background-color:transparent;border:none;width:100%;height:100%;color:#37373a;font-size:14px;cursor:pointer;color:#999;}
+.reg_ad{width:96%;margin:30px auto;overflow:hidden;border-top:1px solid #7f7f7f;}
+.reg_ad_title{position:absolute;left:50%;margin-left:-92px;margin-top:-20px;}
+.reg_ad_img{max-width:520px;margin:60px auto;margin-bottom:10px;}
+.reg_ad_img img{width:100%;}
+
+.DL-Reg-BTN{width:80%;margin:30px auto 10px auto;overflow:hidden;height:40px;background-color:#8eca2c;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;}
+.DL-Reg-BTN input[type="button"]{-webkit-appearance:none;width:100%;height:100%;background-color:transparent;border:none;color:#fff;font-size:18px;cursor:pointer;}
+
+.forget_pw{display:block;float:right;color:#b2b2b2;font-size:14px;}
+.link_reg{display:block;width:100%;text-align:center;color:#8eca2c;font-size:16px;padding:10px 0px;margin-bottom:20px;}

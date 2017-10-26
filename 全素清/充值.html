@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>充值</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/充值.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i>
+      <em>充值</em>
+      <b>刷新</b>
+    </div>
+  </header>
+  <section>
+    <div class="sec-1">
+      <span>
+        <i>充值姓名</i>
+        <em>周苗苗<b style="visibility:hidden;">></b></em>
+      </span>
+      <span>
+        <i>手机号</i>
+        <em>18618337131<b style="visibility:hidden;">></b></em>
+      </span>
+    </div>
+    <div class="sec-1 sec-2">
+      <span>
+        <i>充值方式</i>
+        <em style="color: #a4a4a4;" onclick="a()">
+          请选择充值方式
+          <b style="font-size: 0.9rem;color: #a4a4a4;">></b>
+        </em>
+      </span>
+    </div>
+    <div class="sec-1 sec-2">
+      <span>
+        <i>充值金额</i>
+        <input type="text" placeholder="充值1元起" class="in">
+        <b>元</b>
+      </span>
+    </div>
+    <div class="sec-3">
+      <button type="button" name="button">确定充值</button>
+    </div>
+    <div class="sec-4">
+      <i><em></em>充值如果要提现需收取0.5%手续费；</i>
+      <i><em></em>POS、信用卡充值无法提现；</i>
+    </div>
+  </section>
+  <div class="dalog" id="dalog">
+    <div class="dalog-con">
+      <div class="dalog-con-top">
+        <i style="visibility:hidden;"></i><em>选择充值方式</em><b onclick="d()">X</b>
+      </div>
+      <div class="dalog-con-tex">
+        <span><em>微信支付</em></span>
+        <i><input type="radio" name="" value="" onclick="b()"></i>
+      </div>
+      <div class="dalog-con-tex">
+        <span><em>支付宝支付</em></span>
+        <i><input type="radio" name="" value="" onclick="c()"></i>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a() {
+    document.getElementById('dalog').style.display = 'block';
+  }
+  function b() {
+    document.getElementById('dalog').style.display = 'none';
+  }
+  function c() {
+    document.getElementById('dalog').style.display = 'none';
+  }
+  function d() {
+    document.getElementById('dalog').style.display = 'none';
+  }
+  $("button").click(function(){
+    alert('充值成功');
+    window.location.href="经销中心.html";
+  });
+</script>
+</html>

@@ -1,0 +1,298 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #aaa;
+  height: 6rem;
+}
+.nav-top {
+  width: 100%;
+  height: 15%;
+  background-image: url(../images/style/nav-top.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.nav {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-left: 2%;
+}
+.nav em {
+  float: right;
+  font-size: 0.7rem;
+  color: #fff;
+  margin-right: 2%;
+}
+.head {
+  float: left;
+  width: 100%;
+  height: 70%;
+  text-align: center;
+}
+.head-left {
+  float: left;
+  width: 45%;
+  height: 70%;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.head-left i {
+  display: block;
+}
+.head-left em {
+  font-size: 0.6rem;
+}
+.head-right {
+  float: right;
+  width: 45%;
+  height: 70%;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.head-center {
+  float: left;
+  width: 10%;
+  height: 70%;
+  color: #fff;
+  line-height: 2rem;
+}
+.head-right i {
+  display: block;
+}
+.head-right em {
+  font-size: 0.6rem;
+}
+nav {
+  width: 100%;
+  height: 2rem;
+
+  background: #ddd;
+}
+nav span {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+nav span i {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0.6rem;
+  float: left;
+  text-align: left;
+  text-align: center;
+}
+nav span em {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0.6rem;
+  float: left;
+  text-align: left;
+  text-align: center;
+}
+section {
+  width: 100%;
+}
+.sec-content {
+  width: 100%;
+  height: 14rem;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+@media (min-width:320px) and (max-width:360px) {
+  .sec-content {
+    width: 100%;
+    height: 12.5rem;
+    background: #fff;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width:400px) and (max-width:414px) {
+  .sec-content {
+    width: 100%;
+    height: 14.5rem;
+    background: #fff;
+    margin-bottom: 0.5rem;
+  }
+}
+.sec-top {
+  float: left;
+  width: 100%;
+  height: 2rem;
+}
+.sec-top img {
+  float: left;
+  width: 1.5rem;
+  margin-left: 2%;
+  margin-top: 0.2rem;
+}
+.sec-top>i {
+  float: left;
+  width:2rem;
+  height: 100%;
+  margin-left: 2%;
+  font-size: 0.6rem;
+  line-height: 1.8rem;
+}
+.sec-top>em {
+  float: left;
+  width:1.8rem;
+  height: 0.8rem;
+  color: orange;
+  font-size: 0.5rem;
+  line-height: 0.8rem;
+  border: 1px solid orange;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.sec-R {
+  float: right;
+  width: 30%;
+  text-align: center;
+  line-height: 2rem;
+}
+.sec-R i {
+  font-size: 0.7rem;
+  color: #abc;
+}
+.sec-R em {
+  font-size: 0.9rem;
+  color: orange;
+}
+.sec-content>a>img {
+  float: left;
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+}
+.sec-content>img {
+  float: left;
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+}
+.sec-bom {
+  float: left;
+  width: 100%;
+  height: 1.5rem;
+}
+.sec-bom img {
+  float: left;
+  width: 0.8rem;
+  vertical-align: middle;
+  margin-top: 0.4rem;
+  margin-left: 3%;
+}
+.sec-bom i {
+  float: left;
+  width: 6%;
+  height: 100%;
+  line-height: 1.5rem;
+  font-size: 0.5rem;
+  margin-left: 0.3rem;
+}
+.sec-bom span {
+  float: right;
+  width: 20%;
+  height: 100%;
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.5rem;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  overflow: inherit;
+  font-size: 0.7rem;
+}
+.foot-left {
+  float: left;
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+}
+.foot-left img {
+  width: 10%;
+  vertical-align: middle;
+}
+.foot-img {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  margin-left: -1.4rem;
+  width: 2.8rem;
+}
+.foot-right {
+  float: right;
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+}
+.foot-right img {
+  width: 10%;
+  vertical-align: middle;
+}
+.foot-f {
+  position: absolute;
+  top: -3.5rem;
+  left: 83%;
+  width: 2.5rem;
+}
+.fx {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  z-index: 999;
+  background: #f4f4f4;
+  text-align: center;
+}
+.fx span {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  font-size: 0.7rem;
+  line-height: 2rem;
+}
+.fx ul {
+  width: 100%;
+  height: 50%;
+}
+.fx ul li {
+  float: left;
+  width: 33.333%;
+  height: 80%;
+  font-size: 0.7rem;
+}
+.fx ul li img {
+  margin-top: 10%;
+  width: 3rem;
+}
+.fx-close {
+  width: 90%;
+  margin-left: 5%;
+  background: #fff;
+  font-size: 0.8rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  line-height: 2rem;
+}

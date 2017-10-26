@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的订货订单</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/我的订货订单.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i><em>我的订货订单</em>
+    </div>
+  </header>
+  <section>
+    <div class="sec-nav-news">
+      <div class="lr_nb">
+        <div class="slider_wrap line">
+          <div class="wx_items">
+            <div class="item_cell">
+              <span class="current" id="s1" onclick="a1()">全部</span>
+            </div>
+            <div class="item_cell">
+              <span id="s2" onclick="a2()">代付款</span>
+            </div>
+            <div class="item_cell">
+              <span id="s3" onclick="a3()">已付款</span>
+            </div>
+            <div class="item_cell">
+              <span id="s4" onclick="a4()">已取消</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lr_nb_after"></div>
+    </div>
+    <div class="sec-s1" id="secS1">
+      <div class="sec-wan">
+        <div class="sec-w-t">
+          <i>供货商：李杰</i><em>订货完成</em>
+        </div>
+        <div class="sec-2">
+          <img src="images/index/1.png" alt="">
+          <span><i>A款-秋季战袍卫衣系列 霸气金色</i><em>￥228</em><b>X1</b></span>
+        </div>
+        <div class="sec-3">
+          <span>共16件商品，总价：<i>￥14880</i>.00</span>
+        </div>
+        <div class="sec-3">
+          <em>查看详情</em>
+        </div>
+      </div>
+    </div>
+    <div class="sec-s2" id="secS2">
+      <div class="sec-d">
+        <img src="images/index/1.png" alt="">
+        <i>您还没有相关订单</i>
+      </div>
+    </div>
+    <div class="sec-s3" id="secS3">
+      <div class="sec-wan">
+        <div class="sec-w-t">
+          <i>供货商：李杰</i><em>订货完成</em>
+        </div>
+        <div class="sec-2">
+          <img src="images/index/1.png" alt="">
+          <span><i>A款-秋季战袍卫衣系列 霸气金色</i><em>￥228</em><b>X1</b></span>
+        </div>
+        <div class="sec-3">
+          <span>共16件商品，总价：<i>￥14880</i>.00</span>
+        </div>
+        <div class="sec-3">
+          <em>查看详情</em>
+        </div>
+      </div>
+    </div>
+    <div class="sec-s4" id="secS4">
+      <div class="sec-d">
+        <img src="images/index/1.png" alt="">
+        <i>您还没有相关订单</i>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+function a1() {
+  document.getElementById('s1').className = 'current';
+  document.getElementById('s2').className = '';
+  document.getElementById('s3').className = '';
+  document.getElementById('s4').className = '';
+  document.getElementById('secS1').style.display = 'block';
+  document.getElementById('secS2').style.display = 'none';
+  document.getElementById('secS3').style.display = 'none';
+  document.getElementById('secS4').style.display = 'none';
+}
+function a2() {
+  document.getElementById('s1').className = '';
+  document.getElementById('s2').className = 'current';
+  document.getElementById('s3').className = '';
+  document.getElementById('s4').className = '';
+  document.getElementById('secS1').style.display = 'none';
+  document.getElementById('secS2').style.display = 'block';
+  document.getElementById('secS3').style.display = 'none';
+  document.getElementById('secS4').style.display = 'none';
+}
+function a3() {
+  document.getElementById('s1').className = '';
+  document.getElementById('s2').className = '';
+  document.getElementById('s3').className = 'current';
+  document.getElementById('s4').className = '';
+  document.getElementById('secS1').style.display = 'none';
+  document.getElementById('secS2').style.display = 'none';
+  document.getElementById('secS3').style.display = 'block';
+  document.getElementById('secS4').style.display = 'none';
+}
+function a4() {
+  document.getElementById('s1').className = '';
+  document.getElementById('s2').className = '';
+  document.getElementById('s3').className = '';
+  document.getElementById('s4').className = 'current';
+  document.getElementById('secS1').style.display = 'none';
+  document.getElementById('secS2').style.display = 'none';
+  document.getElementById('secS3').style.display = 'none';
+  document.getElementById('secS4').style.display = 'block';
+}
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>进货单</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/进货单.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i><em>进货单</em>
+    </div>
+  </header>
+  <section>
+    <div class="content">
+      <div class="sec-2">
+        <img src="images/index/1.png" alt="">
+        <span><i>脂老虎营养餐</i><em>￥228</em><b>X1</b></span>
+      </div>
+      <div class="sec-3">
+        <span>搭配价</span>
+        <i>￥228.00</i>
+      </div>
+      <div class="sec-3">
+        <span>数量</span>
+        <i>
+          <div class="gw_num">
+            <em class="jian">-</em>
+            <input type="text" value="1" class="num"/>
+            <em class="add">+</em>
+          </div>
+        </i>
+      </div>
+      <div class="sec-4">
+        <span>订货规则</span><b onclick="a()">V</b>
+        <div class="gz" id="gz">
+          <i>1、上阶库存是指上阶系统库存加公司库存，如果上阶库存跟公司库存一样
+          时，说明上阶系统库存为0。</i><br>
+          <i>2、上阶库存是指上阶系统库存加公司库存，如果上阶库存跟公司库存一样
+          时，说明上阶系统库存为0。</i><br>
+          <i>3、上阶库存是指上阶系统库存加公司库存，如果上阶库存跟公司库存一样
+          时，说明上阶系统库存为0。</i><br>
+          <i>4、上阶库存是指上阶系统库存加公司库存，如果上阶库存跟公司库存一样
+          时，说明上阶系统库存为0。</i><br>
+          <i>5、上阶库存是指上阶系统库存加公司库存，如果上阶库存跟公司库存一样
+          时，说明上阶系统库存为0。</i><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <span>
+      <i>合计：</i><em>￥12.50</em>
+    </span>
+    <em>立即订货</em>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a () {
+    document.getElementById('gz').style.display = 'block';
+  }
+
+    $(document).ready(function() {
+      //加的效果
+      $(".add").click(function() {
+        var n = $(this).prev().val();
+        var num = parseInt(n)+1;
+        if( num == 0) {
+          return;
+        }
+        $(this).prev().val(num);
+      });
+      //减的效果
+      $(".jian").click(function() {
+        var n = $(this).next().val();
+        var num = parseInt(n)-1;
+        if( num == 0 ){
+          return;
+        }
+        $(this).next().val(num);
+      });
+    })
+  </script>
+</script>
+</html>

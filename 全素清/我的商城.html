@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的商城</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/我的商城.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="index.html"><</a></i>
+    </div>
+  </header>
+  <section>
+    <div class="sec-1">
+      <div class="sec-1-j">
+        <a href="#">
+          <img src="images/index/1.png" alt="">
+          <i>进入商城</i>
+        </a>
+      </div>
+      <div class="sec-1-a">
+        <img src="images/index/1.png" alt="">
+        <i>阿雅1的云商城</i>
+      </div>
+      <div class="sec-1-t">
+        <a href="#">
+          <img src="images/index/1.png" alt="">
+          <i>推广商城</i>
+        </a>
+      </div>
+    </div>
+    <div class="sec-nav">
+      <div class="nav-list">
+        <span id="p1" class="current" onclick="a1(),a3(),b1(),c1(),d1(),d3()">
+          组合套餐
+        </span>
+        <span id="p2" onclick="a(),a3(),b(),c(),d(),d3()">
+          零售商品
+        </span>
+        <span id="p3" onclick="a1(),a2(),b2(),c2(),d2(),d1()">
+          百e自营
+        </span>
+      </div>
+    </div>
+    <div class="p1" id="p1-con">
+      <div class="p1-list">
+        <a href="#">
+          <div class="p1ListLeft">
+            <img src="images/style/cen.png" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <div class="p1ListCenter">
+            <i>健康搭档，保驾护航</i>
+            <em>搭配价：￥3549.9</em>
+            <span>组合套餐</span>
+          </div>
+        </a>
+        <div class="p1ListRight">
+          <img src="images/index/1.png" alt="">
+        </div>
+      </div>
+      <div class="p1-list">
+        <a href="#">
+          <div class="p1ListLeft">
+            <img src="images/style/cen.png" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <div class="p1ListCenter">
+            <i>健康减脂的不二搭档</i>
+            <em>搭配价：￥3848.9</em>
+            <span>组合套餐</span>
+          </div>
+        </a>
+        <div class="p1ListRight">
+          <img src="images/index/1.png" alt="">
+        </div>
+      </div>
+      <div class="p1-list">
+        <a href="#">
+          <div class="p1ListLeft">
+            <img src="images/style/cen.png" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <div class="p1ListCenter">
+            <i>三盒搭配，更加实惠</i>
+            <em>搭配价：￥3540</em>
+            <span>组合套餐</span>
+          </div>
+        </a>
+        <div class="p1ListRight">
+          <img src="images/index/1.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="p2" id="p2-con">
+        <div class="p1-list">
+          <a href="#">
+            <div class="p1ListLeft">
+              <img src="images/style/cen.png" alt="">
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListCenter">
+              <i>“排毒”圣品！便秘者的福音</i>
+              <em>搭配价：￥380</em>
+              <span>组合套餐</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListRight">
+              <img src="images/index/1.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="p1-list">
+          <a href="#">
+            <div class="p1ListLeft">
+              <img src="images/style/cen.png" alt="">
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListCenter">
+              <i>脂老虎营养餐</i>
+              <em>搭配价：￥1380</em>
+              <span>组合套餐</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListRight">
+              <img src="images/index/1.png" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    <div class="p3" id="p3-con">
+      <div class="p1-list">
+          <a href="#">
+            <div class="p1ListLeft">
+              <img src="images/style/cen.png" alt="">
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListCenter">
+              <i>尿酮试纸</i>
+              <em>搭配价：￥9.9</em>
+              <span>百e自营</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="p1ListRight">
+              <img src="images/index/1.png" alt="">
+            </div>
+          </a>
+        </div>
+    </div>
+  </section>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a() {
+    document.getElementById('p1').className = '';
+  }
+  function a3() {
+    document.getElementById('p3').className = '';
+  }
+  function b() {
+    document.getElementById('p2').className = 'current';
+  }
+  function c() {
+    document.getElementById('p2-con').style.display = 'block';
+  }
+  function d() {
+    document.getElementById('p1-con').style.display = 'none';
+  }
+  function d3() {
+    document.getElementById('p3-con').style.display = 'none';
+  }
+  function a1() {
+    document.getElementById('p2').className = '';
+  }
+  function b1() {
+    document.getElementById('p1').className = 'current';
+  }
+  function c1() {
+    document.getElementById('p1-con').style.display = 'block';
+  }
+  function d1() {
+    document.getElementById('p2-con').style.display = 'none';
+  }
+  function a2() {
+    document.getElementById('p1').className = '';
+  }
+  function b2() {
+    document.getElementById('p3').className = 'current';
+  }
+  function c2() {
+    document.getElementById('p3-con').style.display = 'block';
+  }
+  function d2() {
+    document.getElementById('p1-con').style.display = 'none';
+  }
+</script>
+</html>

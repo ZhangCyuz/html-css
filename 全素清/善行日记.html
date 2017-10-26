@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>善行日记</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/善行日记.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i>
+      <div class="nav-cen">
+        <em onclick="r1()" id="r1">善行日记</em>
+      </div>
+      <b>分享</b>
+    </div>
+  </header>
+  <section class="section-r" id="r2">
+    <div class="r-1">
+      <span class="c" id="ri-1" onclick="ri1()">全部</span>
+      <span id="ri-2" onclick="ri2()">视频</span>
+      <span id="ri-3" onclick="ri3()">照片</span>
+      <span id="ri-4" onclick="ri4()">数据</span>
+      <i>2小时前 | 共 <em>254</em> 条记录</i>
+    </div>
+    <div class="r-2">
+      <div class="sec-paixu">
+        <i>按时间排序：</i>
+        <em id="i1" onclick="i1()" class="cur">最新</em>
+        <em id="i2" onclick="i2()">最早</em>
+      </div>
+      <div class="r-2-con">
+        <i>第222天</i>
+        <b>10月17日 18:50</b>
+        <em>在独立团看到凯丽宝宝啦！必须要和减脂明星合影呀！哈哈  </em>
+        <img src="images/index/1.png" alt="">
+        <img src="images/index/1.png" alt="">
+      </div>
+      <div class="r-2-con">
+        <i>第221天</i>
+        <b>10月16日 18:50</b>
+        <em>现在，你们还认识我吗？</em>
+        <img src="images/index/1.png" alt="">
+        <img src="images/index/1.png" alt="">
+      </div>
+      <div class="r-2-con">
+        <i>第182天</i>
+        <b>09月07日 09:28</b>
+        <em>蜕变就是这么简单</em>
+        <img src="images/index/1.png" alt="">
+        <img src="images/index/1.png" alt="">
+      </div>
+      <div class="r-2-con">
+        <i>第181天</i>
+        <b>09月06日 13:50</b>
+        <em>哈尔滨的朋友有空来会所坐坐吧</em>
+        <img src="images/index/1.png" alt="">
+        <img src="images/index/1.png" alt="">
+      </div>
+      <div class="r-2-con">
+        <i>第180天</i>
+        <b>09月05日 18:50</b>
+        <em>继续加油吧！</em>
+        <img src="images/index/1.png" alt="">
+        <img src="images/index/1.png" alt="">
+      </div>
+      <div class="r-2-con">
+        <i>第177天 累计减重47.4斤</i>
+        <b>09月02日 18:50</b>
+        <img src="images/index/lunbo_1.png" alt="" class="r-2-con-img">
+      </div>
+      <div class="r-2-con">
+        <i>第176天 累计减重47.0斤</i>
+        <b>09月01日 18:50</b>
+        <img src="images/index/lunbo_1.png" alt="" class="r-2-con-img">
+      </div>
+      <div class="r-2-con">
+        <i>第175天 累计减重47.0斤</i>
+        <b>08月31日 18:50</b>
+        <img src="images/index/lunbo_1.png" alt="" class="r-2-con-img">
+      </div>
+    </div>
+  </section>
+  <footer>
+    <a href="javascript:;">新建日记</a>
+  </footer>
+</body>
+<script type="text/javascript">
+  function z1() {
+    document.getElementById('z1').className = 'current';
+    document.getElementById('r1').className = '';
+    document.getElementById('z2').style.display = 'block';
+    document.getElementById('r2').style.display = 'block';
+  }
+  function r1() {
+    document.getElementById('z1').className = '';
+    document.getElementById('r1').className = 'current';
+    document.getElementById('z2').style.display = 'none';
+    document.getElementById('r2').style.display = 'block';
+  }
+  function ri1() {
+    document.getElementById('ri-1').className = 'c';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = '';
+  }
+  function ri2() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = 'c';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = '';
+  }
+  function ri3() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = 'c';
+    document.getElementById('ri-4').className = '';
+  }
+  function ri4() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = 'c';
+  }
+  function i1() {
+    document.getElementById('i1').className = 'cur';
+    document.getElementById('i2').className = '';
+  }
+  function i2() {
+    document.getElementById('i1').className = '';
+    document.getElementById('i2').className = 'cur';
+  }
+</script>
+</html>

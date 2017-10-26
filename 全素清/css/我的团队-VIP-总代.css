@@ -1,0 +1,107 @@
+body {
+  background: #fff;
+}
+header {
+  width: 100%;
+  height: 4.5rem;
+  background: orange;
+}
+.nav-top {
+  width: 100%;
+  height: 25%;
+  background-image: url(../images/style/nav-top.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.head {
+  width: 100%;
+  height: 75%;
+}
+.first-img {
+  width: 14%;
+  float: left;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.head i {
+  float: left;
+  width: 14%;
+  height: 100%;
+  line-height: 3rem;
+  font-size: 0.6rem;
+  text-align: right;
+  color: #fff;
+}
+.head em {
+  float: left;
+  width: 10%;
+  height: 100%;
+  line-height: 3rem;
+  font-size: 0.5rem;
+  color: red;
+  text-align: center;
+}
+.head>img{
+  width: 5%;
+  float: left;
+  margin-top: 5.5%;
+}
+section {
+  width: 100%;
+  height: 20rem;
+}
+.sec-1 {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 0.5rem solid #fff;
+  background: #87f445;
+
+}
+.sec-1 i {
+  float: left;
+  width: 45%;
+  height: 100%;
+  margin-left: 5%;
+}
+.sec-1 em {
+  float: left;
+  width: 37%;
+  height: 100%;
+  text-align: right;
+  color: red;
+}
+.sec-1 b {
+  float: left;
+  width: 11%;
+  height: 100%;
+  text-align: center;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+footer span {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  margin-top: 0.2rem;
+}
+footer span img {
+  display: block;
+  margin: 0.2rem auto;
+  width: 18%;
+  /*vertical-align: middle;*/
+}
+footer span i {
+  display: block;
+  font-size: 0.67rem;
+}

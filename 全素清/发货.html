@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发货</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/发货.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i><em>发货</em>
+    </div>
+  </header>
+  <section>
+    <div class="sec-1">
+      <div class="sec-1-left">
+
+      </div>
+      <div class="sec-1-right">
+        <i><b>脂老虎营养餐</b><em>每月限发三件 剩余限发数量三件</em></i>
+        <span>
+          <i>可用库存x10</i>
+          <div class="gw_num">
+            <em class="jian">-</em>
+            <input type="text" value="1" class="num"/>
+            <em class="add">+</em>
+          </div>
+        </span>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <a href="确认发货.html">下一步</a>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //加的效果
+    $(".add").click(function() {
+      var n = $(this).prev().val();
+      var num = parseInt(n)+1;
+      if( num == 0) {
+        return;
+      }
+      $(this).prev().val(num);
+    });
+    //减的效果
+    $(".jian").click(function() {
+      var n = $(this).next().val();
+      var num = parseInt(n)-1;
+      if( num == 0 ){
+        return;
+      }
+      $(this).next().val(num);
+    });
+  })
+  function a() {
+    document.getElementById('kfA').style.display = 'none';
+  }
+  function b() {
+    document.getElementById('kfA').style.display = 'none';
+  }
+  function c() {
+    document.getElementById('kfA').style.display = 'block';
+  }
+</script>
+</html>

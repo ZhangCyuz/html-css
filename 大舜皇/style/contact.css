@@ -1,0 +1,40 @@
+section {
+  width: 100%;
+  height: 28rem;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.contact-top {
+  width: 100%;
+  height: 5rem;
+  line-height: 2.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.img img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.top-1 {
+  float: left;
+  width: 100%;
+  height: 2.5rem;
+}
+.top-2 {
+  float: left;
+  width: 50%;
+  height: 2.5rem;
+}
+.top-3 {
+  float: left;
+  width: 50%;
+  height: 2.5rem;
+}
+.contact-map {
+  width: 100%;
+  height: 23rem;
+}
+.contact-map img {
+  width: 100%;
+  height: 100%;
+}

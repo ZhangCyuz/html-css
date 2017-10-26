@@ -1,0 +1,128 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav em {
+  text-align: center;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2%;
+}
+section {
+  width: 100%;
+}
+.sec-banner {
+  width: 100%;
+  height: 7rem;
+  background: orange;
+}
+.sec-banner span {
+  float: left;
+  width: 50%;
+  height: 3rem;
+  line-height: 3rem;
+  text-indent: 1em;
+  font-size: 0.7rem;
+  color: #fff;
+}
+.sec-banner span:last-child {
+  font-size: 2.5rem;
+  text-indent: 0.5rem;
+}
+.sec-banner span img {
+  float: right;
+  width: 10%;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.sec-1 {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  background: #fff;
+}
+.sec-1 span {
+  float: left;
+  width: 50%;
+  text-indent: 1em;
+  font-size: 0.6rem;
+}
+.sec-1 span i {
+  color: red;
+}
+.sec-2 {
+  width: 100%;
+  height: 6rem;
+}
+.sec-3 {
+  width: 100%;
+  height: 2rem;
+}
+.sec-2 .sec-2-top {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 0.5rem;
+  color: #a5a5a5;
+}
+.sec-2 .sec-2-top img {
+  width: 4%;
+  vertical-align: middle;
+}
+
+.sec-2 span {
+  float: left;
+  width: 50%;
+  height: 2rem;
+  line-height: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  text-indent: 1em;
+  font-size: 0.6rem;
+}
+.sec-2 span b {
+  float: right;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #a4a4a4;
+}
+.sec-3 span {
+  float: left;
+  width: 50%;
+  height: 2rem;
+  line-height: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  text-indent: 1em;
+  font-size: 0.6rem;
+}
+.sec-3 span b {
+  float: right;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #a4a4a4;
+}
+.sec-d {
+  width: 100%;
+  height: 6rem;
+  margin: 40% auto;
+  text-align: center;
+}
+.sec-d img {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+}
+.sec-d i {
+  display: block;
+  width: 100%;
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 1rem;
+}

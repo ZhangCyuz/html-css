@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>告警订阅</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/module.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i><a href="javascript:history.back(-1)"><img src="images/close.png" alt=""></a></i><em>告警订阅</em><b style="visibility:hidden;"></b>
+  </header>
+  <!-- 主体 -->
+  <section>
+    <div class="sec-gj">
+      <i>告警订阅 ( <em><a href="参数说明.html">参数说明</a></em> )</i>
+      <span>2017-05-21 12时23分</span>
+    </div>
+    <div class="sec-gj-con">
+      <ul>
+        <li>
+          <i>实况降水</i><span>是否订阅</span>
+        </li>
+        <li>
+          <i>任一观测站小时降雨超过5mm</i>
+        </li>
+        <li>
+          <i>关注</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male1" class="chooseBtn" />
+            <label for="male1" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时降雨超过10mm</i>
+        </li>
+        <li>
+          <i>警戒</i>
+          <span>
+            <input type="checkbox" id="male2" class="chooseBtn" />
+            <label for="male2" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时降雨超过15mm</i>
+        </li>
+        <li>
+          <i>预警</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male3" class="chooseBtn" />
+            <label for="male3" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i></i>
+        </li>
+        <li>
+          <i>实况气温</i><span>是否订阅</span>
+        </li>
+        <li>
+          <i>3个或以上观测站小时气温超过33℃</i>
+        </li>
+        <li>
+          <i>关注</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male4" class="chooseBtn" />
+            <label for="male4" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>3个或以上观测站小时气温超过34℃</i>
+        </li>
+        <li>
+          <i>警戒</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male5" class="chooseBtn" />
+            <label for="male5" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>3个或以上观测站小时气温超过35℃</i>
+        </li>
+        <li>
+          <i>预警</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male6" class="chooseBtn" />
+            <label for="male6" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i></i>
+        </li>
+        <li>
+          <i>实况风力</i><span>是否订阅</span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过6级</i>
+        </li>
+        <li>
+          <i>关注</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male7" class="chooseBtn" />
+            <label for="male7" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过7级</i>
+        </li>
+        <li>
+          <i>警戒</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male8" class="chooseBtn" />
+            <label for="male8" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过8级</i>
+        </li>
+        <li>
+          <i>预警</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male9" class="chooseBtn" />
+            <label for="male9" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i></i>
+        </li>
+        <li>
+          <i>雷达回波</i><span>是否订阅</span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过6级</i>
+        </li>
+        <li>
+          <i>关注</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male10" class="chooseBtn" />
+            <label for="male10" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过7级</i>
+        </li>
+        <li>
+          <i>警戒</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male11" class="chooseBtn" />
+            <label for="male11" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i>任一观测站小时风力超过8级</i>
+        </li>
+        <li>
+          <i>预警</i>
+          <span>
+            <input type="checkbox" checked ='checked' id="male12" class="chooseBtn" />
+            <label for="male12" class="choose-label"></label>
+          </span>
+        </li>
+        <li>
+          <i></i>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li>
+        <span class="span2" onclick="list1()"></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="span3" onclick="list2()"></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="span4" onclick="list3()"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/style.js" charset="utf-8"></script>
+</html>

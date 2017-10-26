@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>气候信息</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/module.css">
+  <link rel="stylesheet" href="style/气候信息.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i><a href="javascript:history.back(-1)"><img src="images/close.png" alt=""></a></i><em>气候信息</em><b style="visibility:hidden;"></b>
+  </header>
+  <!-- 主体 -->
+  <section class="section">
+    <!-- 搜索框 -->
+    <div class="nq-search">
+      <input type="text" placeholder="请输入标题">
+      <i>搜索</i>
+    </div>
+    <!-- 列表 -->
+    <div class="nq-list">
+      <div class="nq-list-left">
+        <img src="images/nq-1.png" alt="">
+      </div>
+      <div class="nq-list-cen">
+        <i>一周预报</i>
+        <em>2015-12-12</em>
+      </div>
+      <div class="nq-list-right">
+        <img src="images/xiangyou.png" alt="">
+      </div>
+    </div>
+    <div class="nq-list">
+      <div class="nq-list-left">
+        <img src="images/nq-2.png" alt="">
+      </div>
+      <div class="nq-list-cen">
+        <i>初霜预报</i>
+        <em>2015-12-12</em>
+      </div>
+      <div class="nq-list-right">
+        <img src="images/xiangyou.png" alt="">
+      </div>
+    </div>
+    <div class="nq-list">
+      <div class="nq-list-left">
+        <img src="images/nq-3.png" alt="">
+      </div>
+      <div class="nq-list-cen">
+        <i>降水过程预报</i>
+        <em>2015-12-12</em>
+      </div>
+      <div class="nq-list-right">
+        <img src="images/xiangyou.png" alt="">
+      </div>
+    </div>
+    <div class="nq-list">
+      <div class="nq-list-left">
+        <img src="images/nq-4.png" alt="">
+      </div>
+      <div class="nq-list-cen">
+        <i>上周天气预报和本周天气预报</i>
+        <em>2015-12-12</em>
+      </div>
+      <div class="nq-list-right">
+        <img src="images/xiangyou.png" alt="">
+      </div>
+    </div>
+    <div class="nq-list">
+      <div class="nq-list-left">
+        <img src="images/nq-5.png" alt="">
+      </div>
+      <div class="nq-list-cen">
+        <i>明显强降水预报</i>
+        <em>2015-12-12</em>
+      </div>
+      <div class="nq-list-right">
+        <img src="images/xiangyou.png" alt="">
+      </div>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li onclick="list1()">
+        <span class="span2" ></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li onclick="list2()">
+        <span class="span3"></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li onclick="list3()">
+        <span class="span4"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/style.js" charset="utf-8"></script>
+</html>

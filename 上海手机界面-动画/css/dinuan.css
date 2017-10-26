@@ -1,0 +1,173 @@
+section {
+  float: left;
+  width: 100%;
+  /*height: 78%;*/
+}
+.sec-1 {
+  float: left;
+  width: 100%;
+  height: 35%;
+  text-align: center;
+}
+.sec-1 span {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+}
+.sec-1 .span-1 {
+  margin-left: 10%;
+}
+.sec-1 span i {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 90%;
+  animation:upDowntext 1s;
+}
+@keyframes upDowntext {
+  0% {
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: 90%;
+  }
+}
+.sec-1-bg {
+  position: absolute;
+  left: 50%;
+  margin-left: -23%;
+  width: 43%;
+  height: 72%;
+  background: url(../images/xinfenbeiwo/xinfenbeiwo-1.png) no-repeat;
+  background-size: 100%;
+  margin-top: 38%;
+  overflow: hidden;
+  animation:upDown 1s;
+}
+@keyframes upDown {
+  0% {
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: 38%;
+  }
+}
+.sec-1-bg:hover {
+  background: url(../images/ketingxuanguan/ketingxuanguan-7.png) no-repeat;
+  background-size: 100%;
+}
+.sec-1-bg-1 {
+  background-image: url(../images/xinfenbeiwo/xinfen-1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /*margin-left: 10%;*/
+  width: 100%;
+  height: 80%;
+}
+
+.sec-1-bg-3 {
+  background-image: url(../images/xinfenbeiwo/xinfen-3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 80%;
+}
+.sec-2 {
+  float: left;
+  width: 100%;
+  height: 66%;
+  text-align: center;
+}
+
+.sec-2-1 {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 45%;
+}
+@keyframes leftToRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+    margin-left: -24%;
+  }
+}
+.sec-right-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -24%;
+  float: left;
+  width: 46%;
+  height: 100%;
+  background: url(../images/xinfenbeiwo/xinfenbeiwo-2.png) no-repeat;
+  background-size: 100%;
+  margin-top: 5%;
+  animation: leftToRight 1.5s;
+}
+.sec-right-bg i:first-child {
+  margin-top: 10%;
+}
+.sec-right-bg i {
+  display: block;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 150%;
+}
+.sec-right-bg hr {
+  width: 94%;
+  margin-left: 3%;
+  height: 2px;
+  color: #fff;
+  background: #fff;
+}
+.sec-2-2 {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 35%;
+}
+.sec-2-2 i {
+  display: block;
+  padding-top: 33%;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.sec-2-bg {
+  float: left;
+  width: 17%;
+  height: 100%;
+  background: url(../images/xinfenbeiwo/xinfenbeiwo-1.png) no-repeat;
+  background-size: 100%;
+  margin-left: 21%;
+  margin-top: 2%;
+  position: absolute;
+}
+@keyframes upDown-2 {
+  0% {
+    left: -42%;
+  }
+  100% {
+    left: 42%;
+  }
+}
+@keyframes upDown-1 {
+  0% {
+    left: -42%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.sec-2-bg-1 {
+  left: 0%;
+  animation: upDown-1 1.5s;
+}
+.sec-2-bg-2 {
+  left: 42%;
+  animation: upDown-2 1.5s;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/list.css"  />
+<!--菜单------>
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" /> 
+<!--<script type='text/javascript' src='js/jquery.js'></script> -->
+<script type='text/javascript' src='js/custom.js'></script> 
+<script type='text/javascript' src='js/jquery.prettyPhoto.js'></script> 
+<!--带标题的banner------>
+<script type="text/javascript" src="js/jq_1.1.js" charset="utf-8"></script>
+<!--banner轮播切换-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/js-1.js"></script>
+<!-----tab------->
+<link rel="stylesheet" href="css/tab.css" />
+<!--展开浮动效果--->
+<script>
+$(function(){
+	$('.On-Sys').click(function(){
+		if($(this).hasClass('Open')){
+			$(this).removeClass('Open');
+			$(this).text('【展开】');
+		}else{
+			$(this).addClass('Open');
+			$(this).text('【收起】');
+		}
+		$('#On-Sys').toggle(300);
+	});
+	
+	$('.float-qr a.close').click(function(){
+		$('.float-qr').remove();
+	});
+	
+	setTimeout(function(){$('.float-qr a.close').click();},4000);
+});
+</script>
+
+
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--<div class="Top">
+	<iframe width="100%" height="60px" frameborder="0" scrolling="no" src="http://dwlm.12371.cn/daohang/"></iframe>
+	<div class="top-bar">
+    	<div class="top-cont">
+        	<h1>全国党建网站联盟</h1>
+            <p>
+                <a href="#">返回联盟首页</a> |
+                <a href="#">共产党员网</a>
+                <span class="On-Sys">【展开】</span>
+            </p>
+        </div>
+    </div>
+</div>-->
+
+<!--展开内容------->
+<div class="spread" id="On-Sys" style="display:none;">
+	<h1><span>黑河市</span> (拥有县级网站6个)</h1>
+    <p>
+    	<a href="###">北安市(拥有乡级网站20个)</a>
+        <a href="###">五大连池市(拥有乡级网站13个)</a>
+        <a href="###">嫩江县(拥有乡级网站18个)</a>
+        <a href="###">孙吴县(拥有乡级网站12个)</a>
+        <a href="###">逊克县(拥有乡级网站11个)</a>
+        <a href="###">爱辉区(拥有乡级网站16个)</a>
+    </p>
+</div>
+<!--展开内容end---->
+<div class="header paging-head">
+	<div class="h-banner">
+    	<div class="hb-center">
+        	<img src="images/h-logo.png" class="h-logo"/>
+        </div>
+    </div>
+
+        <!--菜单----------->
+        <div class="wrap_all paging-nav"> 
+            <div id="top" >
+                <div class="navwrap">	
+                   <ul id="nav"> 
+                        <li class="current_page_item home-btn"  onclick="location.href='index.html'"><a href="index.html"></a></li><!--一级-->
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党建要闻</a></li> 
+                        <li class="page_item"><a href="一级页.html" class="font-style" >部情介绍</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="专题页.html" >组织部简介</a></li> 
+                                <li class="page_item"><a href="专题页.html" >领导介绍</a></li> 
+                                <li class="page_item"><a href="专题页.html" >内设机构</a></li> 
+                                <li class="page_item"><a href="专题页.html" >荣誉殿堂</a></li> 
+                                <li class="page_item"><a href="专题页.html" >办事指南</a></li>                         
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >基层党建</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                            	<li class="page_item"><a href="专题页.html" >城市党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >农村党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >机关事业党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >国有企业党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >高校党建</a></li> 
+                                <li class="page_item"><a href="专题页.html" >“两新”党建</a>
+                                    <!--三级下拉-->
+                                    <ul class='children'> 
+                                        <li class="page_item"><a href="文字列表.html" >要闻要事</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >两个覆盖</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >示范创建</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >载体活动</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >文件资料</a></li> 
+                                    </ul>
+                                    <!--3级end-->
+                                </li> 
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >干部工作</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="二级页.html" >干部政策</a></li>
+                                <li class="page_item"><a href="二级页.html" >干部监督</a> 
+                                    <!--三级下拉-->
+                                    <ul class='children'> 
+                                        <li class="page_item"><a href="文字列表.html" >任前公示</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >个人有关事项</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >因私护照使用</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >制度规范</a></li> 
+                                    </ul>
+                                    <!--3级end-->
+                                </li> 
+                                <li class="page_item"><a href="二级页.html" >干部教育</a></li>
+                                <li class="page_item"><a href="二级页.html" >干部调配</a> 
+                                    <!--三级下拉-->
+                                    <ul class='children'> 
+                                        <li class="page_item"><a href="文字列表.html" >援疆干部人才风采</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >干部成长笔记</a></li>  
+                                    </ul>
+                                    <!--3级end-->
+                                </li>
+                                <li class="page_item"><a href="二级页.html" >公务员管理</a> 
+                                    <!--三级下拉-->
+                                    <ul class='children'> 
+                                        <li class="page_item"><a href="文字列表.html" >公务员考录</a></li> 
+                                        <li class="page_item"><a href="文字列表.html" >公务员政策</a></li>  
+                                    </ul>
+                                    <!--3级end-->
+                                </li> 
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >人才工作</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="一级页.html" >人才政策</a></li>
+                                <li class="page_item"><a href="一级页.html" >活动载体</a></li>
+                                <li class="page_item"><a href="一级页.html" >优秀人才事迹</a></li>                        
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >远程教育</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="文字列表.html" >远教动态</a></li>
+                                <li class="page_item"><a href="文字列表.html" >学用典型</a></li>  
+                                <li class="page_item"><a href="列表页A.html" >精品课件</a></li>
+                                <li class="page_item"><a href="列表页A.html" >优秀电教片</a></li>     
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="专题页1.html" class="font-style" >自身建设</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="文字列表.html" >机关管理</a></li>
+                                <li class="page_item"><a href="文字列表.html" >机关党建</a></li>     
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >理论研究</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="列表页B.html" >党建专刊</a></li>                        
+                                <li class="page_item"><a href="文字列表.html" >调查研究</a></li>                                                
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党员管理</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                            	<li class="page_item"><a href="文字列表.html" >发展党员</a> </li>
+                                <li class="page_item"><a href="文字列表.html" >党员教育</a> </li>    
+                                <li class="page_item"><a href="文字列表.html" >党员服务</a> </li>                                
+                                <li class="page_item"><a href="文字列表.html" >党代表之窗</a></li>    
+                            </ul> <!--2级end-->
+                        </li> 
+                        
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党史资料</a></li> <!--一级-->                                                            
+                        <li class="current_page_item" ><a href="专题页.html" class="font-style" style="background:none;" >下载中心</a></li> 
+                   </ul>                
+                 </div><!--end navwrap-->                                
+            </div><!--end top-->
+        </div>
+		<div style=" clear:both"></div>
+
+    </div>
+</div>
+<div style="clear:both"></div>
+<div class="main">
+	<!--左侧-->
+    <div class="main-left">
+
+    <div class="left-list left-menu">
+    	<h1 class="left-title"><p>党建地图</p></h1>
+        <ul class="menu-list">
+        	<li><a href="#">北安市</a></li>
+            <li class="mltext">
+            	<a href="#">1</a>
+                <a href="#">2</a>            
+            </li>
+            <li><a href="#">五大连池市</a></li>
+            <!--<li class="mltext">
+            	<a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>            
+            </li>-->
+            <li><a href="#">嫩江县</a></li>
+            <!--<li class="mltext">
+            	<a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>            
+            </li>-->
+            <li><a href="#">孙吴县</a></li>
+            <li class="mltext">
+            	<!--<a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>     -->       
+            </li>
+            <li><a href="#">逊克县</a></li> 
+            <!--<li class="mltext">
+            	<a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>            
+            </li>-->
+            <li><a href="#">爱辉区</a></li> 
+            <!--<li class="mltext">
+            	<a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>            
+            </li>           -->
+        </ul>
+    </div>
+    
+    
+  
+    
+    
+    </div>
+    <!--左侧end-->
+    
+    <!--右侧----->
+    <div class="main-right">
+    	<div class="mr-cont mr-right-cont">
+        	<h1 class="mr-top">
+            	<p>党建地图</p>
+            </h1>
+            <div class="maps"><img src="images/maps.jpg" /></div>
+        </div>
+        
+        
+        
+    </div>
+    <!--右侧end----->
+
+
+</div>
+
+<div class="footer">
+	<div class="foot-cont">
+    	<h1 class="left">
+        	<p>扫一扫 关注</p>
+        	<p>黑龙江省黑河先锋网</p>
+        	<p>下载 app</p>
+        </h1>
+        <div class="QR-code">
+        	<p>
+            	<img src="images/qrimg.jpg" />
+                <span>Android</span>
+            </p>
+            <p>
+            	<img src="images/qrimg.jpg" />
+                <span>IOS</span>
+            </p>
+        </div>
+        <h1 class="right">
+        	地址：中共黑河市委组织部 ICP备案号：黑ICP备07004150号-1<br />
+			电话：0451-82304433 传真：0451-82308626<br />
+			邮箱：ffrfa163.com QQ:16589696<br />
+			中共黑河市委组织部 版权所有 <br />
+        </h1>
+    </div>
+    <div class="foot-icon"><img src="images/jglogo.png" /></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

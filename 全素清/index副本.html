@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i>应用中心</i>
+  </header>
+  <section>
+    <div class="sec-1">
+      <div class="sec-1-top">
+        <a href="我的商城.html">
+          <div class="sec-1-top-left">
+            <img src="images/index/1.png" alt="">
+            <div class="sec-1-top-left-text">
+              <h4>我的商城</h4>
+              <span><em>1</em><i>种产品有库存</i><b>赚差价</b></span><br>
+              <span><em>12</em><i>种产品无库存</i><b>赚佣金</b></span>
+            </div>
+          </div>
+          <div class="sec-1-top-right">
+            <span>去推广去赚钱</span>
+          </div>
+        </a>
+      </div>
+      <div class="sec-1-bom">
+        <div class="sec-con">
+          <div class="sec-con-left">
+            <a href="云商城订单.html">
+              <span>
+                <i>商城订单</i>
+                <em>看看卖了多少产品</em>
+              </span>
+              <img src="images/index/1.png" alt="">
+            </a>
+          </div>
+          <div class="sec-con-right">
+            <a href="商城管理.html">
+              <span>
+                <i>商城管理</i>
+                <em>上下架产品 设置</em>
+              </span>
+              <img src="images/index/1.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-2">
+      <div class="sec-2-top">
+        零售工具
+      </div>
+      <div class="sec-con">
+        <div class="sec-con-left">
+          <a href="朋友圈素材.html">
+            <span>
+              <i style="color:blue;">朋友圈素材</i>
+              <em>帮助你发朋友圈</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+        <div class="sec-con-right">
+          <a href="口碑.html">
+            <span>
+              <i style="color:blue;">口碑导航</i>
+              <em>去分享减脂日记</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="sec-con">
+        <div class="sec-con-left">
+          <a href="文章素材.html">
+            <span>
+              <i style="color:blue;">文章导航</i>
+              <em>分享文章卖产品</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+        <div class="sec-con-right">
+          <a href="javascript:;" onclick="b()">
+            <span>
+              <i style="color:blue;">线下素材</i>
+              <em>线下海报 打印专用</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sec-2">
+      <div class="sec-2-top">
+        培训信息
+      </div>
+      <div class="sec-con">
+        <div class="sec-con-left">
+          <a href="在线课堂.html">
+            <span>
+              <i style="color:green;">在线课堂</i>
+              <em>公开课 启航班</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+        <div class="sec-con-right">
+          <a href="线下培训.html">
+            <span>
+              <i style="color:green;">线下培训</i>
+              <em>体脂营 私董会 独立团</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sec-2">
+      <div class="sec-2-top">
+        百e自营
+      </div>
+      <div class="sec-con">
+        <div class="sec-con-left">
+          <a href="百e旗舰店.html">
+            <span>
+              <i style="color:green; width: 4rem;">百e旗舰店</i>
+              <em>经销商物料</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+        <div class="sec-con-right">
+          <a href="我的订单.html">
+            <span>
+              <i style="color:green;">我的订单</i>
+              <em>我买到的物料</em>
+            </span>
+            <img src="images/index/1.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="kf-a" id="kfA">
+    <div class="kf-t">
+      <i>提示</i>
+      <i>您当前不是特约经销商，无法体验该功能</i>
+      <em onclick="a()">知道了</em>
+    </div>
+  </div>
+  <footer>
+    <span>
+      <a href="index.html">
+        <img src="images/index/1.png" alt="">
+        <i>应用中心</i>
+      </a>
+    </span>
+    <span>
+      <a href="经销中心.html">
+        <img src="images/index/1.png" alt="">
+        <i>经销中心</i>
+      </a>
+    </span>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a() {
+    document.getElementById('kfA').style.display = 'none';
+  }
+  function b() {
+    document.getElementById('kfA').style.display = 'block';
+  }
+</script>
+</html>

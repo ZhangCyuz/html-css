@@ -1,0 +1,145 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav em {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  width: 40%;
+  height: 100%;
+  margin-left: 30%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2%;
+}
+section {
+  width: 100%;
+  height: 90%;
+}
+.sec-1 {
+  width: 100%;
+  height: 2rem;
+  background: #ecdf87;
+  line-height: 2rem;
+  font-size: 0.6rem;
+  color: red;
+  text-indent: 1em;
+}
+.sec-2 {
+  width: 100%;
+  height: 5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid #fff;
+  background: #fff;
+}
+.sec-2 img {
+  float: left;
+  width: 3.3rem;
+  margin-left: 2%;
+  margin-top: 3%;
+}
+.sec-2 span {
+  float: left;
+  width: 70%;
+  height: 100%;
+  margin-left: 2%;
+  font-size: 0.6rem;
+}
+.sec-2 span i {
+  float: left;
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+}
+.sec-2 span em {
+  float: left;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.56rem;
+  color: red;
+}
+.sec-2 span b {
+  float: left;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+}
+.sec-2 span u {
+  font-style: normal;
+  text-decoration: none;
+  float: left;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.56rem;
+  color: #a4a4a4;
+}
+.sec-3 {
+  width: 100%;
+  height: 2rem;
+  background: #fff;
+  margin-top: 0.1rem;
+}
+.sec-3 span {
+  float: left;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 2rem;
+}
+.sec-3 span img {
+  width: 0.8rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+footer {
+  height: 2rem;
+}
+footer span {
+  float: left;
+  width: 18%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: 0.25rem;
+  background: orange;
+  color: #fff;
+  font-size: 0.6rem;
+  margin-left: 2%;
+}
+footer em {
+  float: right;
+  width: 3rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  border: 1px solid orange;
+  text-align: center;
+  color: red;
+  font-size: 0.6rem;
+  margin-top: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+footer i {
+  float: right;
+  width: 3rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  border: 1px solid orange;
+  text-align: center;
+  color: red;
+  font-size: 0.6rem;
+  margin-top: 0.25rem;
+}

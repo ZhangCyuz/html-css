@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>云商城订单</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/云商城订单.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="index.html"><</a></i><em>云商城订单</em>
+    </div>
+  </header>
+  <section>
+    <div class="sec-nav-news">
+      <div class="lr_nb">
+        <div class="slider_wrap line">
+          <div class="wx_items">
+            <div class="item_cell">
+              <span class="current" id="s1" onclick="a1()">推荐</span>
+            </div>
+            <div class="item_cell">
+              <span id="s2" onclick="a2()">脂老虎</span>
+            </div>
+            <div class="item_cell">
+              <span id="s3" onclick="a3()">小视频</span>
+            </div>
+            <div class="item_cell">
+              <span id="s4" onclick="a4()">案例</span>
+            </div>
+            <div class="item_cell">
+              <span id="s5" onclick="a5()">减脂知识</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lr_nb_after"></div>
+    </div>
+    <div class="sec-d">
+      <img src="images/index/1.png" alt="">
+      <i>您还没有相关订单</i>
+    </div>
+  </section>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a1() {
+    document.getElementById('s1').className = 'current';
+    document.getElementById('s2').className = '';
+    document.getElementById('s3').className = '';
+    document.getElementById('s4').className = '';
+    document.getElementById('s5').className = '';
+  }
+  function a2() {
+    document.getElementById('s1').className = '';
+    document.getElementById('s2').className = 'current';
+    document.getElementById('s3').className = '';
+    document.getElementById('s4').className = '';
+    document.getElementById('s5').className = '';
+  }
+  function a3() {
+    document.getElementById('s1').className = '';
+    document.getElementById('s2').className = '';
+    document.getElementById('s3').className = 'current';
+    document.getElementById('s4').className = '';
+    document.getElementById('s5').className = '';
+  }
+  function a4() {
+    document.getElementById('s1').className = '';
+    document.getElementById('s2').className = '';
+    document.getElementById('s3').className = '';
+    document.getElementById('s4').className = 'current';
+    document.getElementById('s5').className = '';
+  }
+  function a5() {
+    document.getElementById('s1').className = '';
+    document.getElementById('s2').className = '';
+    document.getElementById('s3').className = '';
+    document.getElementById('s4').className = '';
+    document.getElementById('s5').className = 'current';
+  }
+</script>
+</html>

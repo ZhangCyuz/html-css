@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>口碑-我的-详情</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/口碑-我的-详情.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i>
+      <div class="nav-cen">
+        <em class="current" onclick="z1()" id="z1">主页</em>
+        <em onclick="r1()" id="r1">日记</em>
+      </div>
+      <b>分享</b>
+    </div>
+  </header>
+  <section class="section-z" id="z2">
+    <div class="sec-1">
+      <div class="sec-img">
+
+      </div>
+      <div class="sec-me">
+        <div class="sec-me-top">
+          <img src="images/index/1.png" alt="">
+          <span>
+            <i>阿雅<img src="images/index/1.png" alt=""></i>
+            <em>35岁&nbsp;&nbsp; 160CM &nbsp;&nbsp; 北京市</em>
+          </span>
+        </div>
+        <div class="sec-me-bot">
+          <span>
+            <i>已减&nbsp;&nbsp;&nbsp;<em>0</em>&nbsp;&nbsp;&nbsp;斤</i>
+            <em>？&nbsp;&nbsp;&nbsp;斤&nbsp;&nbsp;&nbsp;<b>==></b>&nbsp;&nbsp;
+              &nbsp;？&nbsp;&nbsp;&nbsp;斤</em>
+          </span>
+          <i><img src="images/index/1.png" alt=""><em>目标0斤</em></i>
+        </div>
+      </div>
+    </div>
+    <div class="sec-2">
+      <div class="sec-2-cen">
+        <span class="sec-2-top">
+          <img src="images/index/1.png" alt="">&nbsp;&nbsp;减脂前后
+        </span>
+        <div class="sec-2-img">
+          <span><i></i>减脂前</span>
+          <span><i></i>减脂中</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-r" id="r2">
+    <div class="r-1">
+      <span class="c" id="ri-1" onclick="ri1()">全部</span>
+      <span id="ri-2" onclick="ri2()">视频</span>
+      <span id="ri-3" onclick="ri3()">照片</span>
+      <span id="ri-4" onclick="ri4()">数据</span>
+      <i>暂无更新 | 共 <em>0</em> 条记录</i>
+    </div>
+    <div class="r-2">
+      <div class="sec-paixu">
+        <i>按时间排序：</i>
+        <em id="i1" onclick="i1()" class="cur">最新</em>
+        <em id="i2" onclick="i2()">最早</em>
+      </div>
+      <div class="ri-1" id="ri-1-1">
+        <div class="sec-d">
+          <img src="images/index/1.png" alt="">
+          <i>还没有上传日记哦</i>
+        </div>
+      </div>
+      <div class="ri-2" id="ri-2-1">
+        <div class="sec-d">
+          <img src="images/index/1.png" alt="">
+          <i>还没有上传视频哦</i>
+        </div>
+      </div>
+      <div class="ri-3" id="ri-3-1">
+        <div class="sec-d">
+          <img src="images/index/1.png" alt="">
+          <i>还没有上传照片哦</i>
+        </div>
+      </div>
+      <div class="ri-4" id="ri-4-1">
+        <div class="sec-d">
+          <img src="images/index/1.png" alt="">
+          <i>还没有上传数据哦</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <i>0次浏览</i>
+    <span><img src="images/index/1.png" alt=""><em>点赞(0)</em></span>
+    <span><img src="images/index/1.png" alt=""><em>分享(0)</em></span>
+  </footer>
+</body>
+<script type="text/javascript">
+  function z1() {
+    document.getElementById('z1').className = 'current';
+    document.getElementById('r1').className = '';
+    document.getElementById('z2').style.display = 'block';
+    document.getElementById('r2').style.display = 'block';
+  }
+  function r1() {
+    document.getElementById('z1').className = '';
+    document.getElementById('r1').className = 'current';
+    document.getElementById('z2').style.display = 'none';
+    document.getElementById('r2').style.display = 'block';
+  }
+  function ri1() {
+    document.getElementById('ri-1').className = 'c';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = '';
+    document.getElementById('ri-1-1').style.display = 'block';
+    document.getElementById('ri-2-1').style.display = 'none';
+    document.getElementById('ri-3-1').style.display = 'none';
+    document.getElementById('ri-4-1').style.display = 'none';
+  }
+  function ri2() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = 'c';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = '';
+    document.getElementById('ri-1-1').style.display = 'none';
+    document.getElementById('ri-2-1').style.display = 'block';
+    document.getElementById('ri-3-1').style.display = 'none';
+    document.getElementById('ri-4-1').style.display = 'none';
+  }
+  function ri3() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = 'c';
+    document.getElementById('ri-4').className = '';
+    document.getElementById('ri-1-1').style.display = 'none';
+    document.getElementById('ri-2-1').style.display = 'none';
+    document.getElementById('ri-3-1').style.display = 'block';
+    document.getElementById('ri-4-1').style.display = 'none';
+  }
+  function ri4() {
+    document.getElementById('ri-1').className = '';
+    document.getElementById('ri-2').className = '';
+    document.getElementById('ri-3').className = '';
+    document.getElementById('ri-4').className = 'c';
+    document.getElementById('ri-1-1').style.display = 'none';
+    document.getElementById('ri-2-1').style.display = 'none';
+    document.getElementById('ri-3-1').style.display = 'none';
+    document.getElementById('ri-4-1').style.display = 'block';
+  } 
+  function i1() {
+    document.getElementById('i1').className = 'cur';
+    document.getElementById('i2').className = '';
+  }
+  function i2() {
+    document.getElementById('i1').className = '';
+    document.getElementById('i2').className = 'cur';
+  }
+</script>
+</html>

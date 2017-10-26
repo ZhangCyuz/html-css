@@ -1,0 +1,130 @@
+header {
+  width: 100%;
+  height: 12rem;
+  background: none;
+}
+body {
+  background: #f4f4f4;
+}
+.swiper-container {
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+section {
+  width: 100%;
+}
+
+.sec-con {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #f4f4f4;
+}
+.sec-con-left {
+  float: left;
+  width: 49%;
+  height: 100%;
+  border-left: 1px solid #f4f4f4;
+  background: #fff;
+}
+.sec-con-left span {
+  float: left;
+  width: 67%;
+  height: 100%;
+  margin-left: 5%;
+}
+.sec-con-left span i {
+  float: left;
+  color: orange;
+  font-size: 0.72rem;
+  margin-top: 0.8rem;
+}
+.sec-con-left span em {
+  float: left;
+  font-size: 0.57rem;
+  color: #ccc;
+}
+.sec-con-left img {
+  float: left;
+  width: 20%;
+  margin-top: 0.8rem;
+  /*margin-right: 1rem;*/
+}
+.sec-con-right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #f4f4f4;
+  background: #fff;
+}
+.sec-con-right span {
+  float: left;
+  width: 67%;
+  height: 100%;
+  margin-left: 5%;
+}
+.sec-con-right span i {
+  float: left;
+  color: orange;
+  font-size: 0.72rem;
+  margin-top: 0.8rem;
+}
+.sec-con-right span em {
+  float: left;
+  font-size: 0.57rem;
+  color: #ccc;
+}
+.sec-con-right img {
+  float: left;
+  width: 20%;
+  margin-top: 0.8rem;
+  /*margin-right: 1rem;*/
+}
+.sec-2 {
+  width: 100%;
+}
+.sec-2-top {
+  width: 100%;
+  height: 1.5rem;
+  text-indent: 1em;
+  font-size: 0.55rem;
+  color: #ccc;
+  line-height: 1.5rem;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+footer span {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  margin-top: 0.2rem;
+}
+footer span img {
+  display: block;
+  margin: 0.2rem auto;
+  width: 18%;
+  /*vertical-align: middle;*/
+}
+footer span i {
+  display: block;
+  font-size: 0.67rem;
+}

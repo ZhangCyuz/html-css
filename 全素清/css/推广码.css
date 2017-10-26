@@ -1,0 +1,36 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav {
+  font-size: 0.7rem;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  width: 13%;
+  height: 100%;
+}
+.nav em {
+  float: left;
+  width: 74%;
+  height: 100%;
+  text-align: center;
+}
+.nav b {
+  float: left;
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  color: red;
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+section img {
+    width: 100%;
+}

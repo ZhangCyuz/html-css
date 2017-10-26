@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>确认订单</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/确认订单.css">
+</head>
+<body>
+  <header>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <i><a href="javascript:history.back(-1)"><</a></i><em>确认订单</em>
+    </div>
+  </header>
+  <section>
+    <div class="sec-1">
+      <a href="选择收货地址.html">
+        <img src="images/index/1.png" alt="">
+        <span>
+          <i>周苗苗</i>
+          <em>18618337131</em>
+          <b>黑龙江省 大庆市 杜尔伯特蒙古族自治县 吉禾酒店一层办公室</b>
+        </span>
+        <i>></i>
+      </a>
+    </div>
+    <div class="sec-2">
+      <img src="images/index/1.png" alt="">
+      <span><i>A款-秋季战袍卫衣系列 霸气金色</i><em>￥228</em><b>X1</b></span>
+    </div>
+    <div class="sec-3">
+      <span>搭配价</span>
+      <i>￥228.00</i>
+    </div>
+    <div class="sec-3">
+      <span>数量</span>
+      <i>
+        <div class="gw_num">
+          <em class="jian">-</em>
+          <input type="text" value="1" class="num"/>
+          <em class="add">+</em>
+        </div>
+      </i>
+    </div>
+    <div class="sec-3">
+      <span>选择配送方式</span>
+      <i onclick="c()"><em>快递：￥12.5 <b>></b></em></i>
+    </div>
+    <div class="sec-3">
+      <span>购买留言</span>
+      <i><input type="text" name="" value="" placeholder="选填：本次交易特别说明"></i>
+    </div>
+    <div class="sec-4">
+      <img src="images/index/1.png" alt="">
+      <i>目前系统暂不支持退款，请知晓！</i>
+    </div>
+  </section>
+  <div class="kf-a" id="kfA">
+    <div class="kf-t">
+      <div class="one">
+        <i>配送方式
+          <!-- <em>X</em> -->
+        </i>
+      </div>
+      <div class="two"><i>快递：<em>12.5元</em></i><b><img src="images/index/1.png" alt=""></b></div>
+      <em onclick="a()">取消</em>
+      <em onclick="a()">确定</em>
+    </div>
+  </div>
+  <footer>
+    <span>
+      <i>合计：</i><em>￥12.50</em>
+    </span>
+    <em>立即购买</em>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //加的效果
+    $(".add").click(function() {
+      var n = $(this).prev().val();
+      var num = parseInt(n)+1;
+      if( num == 0) {
+        return;
+      }
+      $(this).prev().val(num);
+    });
+    //减的效果
+    $(".jian").click(function() {
+      var n = $(this).next().val();
+      var num = parseInt(n)-1;
+      if( num == 0 ){
+        return;
+      }
+      $(this).next().val(num);
+    });
+  })
+  function a() {
+    document.getElementById('kfA').style.display = 'none';
+  }
+  function b() {
+    document.getElementById('kfA').style.display = 'none';
+  }
+  function c() {
+    document.getElementById('kfA').style.display = 'block';
+  }
+</script>
+</html>

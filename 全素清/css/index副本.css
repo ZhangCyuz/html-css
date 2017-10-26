@@ -1,0 +1,219 @@
+section {
+  width: 100%;
+  height: 30rem;
+  background: #f4f4f4;
+  margin-bottom: 2rem;
+}
+.kf-a {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 22, 22, 0.5);
+}
+.kf-t {
+  width: 80%;
+  height: 6rem;
+  background: #fff;
+  margin-left: 10%;
+  border-radius: 1rem;
+  margin-top: 50%;
+}
+.kf-t i {
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 0.6rem;
+}
+.kf-t em {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+  color: red;
+}
+.sec-1 {
+  width: 100%;
+}
+.sec-1-top {
+  width: 100%;
+  height: 4rem;
+  overflow: hidden;
+  background: #fff;
+}
+.sec-1-top-left {
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+.sec-1-top-left img {
+  float: left;
+  display: block;
+  width: 18%;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.sec-1-top-left-text {
+  float: left;
+  width: 70%;
+  height: 100%;
+  font-size: 0.57rem;
+  margin-left: 5%;
+}
+.sec-1-top-left-text h4 {
+  margin-top: 0.5rem;
+  color: orange;
+  font-size: 0.72rem;
+}
+.sec-1-top-left-text span {
+  margin: .1rem 0;
+  line-height: 1rem;
+}
+.sec-1-top-left-text span em {
+  display: inline-block;
+  width: 1rem;
+  color: orange;
+}
+.sec-1-top-left-text span i {
+  display: inline-block;
+  width: 4.5rem;
+  color: #ccc;
+}
+.sec-1-top-left-text span b {
+  color: #111;
+}
+.sec-1-top-right {
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.sec-1-top-right span {
+  display: block;
+  width: 70%;
+  height: 1rem;
+  margin: 20% auto;
+  border: 1px solid orange;
+  border-radius: 1rem 1rem 1rem 1rem;
+  font-size: 0.5rem;
+  text-align: center;
+  color: orange;
+  line-height: 1rem;
+}
+.sec-1-bom {
+  margin-top: 1px;
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+}
+.sec-con {
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+  border-bottom: 1px solid #f4f4f4;
+}
+.sec-con-left {
+  float: left;
+  width: 49%;
+  height: 100%;
+  border-left: 1px solid #f4f4f4;
+}
+.sec-con-left span {
+  float: left;
+  width: 67%;
+  height: 100%;
+  margin-left: 5%;
+}
+.sec-con-left span i {
+  float: left;
+  color: orange;
+  width: 100%;
+  font-size: 0.72rem;
+  margin-top: 0.8rem;
+}
+.sec-con-left span em {
+  float: left;
+  font-size: 0.57rem;
+  color: #ccc;
+}
+.sec-con-left img {
+  float: left;
+  width: 20%;
+  margin-top: 0.8rem;
+  /*margin-right: 1rem;*/
+}
+.sec-con-right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #f4f4f4;
+}
+.sec-con-right span {
+  float: left;
+  width: 67%;
+  height: 100%;
+  margin-left: 5%;
+}
+.sec-con-right span i {
+  float: left;
+  width: 100%;
+  color: orange;
+  font-size: 0.72rem;
+  margin-top: 0.8rem;
+}
+.sec-con-right span em {
+  float: left;
+  font-size: 0.57rem;
+  color: #ccc;
+}
+.sec-con-right img {
+  float: left;
+  width: 20%;
+  margin-top: 0.8rem;
+  /*margin-right: 1rem;*/
+}
+.sec-2 {
+  width: 100%;
+}
+.sec-2-top {
+  width: 100%;
+  height: 1.5rem;
+  text-indent: 1em;
+  font-size: 0.55rem;
+  color: #ccc;
+  line-height: 1.5rem;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+footer span {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  margin-top: 0.2rem;
+}
+footer span img {
+  display: block;
+  margin: 0.2rem auto;
+  width: 18%;
+  /*vertical-align: middle;*/
+}
+footer span i {
+  display: block;
+  font-size: 0.67rem;
+}

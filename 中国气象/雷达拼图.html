@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>雷达拼图</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/module.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i><a href="javascript:history.back(-1)"><img src="images/close.png" alt=""></a></i><em>雷达拼图</em><b style="visibility:hidden;"></b>
+  </header>
+  <div class="yt_sec">
+    <span onclick="a()">雷达监测<b></b></span><i>2017-05-22 09:06</i>
+    <div class="list" id="list">
+      <span><a href="卫星云图.html"><i>●</i>卫星云图</a></span>
+      <span><a href="红外云图.html"><i>●</i>红外云图</a></span>
+    </div>
+  </div>
+  <!-- 主体 -->
+  <section  onclick="b()">
+    <div class="map">
+      <img src="images/lei-1.png" alt="">
+    </div>
+    <div class="radio">
+      <span>
+        <img src="images/leida-1.png" alt="">
+        <img src="images/leida-2.png" alt="">
+        <img src="images/leida-3.png" alt="">
+      </span>
+      <i><em></em></i>
+      <em>08:54</em>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li onclick="list1()">
+        <span class="span2"></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li onclick="list2()">
+        <span class="span3"></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li onclick="list3()">
+        <span class="span4"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/style.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function a() {
+    document.getElementById('list').style.display = 'block';
+  }
+  function b() {
+    document.getElementById('list').style.display = 'none';
+  }
+</script>
+</html>

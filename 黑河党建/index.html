@@ -1,0 +1,1692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<!--菜单------>
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" />
+<!--<script type='text/javascript' src='js/jquery.js'></script> -->
+<script type='text/javascript' src='js/custom.js'></script>
+<script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+<!--带标题的banner------>
+<script type="text/javascript" src="js/jq_1.1.js" charset="utf-8"></script>
+<!--banner轮播切换-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/js-1.js"></script>
+<!-----tab------->
+<link rel="stylesheet" href="css/tab.css" />
+<script type="text/javascript" src="layui/layui.js"></script>
+<link rel="stylesheet" href="layui/css/layui.css" />
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+
+  //一些事件监听
+  element.on('tab(demo)', function(data){
+    console.log(data);
+  });
+});
+</script>
+
+<!--展开浮动效果--->
+<script>
+$(function(){
+	$('.On-Sys').click(function(){
+		if($(this).hasClass('Open')){
+			$(this).removeClass('Open');
+			$(this).text('【展开】');
+		}else{
+			$(this).addClass('Open');
+			$(this).text('【收起】');
+		}
+		$('#On-Sys').toggle(300);
+	});
+
+	$('.float-qr a.close').click(function(){
+		$('.float-qr').remove();
+	});
+
+	setTimeout(function(){$('.float-qr a.close').click();},4000);
+});
+</script>
+<!--图片滚动----->
+<!--<script type="text/javascript" src="js/jquery.min1.4.2.js"></script>-->
+<script>
+//滚动
+(function($){
+	$.fn.kxbdMarquee = function(options){
+		var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);
+
+		return this.each(function(){
+			var $marquee = $(this);//滚动元素容器
+			var _scrollObj = $marquee.get(0);//滚动元素容器DOM
+			var scrollW = $marquee.width();//滚动元素容器的宽度
+			var scrollH = $marquee.height();//滚动元素容器的高度
+			var $element = $marquee.children(); //滚动元素
+			var $kids = $element.children();//滚动子元素
+			var scrollSize=0;//滚动元素尺寸
+			var _type = (opts.direction == 'left' || opts.direction == 'right') ? 1:0;//滚动类型，1左右，0上下
+
+			//防止滚动子元素比滚动元素宽而取不到实际滚动子元素宽度
+			$element.css(_type?'width':'height',10000);
+			//获取滚动元素的尺寸
+			if (opts.isEqual) {
+				scrollSize = $kids[_type?'outerWidth':'outerHeight']() * $kids.length;
+			}else{
+				$kids.each(function(){
+					scrollSize += $(this)[_type?'outerWidth':'outerHeight']();
+				});
+			}
+			//滚动元素总尺寸小于容器尺寸，不滚动
+			if (scrollSize<(_type?scrollW:scrollH)) return;
+			//克隆滚动子元素将其插入到滚动元素后，并设定滚动元素宽度
+			$element.append($kids.clone()).css(_type?'width':'height',scrollSize*2);
+
+			var numMoved = 0;
+			function scrollFunc(){
+				var _dir = (opts.direction == 'left' || opts.direction == 'right') ? 'scrollLeft':'scrollTop';
+				if (opts.loop > 0) {
+					numMoved+=opts.scrollAmount;
+					if(numMoved>scrollSize*opts.loop){
+						_scrollObj[_dir] = 0;
+						return clearInterval(moveId);
+					}
+				}
+				if(opts.direction == 'left' || opts.direction == 'up'){
+					var newPos = _scrollObj[_dir] + opts.scrollAmount;
+					if(newPos>=scrollSize){
+						newPos -= scrollSize;
+					}
+					_scrollObj[_dir] = newPos;
+				}else{
+					var newPos = _scrollObj[_dir] - opts.scrollAmount;
+					if(newPos<=0){
+						newPos += scrollSize;
+					}
+					_scrollObj[_dir] = newPos;
+				}
+			};
+			//滚动开始
+			var moveId = setInterval(scrollFunc, opts.scrollDelay);
+			//鼠标划过停止滚动
+			$marquee.hover(
+				function(){
+					clearInterval(moveId);
+				},
+				function(){
+					clearInterval(moveId);
+					moveId = setInterval(scrollFunc, opts.scrollDelay);
+				}
+			);
+
+			//控制加速运动
+			if(opts.controlBtn){
+				$.each(opts.controlBtn, function(i,val){
+					$(val).bind(opts.eventA,function(){
+						opts.direction = i;
+						opts.oldAmount = opts.scrollAmount;
+						opts.scrollAmount = opts.newAmount;
+					}).bind(opts.eventB,function(){
+						opts.scrollAmount = opts.oldAmount;
+					});
+				});
+			}
+		});
+	};
+	$.fn.kxbdMarquee.defaults = {
+		isEqual:true,//所有滚动的元素长宽是否相等,true,false
+		loop: 0,//循环滚动次数，0时无限
+		direction: 'left',//滚动方向，'left','right','up','down'
+		scrollAmount:1,//步长
+		scrollDelay:20,//时长
+		newAmount:3,//加速滚动的步长
+		eventA:'mousedown',//鼠标事件，加速
+		eventB:'mouseup'//鼠标事件，原速
+	};
+
+	$.fn.kxbdMarquee.setDefaults = function(settings) {
+		$.extend( $.fn.kxbdMarquee.defaults, settings );
+	};
+
+})(jQuery);
+
+</script>
+
+<title>无标题文档</title>
+</head>
+
+<body class="index-body">
+<div class="Top">
+	<iframe width="100%" height="60px" frameborder="0" scrolling="no" src="http://dwlm.12371.cn/daohang/"></iframe>
+	<div class="top-bar">
+    	<div class="top-cont">
+        	<h1>全国党建网站联盟</h1>
+            <p>
+                <a href="#">返回联盟首页</a> |
+                <a href="#">共产党员网</a>
+                <span class="On-Sys">【展开】</span>
+            </p>
+        </div>
+    </div>
+</div>
+<!--浮动二维码------>
+<div class="float-qr">
+	<a href="#" class="close"><img src="images/icon/input_delete.png" /></a>
+	<p class="qrimg"><img src="images/qrimg.jpg" /><span>Android</span></p>
+    <p class="qrimg"><img src="images/qrimg.jpg" /><span>IOS</span></p>
+</div>
+<!--浮动end------->
+<!--展开内容------->
+<div class="spread" id="On-Sys" style="display:none;">
+	<h1><span>黑河市</span> (拥有县级网站6个)</h1>
+    <p>
+    	<a href="###">北安市(拥有乡级网站20个)</a>
+        <a href="###">五大连池市(拥有乡级网站13个)</a>
+        <a href="###">嫩江县(拥有乡级网站18个)</a>
+        <a href="###">孙吴县(拥有乡级网站12个)</a>
+        <a href="###">逊克县(拥有乡级网站11个)</a>
+        <a href="###">爱辉区(拥有乡级网站16个)</a>
+    </p>
+</div>
+<!--展开内容end---->
+<div class="header">
+	<div class="flash">
+	<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="300">
+  <param name="movie" value="flash/flash.swf" />
+  <param name="quality" value="high" />
+  <param name="wmode" value="opaque" />
+  <param name="swfversion" value="12.0.0.0" />
+  <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+  <param name="expressinstall" value="Scripts/expressInstall.swf" />
+  <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+  <!--[if !IE]>-->
+  <object type="application/x-shockwave-flash" data="flash/flash.swf" width="1000" height="300">
+    <!--<![endif]-->
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <param name="swfversion" value="12.0.0.0" />
+    <param name="expressinstall" value="Scripts/expressInstall.swf" />
+    <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+    <div>
+      <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+      <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+    </div>
+</div>
+    <!--[if !IE]>-->
+  </object>
+  <!--<![endif]-->
+</object>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+
+
+    <!--flash end----------------->
+
+        <!--菜单----------->
+        <div class="wrap_all">
+            <div id="top" >
+                <div class="navwrap">
+                   <ul id="nav">
+                        <li class="current_page_item home-btn"  onclick="location.href='index.html'"><a href="index.html"></a></li><!--一级-->
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党建要闻</a></li>
+                        <li class="page_item"><a href="一级页.html" class="font-style" >部情介绍</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="专题页.html" >组织部简介</a></li>
+                                <li class="page_item"><a href="专题页.html" >领导介绍</a></li>
+                                <li class="page_item"><a href="专题页.html" >内设机构</a></li>
+                                <li class="page_item"><a href="专题页.html" >荣誉殿堂</a></li>
+                                <li class="page_item"><a href="专题页.html" >办事指南</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >基层党建</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                            	<li class="page_item"><a href="专题页.html" >农村党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >城市党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >机关事业党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >“两新党建”</a></li>
+                                <li class="page_item"><a href="专题页.html" >国有企业党建</a></li>
+                                <li class="page_item"><a href="专题页.html" >高校党建</a>
+                                    <!--三级下拉-->
+                                    <ul class='children'>
+                                        <li class="page_item"><a href="文字列表.html" >要闻要事</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >两个覆盖</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >示范创建</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >载体活动</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >文件资料</a></li>
+                                    </ul>
+                                    <!--3级end-->
+                                </li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >干部工作</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="二级页.html" >干部政策</a></li>
+                                <li class="page_item"><a href="二级页.html" >干部监督</a>
+                                    <!--三级下拉-->
+                                    <ul class='children'>
+                                        <li class="page_item"><a href="文字列表.html" >任前公示</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >个人有关事项</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >因私护照使用</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >制度规范</a></li>
+                                    </ul>
+                                    <!--3级end-->
+                                </li>
+                                <li class="page_item"><a href="二级页.html" >干部教育</a></li>
+                                <li class="page_item"><a href="二级页.html" >干部调配</a>
+                                    <!--三级下拉-->
+                                    <ul class='children'>
+                                        <li class="page_item"><a href="文字列表.html" >援疆干部人才风采</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >干部成长笔记</a></li>
+                                    </ul>
+                                    <!--3级end-->
+                                </li>
+                                <li class="page_item"><a href="二级页.html" >公务员管理</a>
+                                    <!--三级下拉-->
+                                    <ul class='children'>
+                                        <li class="page_item"><a href="文字列表.html" >公务员考录</a></li>
+                                        <li class="page_item"><a href="文字列表.html" >公务员政策</a></li>
+                                    </ul>
+                                    <!--3级end-->
+                                </li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >人才工作</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="一级页.html" >人才政策</a></li>
+                                <li class="page_item"><a href="一级页.html" >活动载体</a></li>
+                                <li class="page_item"><a href="一级页.html" >优秀人才事迹</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >远程教育</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="文字列表.html" >远教动态</a></li>
+                                <li class="page_item"><a href="文字列表.html" >学用典型</a></li>
+                                <li class="page_item"><a href="列表页A.html" >精品课件</a></li>
+                                <li class="page_item"><a href="列表页A.html" >优秀电教片</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="专题页1.html" class="font-style" >自身建设</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="文字列表.html" >机关管理</a></li>
+                                <li class="page_item"><a href="文字列表.html" >机关党建</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >理论研究</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                                <li class="page_item"><a href="列表页B.html" >党建专刊</a></li>
+                                <li class="page_item"><a href="文字列表.html" >调查研究</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党员管理</a> <!--一级-->
+                            <ul class='children'> <!--二级下拉-->
+                            	<li class="page_item"><a href="文字列表.html" >发展党员</a> </li>
+                                <li class="page_item"><a href="文字列表.html" >党员教育</a> </li>
+                                <li class="page_item"><a href="文字列表.html" >党员服务</a> </li>
+                                <li class="page_item"><a href="文字列表.html" >党代表之窗</a></li>
+                            </ul> <!--2级end-->
+                        </li>
+
+                        <li class="page_item"><a href="一级页.html" class="font-style" >党史资料</a></li> <!--一级-->
+                        <li class="current_page_item" ><a href="专题页.html" class="font-style" style="background:none;" >下载中心</a></li>
+                   </ul>
+                 </div><!--end navwrap-->
+            </div><!--end top-->
+        </div>
+		<div style=" clear:both"></div>
+        <!--菜单end------->
+        <div class="welcome">
+        	<h1>您好！欢迎来到黑河先锋网  星期四 下午15:36</h1>
+            <p class="search">
+            	<input type="text" value="请输入您要搜索的标题" class="s-text"/>
+                <input type="button" value="" class="s-btn"/>
+            </p>
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<div class="main">
+	<!--banner-->
+<div class="NewsImage">
+  <div class="mychgPic">
+    <div id="myFocus" class="mF_liuzg">
+      <div class="loading"><span>请稍候...</span></div><!--载入画面-->
+      <ul class="pic"><!--内容列表-->
+        <li>
+          <a href="#" target="_blank">
+            <img src="images/banner1.jpg" alt="《黑河apec2017》召开“金融思想智库”专家座谈1" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="images/banner1.jpg" alt="《黑河apec2017》召开“金融思想智库”专家座谈2" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="images/banner1.jpg" alt="《黑河apec2017》召开“金融思想智库”专家座谈3" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="images/banner1.jpg" alt="《黑河apec2017》召开“金融思想智库”专家座谈4" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!--banner end------>
+	<div class="news">
+    	<h1 class="title">
+        	<p>党建要闻</p>
+            <a href="列表页.html" class="more">更多>></a>
+        </h1>
+        <div class="special-tit">
+        	<div class="news-tag"></div>
+            <a href="文字内页.html" class="st1">习近平谈“责任”：必须坚持原则、认真负责</a>
+            <a href="文字内页.html" class="st2">
+            “有多大担当才能干多大事业 尽多大责任才能有多大成就”习近平总书记多次从个人国家层及社会发展等方面，论述了各个角色应有的责任担当，党建网微平台为您梳理
+             <span>[查看详细]</span>
+             </a>
+             <!--class="st1"下的文字，请限制显示的文字数量，超出一行隐藏处理------>
+             <!--class="st2"下的文字，请限制显示的文字数量，超出两行隐藏处理------>
+        </div>
+        <ul class="news-list">
+        	<li>
+            	<a href="文字内页.html">
+                	<p>教育部规范高校学生党建工作 禁突击发展党员</p>
+                    <span>2017-3-20</span>
+                </a>
+            </li>
+            <li>
+            	<a href="文字内页.html">
+                	<p>五地区域联动共推“慈善孝贤”文化和了凡善学思想</p>
+                    <span>2017-3-20</span>
+                </a>
+            </li>
+            <li>
+            	<a href="文字内页.html">
+                	<p>《金融思想战线》召开“金融思想智库”专家座谈</p>
+                    <span>2017-3-20</span>
+                </a>
+            </li>
+            <li style="border-bottom:none">
+            	<a href="文字内页.html">
+                	<p>中国政研会机关召开离退休老干部新年座谈会</p>
+                    <span>2017-3-20</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--banner轮播-->
+    <div style="clear:both;"></div>
+ <div class="banner-box">
+	<div class="bd">
+        <ul>
+            <li style="background:#F3E5D8;">
+                <div class="m-width">
+                <a href="javascript:void(0);"><img src="images/banner2.jpg" /></a>
+                </div>
+            </li>
+            <li style="background:#B01415">
+                <div class="m-width">
+                <a href="javascript:void(0);"><img src="images/banner3.jpg" /></a>
+                </div>
+            </li>
+            <li style="background:#C49803;">
+                <div class="m-width">
+                <a href="javascript:void(0);"><img src="images/banner4.jpg" /></a>
+                </div>
+            </li>
+            <li style="background:#C49803;">
+                <div class="m-width">
+                <a href="javascript:void(0);"><img src="images/banner5.jpg" /></a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="banner-btn">
+        <div class="hd"><ul></ul></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".prev,.next").hover(function(){
+		$(this).stop(true,false).fadeTo("show",0.9);
+	},function(){
+		$(this).stop(true,false).fadeTo("show",0.4);
+	});
+
+	$(".banner-box").slide({
+		titCell:".hd ul",
+		mainCell:".bd ul",
+		effect:"fold",
+		interTime:3500,
+		delayTime:500,
+		autoPlay:true,
+		autoPage:true,
+		trigger:"click"
+	});
+});
+</script>
+
+    <!-- banner结束 -->
+   <!--侧栏----->
+    <div class="sideBar">
+    	<div class="side1">
+        	<h1>
+            	<p>通知公告</p>
+                <a href="#" class="more">[更多]</a>
+            </h1>
+            <ul class="side-list">
+            	<li>
+                <a href="文字内页.html"><span>></span>第八批“黑河市优秀青年人才”</a>
+                </li>
+                <li>
+                <a href="文字内页.html"><span>></span>市党建研究会2017年度立项40项</a>
+                </li>
+                <li>
+                <a href="文字内页.html"><span>></span>关于2017年度黑河市思想政治工</a>
+                </li>
+                <li>
+                <a href="文字内页.html"><span>></span>关于表彰北京市优秀青年人才</a>
+                </li>
+                <li>
+                <a href="文字内页.html"><span>></span>关于2017年度黑河市思想政治工</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="side2">
+        	<h1>
+            	<p><a href="#">任前公示</a></p>
+            </h1>
+            <ul class="side-list">
+            	<li>
+                <a href="#"><span>></span>第八批“黑河市优秀青年人才”</a>
+                </li>
+                <li>
+                <a href="#"><span>></span>市党建研究会2017年度立项40项</a>
+                </li>
+                <li>
+                <a href="#"><span>></span>关于2017年度黑河市思想政治工</a>
+                </li>
+                <li>
+                <a href="#"><span>></span>关于表彰北京市优秀青年人才</a>
+                </li>
+                <li>
+                <a href="#"><span>></span>关于2017年度黑河市思想政治工</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="side2">
+        	<h1>
+            	<p><a href="#">党建地图</a></p>
+            </h1>
+            <a href="党建地图.html" class="map"><img src="images/map.jpg" /></a>
+        </div>
+
+        <div class="AD-Link">
+        	<a href="#"><img src="images/01.jpg" /></a>
+            <a href="#"><img src="images/02.jpg" /></a>
+            <a href="#"><img src="images/03.jpg" /></a>
+            <a href="#"><img src="images/04.jpg" /></a>
+        </div>
+
+    </div>
+    <!--侧栏end-------->
+    <!--右侧分栏-------->
+    <div class="right-cont">
+    	<!--内容盒子-------->
+        <div class="layui-tab layui-tab-card cont-boxs">
+          <ul class="layui-tab-title">
+            <li class="layui-this cb-title">基层党建</li>
+            <li class="cb-name">城市党建</li>
+            <li class="cb-name">农村党建</li>
+            <li class="cb-name">机关事业党建</li>
+            <li class="cb-name">国有企业党建</li>
+            <li class="cb-name">高校党建</li>
+            <li class="cb-name">“两新”党建</li>
+          </ul>
+          <div class="layui-tab-content main-box-cont">
+          	<!--内容1--------------->
+            <div class="layui-tab-item layui-show">
+            	<ul class="text-list">
+                	<li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容1end----------->
+
+            <!--内容2--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">2嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">3LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">4闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">7 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">8闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">9高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">0嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">2闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">3高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容2end----------->
+
+            <!--内容3--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">A嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">BLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">C闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">D高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">E 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">FLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">G闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">L高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">H嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">ILV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">Z闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">K高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容3end----------->
+
+            <!--内容4--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">2LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">3闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">4高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">7闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">8高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">9嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">10LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">11闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">12高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容4end----------->
+
+            <!--内容5--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容5end----------->
+
+            <!--内容6--------------->
+            <div class="layui-tab-item">
+            <ul class="text-list">
+                	<li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容6end----------->
+
+            <!--内容7--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">1闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">1高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">1闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">1高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">1闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">1高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容7end----------->
+
+          </div>
+        </div>
+        <!--内容盒子end----->
+
+		<!--内容盒子-------->
+        <div class="layui-tab layui-tab-card cont-boxs spe-box">
+          <ul class="layui-tab-title">
+            <li class="layui-this cb-title">干部工作</li>
+            <li class="cb-name">干部政策</li>
+            <li class="cb-name">干部监督</li>
+            <li class="cb-name">干部教育</li>
+            <li class="cb-name">干部调配</li>
+            <li class="cb-name">公务员管理</li>
+          </ul>
+          <div class="layui-tab-content main-box-cont">
+          	<!--内容1--------------->
+            <div class="layui-tab-item layui-show">
+            	<ul class="text-list">
+                	<li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容1end----------->
+
+            <!--内容2--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">2嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">3LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">4闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">7 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">8闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">9高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">0嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">2闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">3高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容2end----------->
+
+            <!--内容3--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">A嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">BLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">C闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">D高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">E 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">FLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">G闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">L高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">H嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">ILV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">Z闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">K高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容3end----------->
+
+            <!--内容4--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">2LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">3闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">4高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">7闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">8高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">9嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">10LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">11闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">12高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容4end----------->
+
+            <!--内容5--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容5end----------->
+
+            <!--内容6--------------->
+            <div class="layui-tab-item">
+            <ul class="text-list">
+                	<li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容6end----------->
+
+          </div>
+        </div>
+        <!--内容盒子end----->
+
+        <!--内容盒子-------->
+        <div class="layui-tab layui-tab-card cont-boxs spe-box">
+          <ul class="layui-tab-title">
+            <li class="layui-this cb-title">人才工作</li>
+            <li class="cb-name">人才政策</li>
+            <li class="cb-name">活动载体</li>
+            <li class="cb-name">优秀人才事迹</li>
+          </ul>
+          <div class="layui-tab-content main-box-cont">
+          	<!--内容1--------------->
+            <div class="layui-tab-item layui-show">
+            	<ul class="text-list">
+                	<li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#"> LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容1end----------->
+
+            <!--内容2--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">2嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">3LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">4闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">7 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">8闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">9高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">0嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">1LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">2闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">3高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容2end----------->
+
+            <!--内容3--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">A嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">BLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">C闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">D高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">E 嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">FLV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">G闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">L高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">H嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">ILV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">Z闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">K高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容3end----------->
+
+            <!--内容4--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">1嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">2LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">3闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">4高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">7闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">8高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">9嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">10LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">11闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">12高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容4end----------->
+
+            <!--内容5--------------->
+            <div class="layui-tab-item">
+            	<ul class="text-list">
+                	<li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">5嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">5LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">5闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">5高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容5end----------->
+
+            <!--内容6--------------->
+            <div class="layui-tab-item">
+            <ul class="text-list">
+                	<li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6 LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院宣判</a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#">6嘉定区开展世界知识产权日宣传活动嘉定区开展世界</a></li>
+                    <li><a href="#">6LV公司感谢杨浦法院秉公裁判判LV公司感谢杨浦法院   </a></li>
+                    <li><a href="#">6闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">6高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                    <li><a href="#"> 闵行区召开知识产权总结表彰会闵行区召开知识知识产权</a></li>
+                    <li><a href="#">高校知识产权志愿者开展广场宣传高校知识产权志愿者 </a></li>
+                </ul>
+            </div>
+            <!--内容6end----------->
+
+          </div>
+        </div>
+        <!--内容盒子end----->
+
+
+
+
+    </div>
+    <!--右侧分栏end----->
+
+	<!--专题专栏区------------->
+    <div class="scroll-pic">
+    	<h1 class="sp-title"><a href="###"><img src="images/icon/sp_tit1.png" /></a></h1>
+        <div class="marquee">
+            <ul class="m-cont">
+                <li><a href="###" class="m-pic"><img src="images/pic1.jpg"/></a></li>
+                <li><a href="###" class="m-pic"><img src="images/pic2.jpg"/></a></li>
+                <li><a href="###" class="m-pic"><img src="images/pic3.jpg"/></a></li>
+                <li><a href="###" class="m-pic"><img src="images/pic4.jpg"/></a></li>
+                <li><a href="###" class="m-pic"><img src="images/pic5.jpg"/></a></li>
+            </ul>
+        </div>
+		<script type="text/javascript">
+        $(document).ready(function(){
+        $('.marquee').kxbdMarquee({
+            direction:'left',
+            eventA:'mouseenter',
+            eventB:'mouseleave'
+        });
+        });
+        </script>
+    </div>
+    <!--专题专栏区end------------->
+
+    <!--侧栏2----->
+    <div class="sideBar">
+    	<div class="side1">
+        	<h1>
+            	<p>党建专刊</p>
+                <a href="#" class="more">[更多]</a>
+            </h1>
+            <a href="#" class="new-book"><img src="images/book1.jpg"></a>
+        </div>
+
+        <div class="side2 video-list">
+        	<h1  style="margin-top:9px;">
+            	<p><a href="#">优秀电教片</a></p>
+            </h1>
+            <a href="#" class="vpic"><img src="images/video_pic.jpg" /></a>
+            <a href="#" class="vpic"><img src="images/video_pic.jpg" /></a>
+        </div>
+
+
+    </div>
+    <!--侧栏end-------->
+
+    <!--右侧内容----------->
+    <div class="right-cont">
+    	<!--盒子------>
+    	<div class="main-box mb-left m-boxs">
+        	<h1 class="m-head spe-m-head">
+            	<p class="h-title">调查研究</p>
+                <a href="#" class="more">更多>></a>
+            </h1>
+            <div class="news-base">
+            	<h2 class="nb-text">
+                	<p class="data-time">
+                    	<span class="dt1">18</span>
+                        <span class="dt2">2017.08</span>
+                    </p>
+                    <p class="date-cont">
+                    	<a href="#" class="dcTit">第八批“黑河市优秀青年人才”市党建研究会</a>
+                        <a href="#"  class="dcText">中新网8月18日电 国家统计局今日发布了2017年7月份70份</a>
+                    </p>
+                </h2>
+                <ul class="news-area">
+                	<li><a href="#">延庆区四海镇：让“小官”也有“硬约束”</a></li>
+                    <li><a href="#">丰台区“十二法”破解干部工作“四不让”问题</a></li>
+                    <li><a href="#">大兴区召开新任副处级干部任职培训班交流座谈会</a></li>
+                    <li><a href="#">石景山区实施“五步工作法”进一步提升选人用人科学化民</a></li>
+                    <li><a href="#">大兴区召开新任副处级干部任职培训班交流座谈会</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--盒子end------->
+
+        <!--盒子------>
+    	<div class="main-box mb-right m-boxs">
+        	<h1 class="m-head spe-m-head">
+            	<p class="h-title">驻村工作</p>
+                <a href="#" class="more">更多>></a>
+            </h1>
+            <div class="news-base">
+            	<h2 class="nb-text">
+                	<p class="data-time">
+                    	<span class="dt1">18</span>
+                        <span class="dt2">2017.08</span>
+                    </p>
+                    <p class="date-cont">
+                    	<a href="#" class="dcTit">第八批“黑河市优秀青年人才”市党建研究会</a>
+                        <a href="#"  class="dcText">中新网8月18日电 国家统计局今日发布了2017年7月份70份</a>
+                    </p>
+                </h2>
+                <ul class="news-area">
+                	<li><a href="#">延庆区四海镇：让“小官”也有“硬约束”</a></li>
+                    <li><a href="#">丰台区“十二法”破解干部工作“四不让”问题</a></li>
+                    <li><a href="#">大兴区召开新任副处级干部任职培训班交流座谈会</a></li>
+                    <li><a href="#">石景山区实施“五步工作法”进一步提升选人用人科学化民</a></li>
+                    <li><a href="#">大兴区召开新任副处级干部任职培训班交流座谈会</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--盒子end------->
+
+    	<!--盒子------>
+    	<div class="main-box mb-left mbox">
+        	<h1 class="m-head">
+            	<p class="h-title">远程教育</p>
+                <a href="#" class="more">更多>></a>
+            </h1>
+            <div class="tab-head"></div>
+           <div id="tab">
+                <h3 class="up" id="two1" onmouseover="setContentTab('two',1,4)">远教动态</h3>
+                <!--内容1-------->
+                <div class="block" id="con_two_1">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="文字内页.html">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[08-28]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="文字内页.html">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判判  </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="文字内页.html">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容1end-------->
+                <h3 id="two2" onmouseover="setContentTab('two',2,4)">学用典型</h3>
+                <!--内容2-------->
+                <div id="con_two_2">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容2end-------->
+
+                <h3 id="two3" onmouseover="setContentTab('two',3,4)">精品课件</h3>
+                <!--内容3-------->
+                <div id="con_two_3">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">1LV公司感谢杨浦法院秉公裁判判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">2嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">3高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容3end-------->
+
+                <h3 id="two4" onmouseover="setContentTab('two',4,4)" style="background:none">优秀电教片</h3>
+                <!--内容4-------->
+                <div id="con_two_4">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">4LV公司感谢杨浦法院秉公裁判判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">5嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">6高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容4end-------->
+
+            </div>
+
+			<script type="text/javascript">
+            function setContentTab(name, curr, n) {
+                for (i = 1; i <= n; i++) {
+                    var menu = document.getElementById(name + i);
+                    var cont = document.getElementById("con_" + name + "_" + i);
+                    menu.className = i == curr ? "up" : "";
+                    if (i == curr) {
+                        cont.style.display = "block";
+                    } else {
+                        cont.style.display = "none";
+                    }
+                }
+            }
+            </script>
+        </div>
+        <!--盒子end------->
+
+        <!--盒子------>
+    	<div class="main-box mb-right mbox">
+        	<h1 class="m-head">
+            	<p class="h-title">党员管理</p>
+                <a href="#" class="more">更多>></a>
+            </h1>
+            <div class="tab-head"></div>
+           <div id="tab">
+                <h3 class="up" id="three1" onmouseover="setContentTab('three',1,5)">发展党员</h3>
+                <!--内容1-------->
+                <div class="block" id="con_three_1">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[08-28]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判判  </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容1end-------->
+                <h3 id="three2" onmouseover="setContentTab('three',2,5)">党员教育</h3>
+                <!--内容2-------->
+                <div id="con_three_2">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容2end-------->
+                <h3 id="three3" onmouseover="setContentTab('three',3,5)">党员服务</h3>
+                <!--内容3-------->
+                <div id="con_three_3">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[08-28]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判判  </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title"> LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容3end-------->
+                <h3 id="three4" onmouseover="setContentTab('three',4,5)"  style="background:none">党代表之窗</h3>
+                <!--内容4-------->
+                <div id="con_three_4">
+                    <ul class="tab-cont">
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">闵行区召开知识产权总结表彰会</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">LV公司感谢杨浦法院秉公裁判 </p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">嘉定区开展世界知识产权日宣传活动</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">
+                        	<p class="tab-news-title">高校知识产权志愿者开展广场宣传</p>
+                            <span class="tab-news-time">[10-15]</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容4end-------->
+
+
+            </div>
+
+			<script type="text/javascript">
+            function setContentTab(name, curr, n) {
+                for (i = 1; i <= n; i++) {
+                    var menu = document.getElementById(name + i);
+                    var cont = document.getElementById("con_" + name + "_" + i);
+                    menu.className = i == curr ? "up" : "";
+                    if (i == curr) {
+                        cont.style.display = "block";
+                    } else {
+                        cont.style.display = "none";
+                    }
+                }
+            }
+            </script>
+        </div>
+        <!--盒子end------->
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--右侧内容end-------->
+
+
+    <!--AD链接------------>
+    <div class="advert">
+    	<a href="#"><img src="images/ad1.jpg" /></a>
+        <a href="#"><img src="images/ad6.jpg" /></a>
+        <a href="#"><img src="images/ad3.jpg" /></a>
+        <a href="#"><img src="images/ad4.jpg" /></a>
+        <a href="#" style="margin-right:0px;"><img src="images/ad5.jpg" /></a>
+    </div>
+    <!--AD链接end------------>
+
+
+    <!--活动图片区------------->
+    <div class="scroll-pic scroll-title">
+    	<h1 class="sp-title"><a href="###"><img src="images/icon/sp_tit2.png" /></a></h1>
+        <div class="marquee">
+            <ul class="m-cont">
+                <li>
+                	<p>
+                	<a href="###" class="m-pic2"><img src="images/pic6.jpg"/></a>
+                    <a href="###" class="m-tit">大学宿管阿姨出“卖萌板报” 学生围观拍照</a>
+                    </p>
+                </li>
+                <li>
+                	<p>
+                	<a href="###" class="m-pic2"><img src="images/pic7.jpg"/></a>
+                    <a href="###" class="m-tit">大学宿管阿姨出“卖萌板报” 学生围观拍照</a>
+                    </p>
+                </li>
+                <li>
+                	<p>
+                	<a href="###" class="m-pic2"><img src="images/pic8.jpg"/></a>
+                    <a href="###" class="m-tit">大学宿管阿姨出“卖萌板报” 学生围观拍照</a>
+                    </p>
+                </li>
+                <li>
+                	<p>
+                	<a href="###" class="m-pic2"><img src="images/pic9.jpg"/></a>
+                    <a href="###" class="m-tit">大学宿管阿姨出“卖萌板报” 学生围观拍照</a>
+                    </p>
+                </li>
+                <li>
+                	<p>
+                	<a href="###" class="m-pic2"><img src="images/pic10.jpg"/></a>
+                    <a href="###" class="m-tit">大学宿管阿姨出“卖萌板报” 学生围观拍照</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--活动图片区end------------->
+
+    <div class="friendlink">
+    	<h1 class="f-title">
+        	<p><span></span><img src="images/icon/fLink_title.png" /></p>
+        </h1>
+        <div class="link-list">
+        	<p class="l-select">
+            	<select name="">
+                	<option>各地发展和改革委员会</option>
+                </select>
+            </p>
+            <p class="l-select">
+            	<select name="">
+                	<option>各地经济信息网</option>
+                </select>
+            </p>
+            <p class="l-select">
+            	<select name="">
+                	<option>黑龙江省政府网</option>
+                </select>
+            </p>
+            <p class="l-select">
+            	<select name="">
+                	<option>主要信息网站</option>
+                </select>
+            </p>
+            <p class="l-select" style="margin-right:0px;">
+            	<select name="">
+                	<option>方便快速通道</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+	<div class="foot-cont">
+    	<h1 class="left">
+        	<p>扫一扫 关注</p>
+        	<p>黑龙江省黑河先锋网</p>
+        	<p>下载 app</p>
+        </h1>
+        <div class="QR-code">
+        	<p>
+            	<img src="images/qrimg.jpg" />
+                <span>Android</span>
+            </p>
+            <p>
+            	<img src="images/qrimg.jpg" />
+                <span>IOS</span>
+            </p>
+        </div>
+        <h1 class="right">
+        	地址：中共黑河市委组织部 ICP备案号：黑ICP备07004150号-1<br />
+			电话：0451-82304433 传真：0451-82308626<br />
+			邮箱：ffrfa163.com QQ:16589696<br />
+			中共黑河市委组织部 版权所有 <br />
+        </h1>
+    </div>
+    <div class="foot-icon"><img src="images/jglogo.png" /></div>
+</div>
+</body>
+</html>

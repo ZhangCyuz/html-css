@@ -1,0 +1,175 @@
+body {
+  background-image: url(../images/login.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header {
+  width: 100%;
+  height: 3.5rem;
+  background: none;
+}
+section {
+  width: 100%;
+}
+.sec-logo {
+  width: 100%;
+  height: 5rem;
+}
+.logo-ico {
+  width: 34%;
+  height: 100%;
+  margin: 0 auto;
+}
+.logo-ico img {
+  width: 100%;
+}
+.login-1 {
+  /*display: none;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22rem;
+  }
+  .input-login {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .input-1 {
+    position: relative;
+    width: 70%;
+    height: 1.5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .input-2 {
+    position: relative;
+    width: 70%;
+    height: 1.5rem;
+    margin: 1rem auto;
+  }
+  .input-3 {
+    position: relative;
+    width: 70%;
+    height: 1.5rem;
+    margin: 1rem auto;
+    margin-bottom: 0rem;
+  }
+  .input-1 input {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: 1px solid #c8c8c8;
+    text-indent: 3em;
+    color: #c2c2c2;
+    font-size: 0.4rem;
+  }
+  .input-2 input {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: 1px solid #c8c8c8;
+    text-indent: 3em;
+    color: #c2c2c2;
+    font-size: 0.4rem;
+  }
+  .input-3 input {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: 1px solid #c8c8c8;
+    text-indent: 3em;
+    color: #c2c2c2;
+    font-size: 0.4rem;
+  }
+  .input-1 img {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 10%;
+  }
+  .input-2 img {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 10%;
+  }
+  .input-3 img {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 10%;
+  }
+  .input-text {
+    width: 70%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: right;
+    font-size: 0.5rem;
+    color: #c4c4c4;
+    margin: 0 auto;
+  }
+  .login {
+    width: 100%;
+    height: 2rem;
+    margin-top: 2rem;
+  }
+  .login button {
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    background: #e6454a;
+    color: #fff;
+    border: none;
+    border-radius: 1rem 1rem 1rem 1rem;
+    font-size: 0.7rem;
+  }
+  .button-login-1 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+  }
+  .button-login-1 img {
+    display: block;
+    margin: 0 auto;
+    width: 8%;
+    margin-top: 1rem;
+}
+.login-2 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22rem;
+}
+
+.login-2-text {
+  width: 100%;
+  height: 16rem;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 2rem;
+}
+.login-2-text ul {
+  width: 100%;
+  height: 100%;
+}
+.login-2-text ul li {
+  float: left;
+  width: 33.333%;
+  height: 33.333%;
+}
+.item {
+  width: 44%;
+  height: 55%;
+  margin: 0.3rem auto;
+}
+.item img {
+  width: 98%;
+}

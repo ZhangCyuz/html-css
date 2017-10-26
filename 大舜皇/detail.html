@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>详情页</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/swiper.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/detail.css">
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="detail-f"><a href="javascript:history.back(-1)"></a></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/detail/detail-1.png"></div>
+        <div class="swiper-slide"><img src="images/detail/detail-2.png"></div>
+        <div class="swiper-slide"><img src="images/detail/detail-3.png"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="detail-text">
+    <i class="text-1">苦荞茶黑珍珠 黑苦荞茶 四川大凉山 荞麦茶 花草茶包</i>
+    <em class="text-2">海拔3千米 高寒 珍稀黑苦荞 口味地道</em>
+    <span>￥ 39.00 <i class="text-3">原价 ￥99.00</i></span>
+    <em class="text-4">积分 56</em>
+  </div>
+  <div class="modal-product" id="modal">
+    <div class="product-in">
+
+    </div>
+    <div class="product-close">
+      <i><a href="confirm-order.html">立即购买</a></i>
+      <em onclick="a(),b()">加入购物车</em>
+    </div>
+  </div>
+  <div class="modal-alert" id="modal-alert">
+    <div class="text-alert">
+      加入购物车成功！
+    </div>
+  </div>
+  <div class="detail-choice">
+    <div class="choice-left">选择</div>
+    <div class="choice-right" onclick="c()"><i></i></div>
+  </div>
+  <div class="detail-collection">
+    <i></i><em>收藏商品</em>
+  </div>
+  <div class="introduction">
+    <span class="introduction-top-ico">
+      <i>商品介绍</i>
+    </span>
+    <div class="introduction-top">
+      <em class="de-title"></em>
+      <em class="text-one">颗粒饱满 品相纯良</em>
+      <em class="text-two">蓬松Q感 散发米香 可当零食干吃 味同炒米</em>
+    </div>
+    <div class="introduction-body-img">
+      <div class="img-1"><img src="images/detail/de-img-1.png" alt=""></div>
+      <div class="img-2 "><img src="images/detail/de-img-2.png" alt=""></div>
+      <div class="img-3"><img src="images/detail/de-img-3.png" alt=""></div>
+    </div>
+    <div class="introduction-top">
+      <em class="de-title"></em>
+      <em class="text-one">悠悠米香 淳朴地道</em>
+      <em class="text-two">冲泡后的茶底可以直接喂食 软糖美味 好喝又好吃</em>
+    </div>
+    <div class="introduction-body-img-2">
+      <div class="img-1"><img src="images/detail/de-img-4.png" alt=""></div>
+    </div>
+    <div class="introduction-top">
+      <em class="de-title"></em>
+      <em class="text-one">常喝黑苦荞 营养健康</em>
+      <em class="text-two">家中常备苦荞茶 关心自己 更关爱家人健康</em>
+    </div>
+    <div class="introduction-body-img-2">
+      <div class="img-1"><img src="images/detail/de-img-4.png" alt=""></div>
+    </div>
+  </div>
+  <div class="detail-foot">
+    <div class="foot-left">
+      <i></i><a href="#">分享</a>
+    </div>
+    <div class="foot-right">
+      <a href="confirm-order.html">立即购买</a>
+    </div>
+  </div>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/swiper.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var mySwiper = new Swiper(".swiper-container",{
+    direction:"horizontal",
+    loop:true,
+    pagination:".swiper-pagination",
+    autoplay:3000
+  })
+  function a() {
+    document.getElementById('modal-alert').style.display = 'block';
+    var t = setTimeout("document.getElementById('modal-alert').style.display = 'none'", 500);
+  }
+  // function b() {
+  //   document.getElementById('modal-alert').style.display = 'none';
+  // }
+  function b() {
+    document.getElementById('modal').style.display = 'none';
+  }
+  function c() {
+    document.getElementById('modal').style.display = 'block';
+  }
+</script>
+</html>

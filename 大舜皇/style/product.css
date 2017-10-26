@@ -1,0 +1,97 @@
+section {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+.top  {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+.search-ico {
+  width: 1rem;
+  height: 100%;
+  position: absolute;
+  left: 8%;
+  background: url(../images/product/search-ico.png) no-repeat;
+  background-size: 100% 31%;
+  background-position: center;
+  z-index: 99;
+}
+.top input {
+  width: 90%;
+  height: 50%;
+  margin-left: 5%;
+  margin-top: 3%;
+  outline: none;
+  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border: none;
+  background-color: #ebebeb;
+  text-indent: 2rem;
+}
+.nav {
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1rem;
+}
+.nav ul {
+  width: 100%;
+  height: 100%;
+}
+.nav ul li {
+  float: left;
+  width: 18%;
+  height: 100%;
+  text-align: center;
+}
+.nav ul li a {
+  font-size: 0.7rem;
+}
+.nav ul li a:hover {
+  display: inline-block;
+  height: 80%;
+  border-bottom: 2px solid #197ecc;
+}
+.product {
+  width: 100%;
+  height: 100%;
+}
+.product .lists {
+  width: 100%;
+  height: 100%;
+}
+.product .lists li {
+  float: left;
+  width: 45%;
+  height: 16rem;
+  margin-left: 3.5%;
+  margin-top: 3%;
+}
+.product .lists li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.product .lists li a img {
+  width: 100%;
+  height: 70%;
+}
+.product .lists li a i {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #333333;
+  width: 100%;
+  height: 3rem;
+}
+.product .lists li a em {
+  font-size: 0.9rem;
+  color: #f2773b;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}

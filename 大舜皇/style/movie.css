@@ -1,0 +1,29 @@
+section {
+  width: 100%;
+}
+section ul {
+  width: 100%;
+  height: 100%;
+}
+section ul li {
+  float: left;
+  width: 46%;
+  margin-left: 3%;
+  margin-top: 5%;
+}
+section ul li img {
+  width: 100%;
+}
+.text {
+  display: block;
+  width: 100%;
+  height: 30%;
+}
+.text i {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #666666;
+}

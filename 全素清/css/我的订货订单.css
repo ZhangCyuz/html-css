@@ -1,0 +1,167 @@
+body {
+  background: #f4f4f4;
+}
+header {
+  background: #f4f4f4;
+}
+.nav em {
+  text-align: center;
+}
+.nav i {
+  float: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2%;
+}
+section {
+  width: 100%;
+}
+.sec-nav {
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+}
+.current {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.sec-nav span {
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 0.6rem;
+}
+.sec-d {
+  width: 100%;
+  height: 6rem;
+  margin: 40% auto;
+  text-align: center;
+}
+.sec-d img {
+  display: block;
+  width: 19%;
+  margin: 0 auto;
+}
+.sec-d i {
+  display: block;
+  width: 100%;
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+.sec-s1 {
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s2 {
+  display: none;
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s3 {
+  display: none;
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  width: 100%;
+}
+.sec-s4 {
+  display: none;
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  width: 100%;
+}
+.sec-2 {
+  width: 100%;
+  height: 4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid #fff;
+}
+.sec-2 img {
+  float: left;
+  width: 18%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.sec-2 span {
+  float: left;
+  width: 78%;
+  height: 100%;
+  margin-left: 2%;
+  font-size: 0.6rem;
+}
+.sec-2 span i {
+  float: left;
+  width: 100%;
+  height: 50%;
+  line-height: 1.8rem;
+}
+.sec-2 span em {
+  float: left;
+  width: 50%;
+  height: 50%;
+line-height: 2.2rem;
+}
+.sec-2 span b {
+  float: left;
+  width: 46%;
+  height: 50%;
+  text-align: right;
+  line-height: 2.2rem;
+}
+.sec-wan {
+  width: 100%;
+}
+.sec-w-t {
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+  line-height: 1.5rem;
+  font-size: 0.6rem;
+}
+.sec-w-t i {
+  float: left;
+  width: 50%;
+  height: 100%;
+  text-indent: 1em;
+}
+.sec-w-t>em {
+  float: left;
+  width: 48%;
+  height: 100%;
+  text-align: right;
+}
+.sec-3 {
+  width: 100%;
+  text-align: right;
+  height: 1.5rem;
+  background: #fff;
+  font-size: 0.6rem;
+  line-height: 1.5rem;
+  border-top: 1px solid #eee;
+}
+.sec-3>span {
+  margin-right: 2%;
+}
+.sec-3>span>i {
+  font-size: 0.7rem;
+}
+.sec-3 em {
+  display: block;
+  width: 3rem;
+  height: 1rem;
+  border: 1px solid #a4a4a4;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-left: 83%;
+  margin-top: 0.2rem;
+}

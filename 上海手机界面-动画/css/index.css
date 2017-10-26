@@ -1,0 +1,149 @@
+section {
+  float: left;
+  width: 100%;
+  height: 56%;
+  margin-top: 2rem;
+}
+section ul {
+  width: 100%;
+  height: 100%;
+}
+section ul li {
+  float: left;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  position: relative;
+}
+.sec-bg {
+  width: 41%;
+  height: 49%;
+  background: url(../images/an.png) no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media all and (min-width:420px) and (max-width:768px) {
+  .sec-bg {
+    height: 55%;
+  }
+}
+@media all and (min-width:768px) and (max-width:1024px) {
+  .sec-bg {
+    height: 60%;
+  }
+}
+@media all and (min-width:1024px) {
+  .sec-bg {
+    height: 69%;
+  }
+}
+@media all and (min-width:1030px) {
+  .sec-bg {
+    height: 80%;
+  }
+}
+.sec-bg1 {
+  position: absolute;
+  left: 29%;
+  animation: sec-bg-left 1s;
+}
+.sec-bg2 {
+  position: absolute;
+  right: 29%;
+  animation: sec-bg-right 1s;
+}
+.sec-bg3 {
+  position: absolute;
+  left: 29%;
+  animation: sec-bg-left 1s;
+}
+.sec-bg4 {
+  position: absolute;
+  right: 29%;
+  animation: sec-bg-right 1s;
+}
+@keyframes sec-bg-left {
+  0% {
+    left: -29%;
+    opacity: 0;
+  }
+  100% {
+    left: 29%;
+    opacity: 1;
+  }
+}
+@keyframes sec-bg-right {
+  0% {
+    right: -29%;
+    opacity: 0;
+  }
+  100% {
+    right: 29%;
+    opacity: 1;
+  }
+}
+.sec-bg-1 {
+  background: url(../images/1.png) no-repeat;
+  background-size: 88%;
+}
+.sec-bg-2 {
+  background: url(../images/2.png) no-repeat;
+  background-size: 88%;
+}
+.sec-bg-3 {
+  background: url(../images/3.png) no-repeat;
+  background-size: 88%;
+}
+.sec-bg-4 {
+  background: url(../images/4.png) no-repeat;
+  background-size: 88%;
+}
+.sec-img {
+  width: 100%;
+  height: 75%;
+  margin-top: 17%;
+  margin-left: 9%;
+}
+.sec-bg:hover {
+  background: url(../images/liang.png) no-repeat;
+  background-size: 100%;
+}
+.sec-bg:hover .sec-bg-1 {
+  background: url(../images/1-1.png) no-repeat;
+  background-size: 88%;
+  margin-left: 0;
+}
+.sec-bg:hover .sec-bg-2 {
+  background: url(../images/2-1.png) no-repeat;
+  background-size: 88%;
+  margin-left: 0;
+}
+.sec-bg:hover .sec-bg-3 {
+  background: url(../images/3-1.png) no-repeat;
+  background-size: 100%;
+  margin-left: 0;
+}
+.sec-bg:hover .sec-bg-4 {
+  background: url(../images/4-1.png) no-repeat;
+  background-size: 88%;
+  margin-left: 0;
+}
+section ul li i {
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 50%;
+  animation: index-i 1s;
+}
+@keyframes index-i {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

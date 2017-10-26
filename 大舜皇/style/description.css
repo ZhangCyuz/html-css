@@ -1,0 +1,49 @@
+section {
+  width: 100%;
+  height: 48rem;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+.sec-title {
+  width: 100%;
+  height: 6rem;
+}
+.sec-title i {
+  display: block;
+  width: 100%;
+  height: 50%;
+  line-height: 4rem;
+  text-indent: 2rem;
+  font-size: 1.5rem;
+}
+.sec-title em {
+  display: block;
+  width: 100%;
+  height: 50%;
+  line-height: 1.8rem;
+  text-indent: 2rem;
+  font-size: 1.2rem;
+  color: #dbdbdb;
+}
+.textall {
+  width: 100%;
+  height: 40rem;
+}
+.textall i:first-child {
+  margin-top: 0;
+}
+.textall i {
+  display: inline-block;
+  width: 94%;
+  height: 12rem;
+  margin-top: 2rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+  text-indent: 2em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+  margin-left: 0.7rem;
+}

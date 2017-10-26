@@ -1,0 +1,153 @@
+section {
+  width: 100%;
+  height: 32rem;
+  background-color: #f6f6f6;
+}
+.section-one {
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+.section-one>img {
+  float: left;
+  width: 18%;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+.section-one .se-one-text {
+  float: left;
+  width: 50%;
+  margin-left: .5rem;
+  margin-top: 0.3rem;
+}
+.se-one-text i {
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  color: #666666;
+}
+.se-one-text em {
+  display: inline-block;
+  width:50%;
+  height: 50%;
+  margin-left: 0.5rem;
+  font-size: 0.6rem;
+  line-height: 2rem;
+  color: #bababa;
+}
+.se-one-text em img {
+  width: 12%;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+
+}
+.se-one-text span {
+  display: block;
+  width: 100%;
+  height: 50%;
+  font-size: 0.8rem;
+  color: #b6b6b6;
+}
+.my-ico {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.my-ico>a {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.my-ico img {
+  float: right;
+  width: 19%;
+  margin-top: 37%;
+}
+.section-two {
+  float: left;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.section-two ul {
+  width: 100%;
+  height: 100%;
+}
+.section-two ul li {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+}
+.section-two ul li a img {
+  width: 35%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.section-two ul li a i {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  color: #6b6b6b;
+}
+.section-three {
+  float: left;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.section-three ul {
+  width: 100%;
+  height: 100%;
+}
+.section-three ul li {
+  float: left;
+  width: 32%;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  margin-left: 1%;
+
+}
+.section-three ul li a img {
+  width: 22%;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.section-three ul li a i {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+}
+.section-four {
+  float: left;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #fff;
+}
+.section-four ul {
+  width: 100%;
+}
+.section-four ul li {
+  float: left;
+  width: 32.3%;
+  height: 7rem;
+  text-align: center;
+  background: #fff;
+  border: 0.1rem solid #f6f6f6;
+}
+.section-four ul li a img {
+  width: 22%;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.section-four ul li a i {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+}

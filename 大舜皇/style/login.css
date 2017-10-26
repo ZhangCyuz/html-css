@@ -1,0 +1,118 @@
+.top {
+  width: 100%;
+  height: 4rem;
+}
+.top>a {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+}
+.top img {
+  margin: 1.2rem;
+  width: 20%;
+}
+.login-logo {
+  width: 100%;
+}
+.login-logo img {
+  display: block;
+  width: 25%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+section {
+  width: 100%;
+  height: 24.5rem;
+}
+.user {
+  width: 90%;
+  height: 2rem;
+  margin-left: 5%;
+  margin-top: 6%;
+  border-radius: 2.2rem 2.2rem 2.2rem 2.2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  text-indent: 2em;
+}
+.pwd {
+  width: 90%;
+  height: 2rem;
+  margin-left: 5%;
+  margin-top: 6%;
+  border-radius: 2.2rem 2.2rem 2.2rem 2.2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  text-indent: 2em;
+}
+.check {
+  width: 60%;
+  height: 2rem;
+  margin-left: 5%;
+  margin-top: 6%;
+  border-radius: 2.2rem 0rem 0rem 2.2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  text-indent: 2em;
+}
+.check-img {
+  float: right;
+  width: 25%;
+  margin-top: 6%;
+  margin-right: 5%;
+}
+.checkbox {
+  float: left;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid #8cc62e;
+  outline: none;
+  margin-left: 7%;
+  margin-top: 10%;
+  margin-right: 3%;
+}
+section a {
+  float: left;
+  display: inline-block;
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 10%;
+}
+section a i {
+  color: #8cc62e;
+}
+.button {
+  width: 90%;
+  height: 2.5rem;
+  margin: 5% 5%;
+  border-radius: 2.2rem 2.2rem 2.2rem 2.2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #197ecc;
+  color: #fff;
+  font-size: 1rem;
+}
+.sec-foot {
+  display: block;
+  width: 50%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: #b8b8b8;
+}
+.zhmm {
+  width: 100%;
+  height: 1rem;
+}
+.zhmm a {
+  display: block;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: #8cc62e;
+  text-decoration: underline;
+}
