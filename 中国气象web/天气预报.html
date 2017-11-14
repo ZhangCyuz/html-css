@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>天气预报</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/key.css">
+  <link rel="stylesheet" href="style/Weather.css">
+</head>
+<body>
+  <section>
+    <div class="sec-1" id="top">
+      <img src="images/tq-2.png" alt="">
+      <i>榆林</i>
+    </div>
+    <div class="sec-2">
+      <i>15分钟前发布</i>
+    </div>
+    <div class="sec-3">
+      <img src="images/duoyun-1.png" alt="">
+      <div class="sec-3-font">
+        39 <i>°</i>
+      </div>
+    </div>
+    <div class="sec-4">
+      <span>
+        <img src="images/tq-5.png" alt="">
+        <i>西北风4级</i>
+      </span>
+      <span>
+        <img src="images/tq-6.png" alt="">
+        <i>降水 0 mm</i>
+      </span>
+      <span>
+        <img src="images/tq-7.png" alt="">
+        <i>湿度23%</i>
+      </span>
+    </div>
+    <div class="sec-5">
+      <span>
+        <div class="shang">
+          <i>今天<em>优</em></i>
+          <b>10/2℃</b>
+        </div>
+        <div class="xia">
+          <i>多云</i>
+          <img src="images/tq-7.png" alt="">
+        </div>
+      </span>
+      <span class="s">
+        <div class="shang">
+          <i>明天<em>优</em></i>
+          <b>13/1℃</b>
+        </div>
+        <div class="xia">
+          <i>晴</i>
+          <img src="images/tq-7.png" alt="">
+        </div>
+      </span>
+    </div>
+    <div class="sec-6">
+      <div class="sec-6-top">
+        <i>24小时预报</i>
+        <div class="sec-6-right">
+          <span class="cur" onclick="tq()" id="tq1">天气</span>
+          <span onclick="js()" id="js1">降水</span>
+          <span onclick="fl()" id="fl1">风力</span>
+          <span onclick="sd()" id="sd1">湿度</span>
+        </div>
+      </div>
+      <div class="sec-con">
+        <div class="lr_nb">
+          <div class="slider_wrap line">
+            <div class="wx_items">
+              <div class="item_cell">
+                <div class="tq" id="tq">
+                  <div id="container" style="width: 1120px; height: 100%; margin: 0 auto">
+
+                  </div>
+                </div>
+                <div class="js" id="js">
+                  <!--<img src="images/jiangshuiliang.png" alt="">-->
+                </div>
+                <div class="fl" id="fl">
+                  <!--<img src="images/fengsu.png" alt="">-->
+                </div>
+                <div class="sd" id="sd">
+                  <!--<img src="images/qiwen.png" alt="">-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lr_nb_after"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-7">
+      <div class="sec-6-top">
+        <i>七天预报</i>
+      </div>
+      <div class="sec-qi">
+        <ul>
+          <li>
+            <div class="li-top">
+              <i>周三</i>
+              <i>10/11</i>
+              <em>阴</em>
+              <img src="images/qi-1.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-1.png" alt="">
+              <em>阴</em>
+              <i>偏西风</i>
+              <i>3-4 级</i>
+              <b class="b">良</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>今天</i>
+              <i>10/12</i>
+              <em>多云</em>
+              <img src="images/qi-2.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-2.png" alt="">
+              <em>多云</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>周五</i>
+              <i>10/13</i>
+              <em>大雨</em>
+              <img src="images/qi-3.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-3.png" alt="">
+              <em>大雨</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>周六</i>
+              <i>10/14</i>
+              <em>晴</em>
+              <img src="images/qi-4.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-4.png" alt="">
+              <em>晴</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>周日</i>
+              <i>10/15</i>
+              <em>小雨</em>
+              <img src="images/qi-5.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-5.png" alt="">
+              <em>小雨</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>周一</i>
+              <i>10/16</i>
+              <em>多云</em>
+              <img src="images/qi-2.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-2.png" alt="">
+              <em>多云</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <li>
+            <div class="li-top">
+              <i>周二</i>
+              <i>10/17</i>
+              <em>大雨</em>
+              <img src="images/qi-3.png" alt="">
+            </div>
+            <div class="li-cen">
+
+            </div>
+            <div class="li-bom">
+              <img src="images/qi-3.png" alt="">
+              <em>大雨</em>
+              <i>西风</i>
+              <i>3-4 级</i>
+              <b class="y">优</b>
+            </div>
+          </li>
+          <div class="qx">
+            <img src="images/qx-2.png" alt="" class="qx-2">
+            <img src="images/qx-1.png" alt="" class="qx-1">
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="sec-8">
+      <div class="sec-6-top">
+        <i>今日概况</i>
+      </div>
+      <div class="sec-8-con">
+        <ul>
+          <li>
+            <div class="banyuan">
+              <div class="yin"></div>
+            </div>
+            <div class="cirl-1"></div>
+            <div class="cirl-2"></div>
+            <img src="images/taiyang.png" alt="" class="taiyang">
+            <em class="left-span">06:48</em>
+            <em class="right-span">18:07</em>
+            <i>日出 ~ 日落</i>
+          </li>
+          <li>
+            <span><img src="images/shenghuo-1.png" alt=""><i>温度</i><em>3.7℃</em></span>
+            <span><img src="images/shenghuo-2.png" alt=""><i>湿度</i><em>69%</em></span>
+            <span><img src="images/shenghuo-3.png" alt=""><i>气压</i><em>869hpa</em></span>
+            <span><img src="images/shenghuo-4.png" alt=""><i>能见度</i><em>28.7</em></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec-9">
+      <div class="sec-6-top">
+        <i>生活指数</i>
+      </div>
+      <div class="sec-9-con">
+        <ul>
+          <li>
+            <div class="li-1" onclick="a()" id="li1">
+              <img src="images/tq-s-1.png" alt="">
+              <i>较冷</i>
+              <em>穿衣指数</em>
+            </div>
+            <div class="li-2" onclick="b()" id="li2">
+              <i>气温偏凉，厚外套是一个很棒的选择。</i>
+            </div>
+          </li>
+          <li>
+            <div class="li-1" onclick="a1()" id="li3">
+              <img src="images/tq-s-2.png" alt="">
+              <i>极易发</i>
+              <em>感冒指数</em>
+            </div>
+            <div class="li-2" onclick="b1()" id="li4">
+              <i>感冒极易发生，勤洗手降低感冒几率。</i>
+            </div>
+          </li>
+          <li>
+            <div class="li-1" onclick="a2()" id="li5">
+              <img src="images/tq-s-3.png" alt="">
+              <i>不太适宜</i>
+              <em>钓鱼</em>
+            </div>
+            <div class="li-2" onclick="b2()" id="li6">
+              <i>早晚水温偏低，建议中午进行垂钓。</i>
+            </div>
+          </li>
+          <li>
+            <div class="li-1" onclick="a3()" id="li7">
+              <img src="images/tq-s-4.png" alt="">
+              <i>较适宜</i>
+              <em>运动</em>
+            </div>
+            <div class="li-2" onclick="b3()" id="li8">
+              <i>气温过低，建议进行室内运动。</i>
+            </div>
+          </li>
+          <li>
+            <div class="li-1" onclick="a4()" id="li9">
+              <img src="images/tq-s-5.png" alt="">
+              <i>非常适宜</i>
+              <em>洗车</em>
+            </div>
+            <div class="li-2" onclick="b4()" id="li10">
+              <i>无雨且风力较小，以保持清洁度。</i>
+            </div>
+          </li>
+          <li>
+            <div class="li-1" onclick="a5()" id="li11">
+              <img src="images/tq-s-6.png" alt="">
+              <i>弱</i>
+              <em>紫外线</em>
+            </div>
+            <div class="li-2" onclick="b5()" id="li12">
+              <i>紫外线强度较弱，建议出门涂擦SPF在12-15之前。PA+的防晒护肤品。</i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="ruturnTop">
+      <a href="#top"><i>返回<br>顶部</i></a>
+    </div>
+  </section>
+</body>
+<script src="scripts/jquery.min.js" charset="utf-8"></script>
+<script src="scripts/highcharts.js" charset="utf-8"></script>
+<script src="scripts/modules/exporting.js" charset="utf-8"></script>
+<script src="scripts/tq.js" charset="utf-8"></script>
+</html>

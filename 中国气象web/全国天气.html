@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全国天气</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/module.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i><a href="javascript:history.back(-1)"><img src="images/close.png" alt=""></a></i><em>全国天气</em><b style="visibility:hidden;"></b>
+  </header>
+  <!-- 主体 -->
+  <section>
+    <div class="QG_sec-top">
+      全国主要城市
+    </div>
+    <div class="sec-city">
+      <ul>
+        <li class="cur">北京</li>
+        <li>上海</li>
+        <li>深圳</li>
+        <li>广州</li>
+        <li>香港</li>
+        <li>澳门</li>
+        <li>天津</li>
+        <li>南京</li>
+        <li>武汉</li>
+        <li>杭州</li>
+        <li>重庆</li>
+        <li>苏州</li>
+        <li>大连</li>
+        <li>东莞</li>
+        <li>沈阳</li>
+        <li>成都</li>
+        <li>青岛</li>
+        <li>厦门</li>
+        <li>济南</li>
+        <li>哈尔滨</li>
+        <li>长春</li>
+        <li>长沙</li>
+        <li>郑州</li>
+        <li>太原</li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li onclick="list1()">
+        <span class="span2"></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li onclick="list2()">
+        <span class="span3"></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li onclick="list3()">
+        <span class="span4"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/style.js" charset="utf-8"></script>
+</html>

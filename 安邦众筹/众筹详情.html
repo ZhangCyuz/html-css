@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/module.css"  />
+<!--banner------------>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="shortcut-menu">
+	<p class="sp1"><a href="javascript:history.go(-1);" class="go-back"><em></em></a></p>
+    <p class="sp2">
+    <a href="#" class="shopping_cart"><em></em></a>
+    <a href="#" class="share"><em></em></a>
+    </p>
+</div>
+<!--banner-->
+<div class="wrapper">
+    <div class="swipe zc-banner">
+        <ul id="slider">
+            <a href="商品内页.html"><li style="display:block"><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+        </ul>
+        <div id="pagenavi">
+            <a href="javascript:void(0);" class="active">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>	
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<script type="text/javascript">
+var active=0,
+as=document.getElementById('pagenavi').getElementsByTagName('a');
+for(var i=0;i<as.length;i++){
+    (function(){
+        var j=i;
+        as[i].onclick=function(){
+            t2.slide(j);
+            return false;
+        }
+    })();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:600, timeout:3000, before:function(index){
+        as[active].className='';
+        active=index;
+        as[active].className='active';
+    }});
+</script>
+<!-- banner结束 -->
+
+<div class="main">
+	<div class="goods-cont">
+    	<h1 class="title">可可西里云智能锁指纹密码锁-高安防高颜值</h1>
+        <h2 class="exp">此项目须在2017/07/01前，获得 ¥200000.00 的支持才可成功!</h2>
+        <p class="add-up">
+        	目前累计资金<i>¥</i><em>6003533.60</em>
+        </p>
+        <p class="add-speed">
+        	<span class="as-line">
+            	<em></em>
+                <em></em>
+                <em></em>
+                <em></em>
+                <em></em>
+            </span>
+            <span class="as-text">50%</span>
+        </p>
+        <p class="means">
+        	<span>支持人数：45人</span>
+            <span>剩余天数：10天</span>
+        </p>
+    </div>
+	    	
+</div>
+
+<div class="pro-conts zc-pro-conts">
+	<!--start------->
+    <ul id="tabs">
+      <li><a href="#" name="#tab1">项目介绍</a></li>
+      <li><a href="#" name="#tab2">项目动态</a></li>
+  </ul>
+
+  <div id="content">
+      <div id="tab1">
+          <img src="images/pro_details2.jpg" />
+      </div>
+      <div id="tab2">
+          <!--tab2内容------------>
+          <ul class="review-list">
+          	<li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>                    
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>  
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>                  
+          </ul>
+          <!--内容END------------>
+      </div>
+
+  </div>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+  <script>
+    function resetTabs(){
+        $("#content > div").hide(); //Hide all content
+        $("#tabs a").attr("id",""); //Reset id's      
+    }
+
+    var myUrl = window.location.href; //get URL
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
+    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
+
+    (function(){
+        $("#content > div").hide(); // Initially hide all content
+        $("#tabs li:first a").attr("id","current"); // Activate first tab
+        $("#content > div:first").fadeIn(); // Show first tab content
+        
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+             return       
+            }
+            else{             
+            resetTabs();
+            $(this).attr("id","current"); // Activate this
+            $($(this).attr('name')).fadeIn(); // Show content for current tab
+            }
+        });
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+          if (myUrlTab == myUrlTabName + i) {
+              resetTabs();
+              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
+              $(myUrlTab).fadeIn(); // Show url tab content        
+          }
+        }
+    })()
+  </script>    
+    <!--End------->
+<div style="height:50px;clear:both"></div>
+<div class="foot-nav-btn">
+    <a href="#">返回众筹</a>
+    <a href="#" class="default-on" id="example">我要支持</a>
+</div>
+<!--弹出内容-->
+<div id="LoginBox">
+    <div class="row1">
+        确认订单<a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn" style="color:#FFF; font-weight:normal">×</a>
+    </div>
+    <div class="Chips-de">
+        <div class="Other-zc" style="float:none">
+            <ul>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <h1>￥300.00</h1>
+                        <h2>上门安装服务</h2>
+                        <p>感谢您的支持！您将获得1次上门安装1套可可西里云智能锁服务，包含拆旧锁与装新锁。</p>
+                        <div class="name">限额<em>10</em>位 剩余<em>10</em>位</div>
+                        <div class="image"><img src="images/TB13N9xRpXXXXagXXXXSutbFXXX_100x100xz.jpg" /></div>
+                        <div class="ts">配送费用:免运费</div>
+                        <div class="ts">预计回报发放时间:项目筹款成功后的30天内</div>
+                        <a href="确认订单.html" class="zc">支持</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<!--弹出js特效-->
+<script type="text/javascript">
+	$(function ($) {
+		//弹出登录
+		$("#example").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.6'
+			}, 1000);
+		}).on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+			}, 1000);
+		});
+		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#ffffff' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+		});
+	});
+</script>	
+<!--弹出js特效结束-->	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

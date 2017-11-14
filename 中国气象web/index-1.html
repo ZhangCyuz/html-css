@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>中国 ● 气象</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/swiper.min.css">
+  <link rel="stylesheet" href="style/animate.min.css">
+  <link rel="stylesheet" href="style/index-1.css">
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="header">
+          <div class="yun rel">
+            <div class="yun-1 abs"></div>
+          </div>
+          <div class="logo">
+            <img src="images/logo.png" alt="">
+          </div>
+          <div class="text">
+            <i>中国 ● 气象</i><br>
+            <em>CHINA METEOROLOGY</em>
+          </div>
+        </div>
+        <div class="section">
+          <div class="map rel">
+            <img src="images/map.png" alt="">
+          </div>
+          <div class="city rel">
+            <div class="city-1 abs ani"
+              swiper-animate-effect="bounce"
+              swiper-animate-duration="1s"
+              swoper-animate-delay="0.3s">
+              <div class="city-name">
+                <i>五常市</i><br>
+                <em><img src="images/yintian.png" alt=""></em>
+              </div>
+            </div>
+            <div class="city-2 abs ani"
+              swiper-animate-effect="bounce"
+              swiper-animate-duration="1s"
+              swoper-animate-delay="0.3s">
+              <div class="city-name">
+                <i>榆树市</i><br>
+                <em><img src="images/duoyun.png" alt=""></em>
+              </div>
+            </div>
+            <div class="city-3 abs ani"
+              swiper-animate-effect="bounce"
+              swiper-animate-duration="1s"
+              swoper-animate-delay="0.3s">
+              <div class="city-name">
+                <i>舒兰市</i><br>
+                <em><img src="images/duoyun.png" alt=""></em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src="scripts/swiper.min.js" charset="utf-8"></script>
+  <script src="scripts\swiper.animate1.0.2.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      direction: 'vertical',
+      onInit: function(swiper) {
+        swiperAnimateCache(swiper);
+        swiperAnimate(swiper);
+      },
+      onSlideChangeEnd: function(swiper) {
+        swiperAnimate(swiper);
+      }
+    })
+  </script>
+</html>

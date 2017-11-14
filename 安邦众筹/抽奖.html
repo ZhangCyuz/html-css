@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/user.css" rel="stylesheet" type="text/css">
+<!--游戏样式-->
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+
+	table{
+		background:#666;
+		width:320px;
+		margin:0 auto 30px auto;
+	}
+	table tr td{
+		width:78px;
+		height:78px;
+	}
+	div.button{
+		width:120px;
+		height:40px;
+		line-height:40px;
+		display:inline-block;
+		color:#fff;
+		font-family:"Microsoft Yahei";
+		background-color:#CE3114;
+		position:relative;
+		border-radius:3px;
+		cursor:pointer;
+		top:15px;
+		font-size:18px;
+		margin-bottom:10px;
+	}
+	div.button:hover{
+		background-color:#c40000;
+	}
+	.target{
+		border:3px solid #E64528;
+		width:76px;
+		height:76px;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.Img{
+		width:120px;
+		height:160px;
+		position:absolute;
+		left:365px;
+		top:10px;
+		border:1px solid #666;
+		border-radius:5px;
+		background:url("img/mv.jpg");
+		background-size:cover;
+		margin-left:-150px;
+	}
+	.bg_color{ background:#fc5955; padding-bottom:30px;}
+</style>
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.7.1.js"></script>
+</head>
+
+<body>
+<div class="header-list">	
+	<a href="javascript:history.go(-1);" class="Previous"><img src="images/user/previous_icon.png"></a>
+	<h1>抽奖</h1>
+</div>
+<div class="bg_color">
+	<div><img src="img/advimg.jpg" /></div>
+    <!--游戏区域开始-->
+    <table border="0" cellpadding="0" cellspacing="1">
+        <tr>
+            <td id="0" style="background:url(img/0.png);background-size:cover;"></td>
+            <td id="1" style="background:url(img/1.png);background-size:cover;"></td>
+            <td id="2" style="background:url(img/2.png);background-size:cover;"></td>
+            <td id="3" style="background:url(img/3.png);background-size:cover;"></td>
+        </tr>
+        <tr>
+            <td id="13" style="background:url(img/7.png);background-size:cover;"></td>
+            <td colspan="2" rowspan="3" style="background:#ff745b url(img/bg.jpg) no-repeat;text-align:center;position:relative;">
+                <div class="div_box" style="color:#FFF; font-size:16px;">还有3次抽奖机会</div>
+                <div class="button staBtn" onclick="startRun()">开始抽奖</div>
+                <div class="button czBtn" onclick="init()">重置</div>
+            </td>
+            <td id="4" style="background:url(img/7.png);background-size:cover;"></td>
+        </tr>
+        <tr>
+            <td id="12" style="background:url(img/6.png);background-size:cover;"></td>
+            <td id="5" style="background:url(img/8.png);background-size:cover;"></td>
+        </tr>
+        <tr>
+            <td id="11" style="background:url(img/5.png);background-size:cover;"></td>
+            <td id="6" style="background:url(img/9.png);background-size:cover;"></td>
+        </tr>
+        <tr>
+            <td id="10" style="background:url(img/1.png);background-size:cover;"></td>
+            <td id="9" style="background:url(img/0.png);background-size:cover;"></td>
+            <td id="8" style="background:url(img/11.png);background-size:cover;"></td>
+            <td id="7" style="background:url(img/10.png);background-size:cover;"></td>
+        </tr>
+    </table>
+    <!--游戏区域结束-->
+    <!--目标游戏开始-->
+    <div class="target"></div>
+    <!--目标游戏结束-->	
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+                        //变量
+                        //数据类型
+                        //条件判断
+                        //循环
+                        //API
+                        //对象
+                        //json
+                        var n = 0;
+                        init();
+                        function init() {
+                            moveToNext(0);
+                        }
+                        function moveToNext(i) {
+                            var $target = $('div.target');//代表找到div.target的元素
+                            var offset = $('#' + (i % 14)).offset();
+                            $target.animate({top: offset.top - 2, left: offset.left - 2}, 50);
+                            n = i;
+                        }
+                        function startRun() {
+                            var randomNumber = Math.random(10) * 14;//随机生成0-20之间的数字
+                            randomNumber = Math.ceil(randomNumber) + 50;//+上一个50的基数
+                            var m = n;
+                            for (var i = m; i < randomNumber + m; i++) {
+                                moveToNext(i);
+                            }
+                        }
+</script>

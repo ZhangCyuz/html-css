@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/module.css" />
+<!--Menu-->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.simplesidebar.js"></script>
+<!--列表显示 隐藏 js-->
+    <script language="javascript" type="text/javascript">
+    $(function()
+    {
+        $(".more").click(function()
+        {
+            var txt=$(this).html();
+            if(txt=="更多")
+            {
+                $(this).prev(".list").removeClass("list").addClass("listall");
+                $(this).html("隐藏");
+            }
+            else if(txt=="隐藏")
+            {
+                $(this).prev(".listall").removeClass("listall").addClass("list");
+                $(this).html("更多");
+            }
+        });
+    })
+    </script>
+<!--列表显示 隐藏 js结束-->
+
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="top-nav">
+	<div class="search search-box">
+    	<input type="text" value="请输入商品名称" class="sInput1"/>
+        <input type="button" value="搜索" class="sInput2" style="display:none;"/>
+    </div>
+    <!--<div class="mess-btn">
+    	<a href="#"></a>
+    </div>-->
+</div>
+<div class="wrapper">
+	<div class="toolbar Header">
+        <div class="HMenu">
+            <div id="open-sb" class="menu-button menu-left"><img src="images/icon/nav_btn.png" /></div>
+        </div>
+	</div>
+	<section class="sidebar">
+		<nav>
+			<div class="menu-top">
+      			<span class="menu-logo"><img src="images/touxiang.jpg" /></a>        		
+      		</div>
+			<ul class="navBtn">
+				<li><a href="index.html">首 页</a></li>
+				<li><a href="购实惠.html">购实惠</a></li>
+				<li><a href="团购专区.html">团购专区</a></li>
+				<li><a href="限时秒杀.html">限时秒杀</a></li>
+                <li><a href="安邦众筹.html">安邦众筹</a></li>
+                <li><a href="会员中心.html">会员中心</a></li>
+                <li><a href="登录.html">安全退出</a></li>
+			</ul>
+		</nav>
+	</section>
+</div>
+<script>
+$( document ).ready(function() {
+	$.ajaxSetup({
+		cache: false
+	});
+	$( '.sidebar' ).simpleSidebar({
+		settings: {
+			opener: '#open-sb',
+			wrapper: '.wrapper',
+			animation: {
+				duration: 500,
+				easing: 'easeOutQuint'
+			}
+		},
+		sidebar: {
+			align: 'left',
+			width: 250,
+			closingLinks: 'a',
+		}
+	});
+});
+</script>
+<!-- 代码 结束 -->
+
+<!---筛选功能--->
+<div class="auto_center search_body">
+    <div class="cate_wraper">        
+        <!--cate_list_w-->
+        <div class="hf cate_list_w" >
+            <span class="tit">品 牌</span>
+            <div class="list">
+                <a href="###.html" class='search_select'>全部不限</a>
+                <a href="###.html" class="select-on">Szgoo</a>
+                <a href="###.html" >美国jeep</a>
+                <a href="###.html" >千里马</a>
+                <a href="###.html" >巴布狗</a>
+                <a href="###.html" >True Love系列</a>
+            </div>
+            <span class="more">更多</span>
+        </div>
+        <!--/cate_list_w-->
+        <!--cate_list_w-->
+        <div class="hf cate_list_w">
+            <span class="tit">类 别</span>
+            <div class="list">
+                <a href="###.html" class='search_select'>全部不限</a>
+                <a href="###.html">女装</a>
+                <a href="###.html" >男装</a>
+                <a href="###.html" >家居服饰</a>
+                <a href="#" >女装裙子</a>
+                <a href="#" >男装裤子</a>
+            </div>
+            <span class="more">更多</span>
+        </div>
+        <!--/cate_list_w-->
+        
+        <!--cate_list_w-->
+        <div class="hf cate_list_w">
+            <span class="tit">价 格</span>
+            <div class="list">
+                <a href="###.html" class='search_select'>全部不限</a>
+                <a href="###.html" >0-100元</a>
+                <a href="###.html" >100-200元</a>
+                <a href="###.html" >200-500元</a>
+                <a href="###.html" >500-1000元</a>
+            </div>
+            <span class="more">更多</span>
+        </div>
+        <!--/cate_list_w-->               
+    </div>
+</div>
+<!--/cate_wraper-->
+<!---筛选功能End--->
+<div class="classify-top">
+	<a href="#" class="on">默 认</a>
+    <a href="#">销 量</a>
+    <a href="#">价 格</a>
+    <a href="#">新 品</a>
+</div>
+
+<div class="pro-all-list">
+    <ul class="pro-box">
+    	<li class="p-left">
+        	<div class="p-cont">
+            	<a href="###" class="p-tips">
+                	<span>20元券</span>
+                    <span>点击领取</span>
+                </a>
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg" /></a>
+                    <span class="p-tag1">剩余6天</span>
+                </p>
+                <p class="p-tit"><a href="#">夏季职业装女装套装时尚气质套裙</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>
+                <p class="p-public">
+                	<span class="p3">可省80.0元</span>
+                	<span class="p4">剩余3000件</span>
+                </p>
+            </div>
+        </li>
+        <li class="p-right">
+        	<div class="p-cont">
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg"/></a>
+                    <a href="#" class="p-tag2">赶快去抢</a>
+                </p>
+                <p class="p-tit"><a href="#">亚菲儿香水女士玫瑰淡香清新50ml</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>      
+                <p class="p-public">
+                	<span class="p5">购买后返46%</span>
+                	<span class="p4">-10.00</span>
+                </p>         
+            </div>
+        </li>
+        
+        <li class="p-left">
+        	<div class="p-cont">
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg" /></a>
+                </p>
+                <p class="p-tit"><a href="#">夏季职业装女装套装时尚气质套裙</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>
+                <p class="p-public">
+                	<span class="p5">返现金:¥19.9</span>
+                	<span class="p6"><img src="images/icon/taobao_icon1.png" /></span>
+                </p>
+            </div>
+        </li>
+        <li class="p-right">
+        	<div class="p-cont">
+            	<p class="p-sale">促 销</p>
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg"/></a>
+                    <a href="#" class="p-tag1">已售2750</a>
+                </p>
+                <p class="p-tit"><a href="#">亚菲儿香水女士玫瑰淡香清新50ml</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>      
+                <p class="p-public">
+                	<span class="p5">包邮 | 反积分</span>
+                	<span class="p4">剩余1000件</span>
+                </p>         
+            </div>
+        </li>
+        
+        <li class="p-left">
+        	<div class="p-cont">
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg" /></a>
+                </p>
+                <p class="p-tit"><a href="#">夏季职业装女装套装时尚气质套裙</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>
+                <p class="p-public">
+                	<span class="p5">8.9 折</span>
+                	<span class="p6"><img src="images/icon/taobao_icon1.png" /></span>
+                </p>
+            </div>
+        </li>
+        <li class="p-right">
+        	<div class="p-cont">
+            	<p class="p-user">会员专享</p>
+            	<p class="p-pic">
+                	<a href="#"><img src="images/proList_Img05.jpg"/></a>
+                    <a href="#" class="p-tag1">已售2750</a>
+                </p>
+                <p class="p-tit"><a href="#">亚菲儿香水女士玫瑰淡香清新50ml</a></p>
+                <p class="p-price">
+                	<span class="p1"><em>¥189.00</em></span>
+                    <span class="p2">¥269.00</span>
+                </p>      
+                <p class="p-public">
+                	<span class="p5">会员立减18.1</span>
+                	<span class="p4">会员优惠</span>
+                </p>         
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div style="clear:both;height:55px;"></div>
+<div class="foot-nav">
+	<a href="index.html" class="on">
+    	<p><img src="images/icon/foot_on_icon1.png" /></p>
+        <p>首页</p>
+    </a>
+    <a href="购物车.html">
+    	<p><img src="images/icon/foot_icon2.png" /></p>
+        <p>购物车</p>
+    </a>
+    <a href="我的订单.html">
+    	<p><img src="images/icon/foot_icon3.png" /></p>
+        <p>订单</p>
+    </a>
+    <a href="站内信.html">
+    	<p><img src="images/icon/foot_icon4.png" /></p>
+        <p>消息</p>
+    </a>
+    <a href="会员中心.html">
+    	<p><img src="images/icon/foot_icon5.png" /></p>
+        <p>我的</p>
+    </a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

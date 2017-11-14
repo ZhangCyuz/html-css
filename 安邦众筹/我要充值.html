@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/user.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header-list">	
+	<a href="javascript:history.go(-1);" class="Previous"><img src="images/user/previous_icon.png"></a>
+	<h1>我要充值</h1> 
+</div>
+<div class="userinfo-B">
+	<span>28000.0</span>
+    <em>账户余额</em>
+</div>
+<div class="Account" style="margin-top:-1px;">
+    <p class="A-Nav">
+    	<a href="我要充值.html"><span class="on"></span>我要充值</a>
+        <a href="充值记录.html">充值记录</a>
+    </p>
+</div>
+<div class="height-gray"></div>
+<div class="Recharge">
+	<ul>
+    	<li><input type="text" value="请输入充值金额 0.00"></li>
+        <li>
+        	<select name="">
+            <option>请您选择充值方式</option>
+            </select>
+            <span class="sanjiao"></span>
+        </li>        
+    </ul>
+    <div class="R-Messages">
+    	<p>用户充值金额：1000.00</p>
+        <p>选择充值方式：银行卡充值</p>
+    </div>
+</div>
+<div class="ok-btn">
+  <input type="button" value="确 认" />
+</div>
+
+<div style="clear:both;height:55px;"></div>
+<div class="foot-nav">
+	<a href="index.html">
+    	<p><img src="images/icon/foot_icon1.png" /></p>
+        <p>首页</p>
+    </a>
+    <a href="购物车.html">
+    	<p><img src="images/icon/foot_icon2.png" /></p>
+        <p>购物车</p>
+    </a>
+    <a href="我的订单.html">
+    	<p><img src="images/icon/foot_icon3.png" /></p>
+        <p>订单</p>
+    </a>
+    <a href="站内信.html">
+    	<p><img src="images/icon/foot_icon4.png" /></p>
+        <p>消息</p>
+    </a>
+    <a href="会员中心.html" class="on">
+    	<p><img src="images/icon/foot_on_icon5.png" /></p>
+        <p>我的</p>
+    </a>
+</div>
+<!--时间查询-->
+<script type="text/javascript">
+	$(function () {
+		var currYear = (new Date()).getFullYear();	
+		var opt={};
+		opt.date = {preset : 'date'};
+		opt.datetime = {preset : 'datetime'};
+		opt.time = {preset : 'time'};
+		opt.default = {
+			theme: 'android-ics light', //皮肤样式
+			display: 'modal', //显示方式 
+			mode: 'scroller', //日期选择模式
+			dateFormat: 'yyyy-mm-dd',
+			lang: 'zh',
+			showNow: true,
+			nowText: "今天",
+			startYear: currYear - 10, //开始年份
+			endYear: currYear + 10 //结束年份
+		};
+
+		$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+		var optDateTime = $.extend(opt['datetime'], opt['default']);
+		var optTime = $.extend(opt['time'], opt['default']);
+		$("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+		$("#appTime").mobiscroll(optTime).time(optTime);
+	});
+</script>
+
+<script type="text/javascript">
+	$(function () {
+		var currYear = (new Date()).getFullYear();	
+		var opt={};
+		opt.date = {preset : 'date'};
+		opt.datetime = {preset : 'datetime'};
+		opt.time = {preset : 'time'};
+		opt.default = {
+			theme: 'android-ics light', //皮肤样式
+			display: 'modal', //显示方式 
+			mode: 'scroller', //日期选择模式
+			dateFormat: 'yyyy-mm-dd',
+			lang: 'zh',
+			showNow: true,
+			nowText: "今天",
+			startYear: currYear - 10, //开始年份
+			endYear: currYear + 10 //结束年份
+		};
+
+		$("#appDate1").mobiscroll($.extend(opt['date'], opt['default']));
+		var optDateTime = $.extend(opt['datetime'], opt['default']);
+		var optTime = $.extend(opt['time'], opt['default']);
+		$("#appDate1Time").mobiscroll(optDateTime).datetime(optDateTime);
+		$("#appTime").mobiscroll(optTime).time(optTime);
+	});
+</script>
+<!--时间查询结束-->
+
+</body>
+</html>

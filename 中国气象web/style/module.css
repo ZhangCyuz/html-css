@@ -1,0 +1,154 @@
+/*通用*/
+.section {width: 95%;margin-left: 2%;}
+section {width: 100%;padding-bottom: 5rem;color: #777777;}
+.sec-top {width: 100%;height: 2.5rem;border-bottom: 1px solid #e0dede;font-size: 0.9rem;margin-bottom: 1rem;}
+.sec-top span {float: left;width: 30%;height: 100%;border-bottom: 1px solid #07b5f1;}
+.sec-top span i {float: left;width: 80%;height: 1rem;line-height: 1rem;margin-top: 0.75rem;text-align: center;border-left: 3px solid #07b5f1;}
+
+.sec-text {width: 100%;padding-bottom: 1rem;}
+.sec-text i {display: block;text-indent: 2rem;font-size: 0.96rem;line-height: 1.8rem;text-align: justify;}
+
+
+.sec-title {width: 100%;height: 2.5rem;line-height: 1rem;font-size: 0.7rem;margin-top: 1rem;text-align: center;}
+
+.table-top {width: 96%;height: 3rem;margin-left: 3%;line-height: 3rem;font-size: 0.8rem;}
+.table-top i {float: left;width: 50%;height: 100%;}
+.table-top em {float: left;width: 49%;height: 100%;text-align: right;}
+
+.sec-banner {width: 100%;height: 12rem;overflow: hidden;}
+.swiper-container {height: 100%;width: 100%;}
+.swiper-wrapper {width: 100%;height: 100%;}
+.swiper-slide {width: 100%;height: 100%;}
+.swiper-slide img {width: 100%;height: 100%;}
+
+table {width: 100%;font-size: 0.8rem}
+/*降水色斑*/
+.JS_table tr:nth-child(odd) {background:#f5f5f5;}
+.JS_table tr th {height: 2rem;line-height: 2rem;background: #898989;color: #fff;}
+.JS_table tr td {width: 16.6%;height: 2rem;text-align: center;line-height: 2rem;}
+
+/*参数说明*/
+.CS_table {border: 1px solid #c9c9c9;text-align: center;vertical-align: middle;}
+.CS_table th {width: 33%;height: 5rem;border: 1px solid #c9c9c9;vertical-align:middle;background: #e2f8ff;}
+.CS_table th i {float: left;width: 100%;height: 2rem;line-height: 2rem;}
+.CS_table th em {float: left;width: 100%;height: 2rem;line-height: 2rem;}
+.CS_table tr td {line-height: 4rem;height: 4rem;border: 1px solid #c9c9c9;}
+.CS_table tr td i{color: #07b5f1;}
+
+.CS_sec-1 {width: 100%;}
+.CS_sec-2 {width: 100%;}
+.CS_sec-3 {width: 100%;}
+.CS_sec-4 {width: 100%;}
+
+/*气温色斑*/
+.QW_table tr:nth-child(odd) {background:#f5f5f5;}
+.QW_table tr th {height: 2rem;line-height: 2rem;background: #898989;color: #fff;}
+.QW_table tr td {width: 25%;height: 2rem;text-align: center;line-height: 2rem;}
+
+/*告警订阅*/
+.sec-gj {width: 100%;height: 6rem;text-align: center;font-size: 1rem;}
+.sec-gj i {float: left;width: 100%;height: 3rem;line-height: 3.5rem;color: #0074b6;}
+.sec-gj i em {font-size: 0.8rem;color: #864596;text-decoration: underline;}
+.sec-gj span {font-size: 0.8rem;color: #bbbbbb;}
+
+.sec-gj-con {width: 100%;height: 84.5rem;}
+.sec-gj-con ul {width: 100%; height: 100%;}
+.sec-gj-con ul li {float: left;width: 100%;height: 3rem;background: #f7f7f7;line-height: 3rem;font-size: 0.9rem;}
+.sec-gj-con ul li i {float: left;width: 50%;height: 100%;text-indent: 1em;}
+.sec-gj-con ul li span {float: left;width: 45%;height: 100%;text-align: right;color: #999999;}
+
+.sec-gj-con ul li:nth-of-type(even) {width: 100%;height: 2.5rem;background: #fff;line-height: 2.5rem;
+  font-size: 0.8rem;text-indent: 1em;color: #888888;}
+/*滑块*/
+.chooseBtn {display: none;}
+.choose-label {box-shadow: #ccc 0px 0px 0px 1px;width: 40px;height: 20px;
+  display: inline-block;border-radius: 20px;position: relative;background-color: #bdbdbd;overflow: hidden;}
+.choose-label:before {content: '';position: absolute;left: 0;width: 20px;height: 20px;  display: inline-block;
+  border-radius: 20px;  background-color: #fff;z-index: 20;-webkit-transition: all 0.5s;transition: all 0.5s;}
+.chooseBtn:checked + .choose-label:before {left: 20px;}
+.chooseBtn:checked + .choose-label { background-color: #26c302;}
+
+/*红外云图 雷达拼图 卫星云图等*/
+.yt_sec {position: relative;width: 100%;height: 3rem;border-bottom: 1px solid #dadada;
+  font-size: 0.9rem;line-height: 3rem;}
+.yt_sec>span {float: left;width: 50%;height: 3rem;text-indent: 1em;}
+.yt_sec>span>b {position: absolute;top: 1rem;left: 5rem;display: block;width: 1rem;
+  height: 1rem;background: url(../images/downt.ico);background-position: center;background-size: cover;
+  background-repeat: no-repeat;}
+.yt_sec>i {float: left;width: 47%;height: 3rem;text-align: right;}
+
+
+.list {display: none;position: absolute;top: 3rem;width: 100%;height: 4rem;line-height: 2rem;font-size: 0.8rem;color: #fff;}
+.list span {float: left;width: 100%;height: 2rem;background: #07b5f1;border-bottom: 1px solid #fff;}
+.list span i {display: inline-block;text-align: center;width: 8%;color: #fff;}
+
+.map {width: 100%;height: 26rem;}
+.map img {width: 100%;margin-top: 5rem;}
+
+
+.radio {position: fixed;left: 0;bottom: 4rem;width: 100%;height: 4rem;background: #404040;}
+.radio span {float: left;width: 25%;height: 100%;}
+.radio span img {width: 29.333%;height: 2rem;margin-top: 1rem;vertical-align: middle;}
+.radio i {  float: left;width: 45%;  height: 0.2rem;  background: #616161;margin-top: 1.9rem;  margin-left: 5%;}
+.radio i>em {  display: block;width: 60%;  height: 100%;  background: #fff;  border-radius:  0 25px 25px 0;}
+.radio>em {  float: left;  width: 25%;  height: 100%;  line-height: 4rem;  font-size: 0.9rem;
+  color: #fff;  text-align: center;  font-weight: bold;}
+
+/*农气服务*/
+.nq-search {position: relative;width: 100%;height: 4rem;font-size: 0.8rem;}
+.nq-search input {width: 99%;height: 2rem;  text-indent: 1em;margin-top: 1rem;outline: none;border: 1px solid #dadada;
+  font-size: 0.8rem;color: #999999;border-radius: 0.3rem;}
+.nq-search i {position: absolute;top: 1.6rem;right: 0rem;display: block;width: 4rem;height: 1rem;
+  text-align: center;line-height: 1rem;border-left: 1px solid #dadada;}
+
+.nq-list {width: 100%;height: 6rem;border-bottom: 1px solid #dadada;}
+.nq-list-left {float: left;width: 26%;height: 80%;margin-top: 0.6rem;}
+.nq-list-left img {width: 100%;height: 100%;}
+.nq-list-cen {float: left;width: 59%;height: 80%;margin-left: 5%;margin-top: 0.6rem;}
+.nq-list-cen i {float: left;width: 100%;height: 50%;font-size: 1rem;line-height: 2rem;
+  display: -webkit-box;-webkit-box-orient: vertical;  -webkit-line-clamp: 1;overflow: hidden;}
+.nq-list-cen em {float: left;width: 100%;height: 50%;font-size: 0.8rem;line-height: 2rem;color: #c5c5c5;}
+.nq-list-right {float: left;width: 10%;height: 100%;text-align: center;line-height: 6rem;
+  font-size: 1.2rem;color: #bbbbbb;}
+.nq-list-right img {width:60%;vertical-align: middle;}
+/*全国天气  */
+.QG_sec-top {width: 100%;height: 3rem;background: #eaeaea;line-height: 3rem;text-indent: 0.5rem;font-size: 0.9rem;}
+
+
+.sec-city {width: 100%;height: 30rem;}
+.sec-city ul{width: 100%;  height: 100%;}
+.sec-city ul li {float: left;width: 24%;height: 2.5rem;margin: 0.5rem 0.95rem;text-align: center;
+  line-height: 2.5rem;border: 1px solid #dadada;border-radius: 0.4rem;font-size: 0.8rem;box-shadow: #fafafa 1px 1px 12px inset;}
+
+/*选中状态类名*/
+.sec-city ul li.cur {background: #ff9f17;color: #fff;box-shadow: #000000 0px 0px 0px inset;;}
+
+/*乡镇预报*/
+.XZ_sec {width: 100%;height: 8rem;text-align: center;}
+.XZ_sec i {float: left;width: 100%;height: 4rem;line-height: 6rem;font-size: 0.9rem;color: #07b5f1;}
+.XZ_sec em {font-size: 0.8rem;color: #bbbbbb;}
+
+.XZ-table tr:nth-child(odd) {background:#f5f5f5;}
+.XZ-table tr th {height: 2rem;line-height: 2rem;background: #898989;color: #fff;}
+.XZ-table tr td {width: 25%;height: 2rem;text-align: center;line-height: 2rem;}
+
+/*预警信号*/
+.YJ_sec {width: 100%;height: 3rem;border-bottom: 1px solid #dadada;overflow: hidden;}
+.YJ_sec span {display: block;width: 100%;height: 1.5rem;line-height: 1.5rem;font-size: 0.9rem;color: #07b5f1;margin-top: 0.75rem;text-indent: 1em;border-left: 3px solid #07b5f1;}
+
+.YJ_list {width: 100%;height: 4rem;border-bottom: 1px solid #dadada;padding-top: 0.5rem;padding-bottom: 0.9rem;}
+.YJ_list-left {float: left;width: 15%;height: 80%;  margin-top: 0.6rem;}
+.YJ_list-left img {width: 100%;height: 100%;}
+.YJ_list-cen {float: left;width: 77%;height: 80%;margin-left: 3%;margin-top: 0.5rem;}
+.YJ_list-cen i {float: left;width: 100%;height: 50%;font-size: 0.8rem;line-height: 2rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
+.YJ_list-cen em {float: left;width: 100%;height: 50%;font-size: 0.8rem;line-height: 2rem;color: #c5c5c5;}
+.YJ_list-right {float: left;width: 5%;height: 100%;text-align: center;line-height: 4rem;font-size: 1.2rem;color: #bbbbbb;}
+.YJ_list-right img {width: 100%;vertical-align: middle;}
+/*预警信号内容*/
+.YJNR-top {width: 100%;height: 6rem;text-align: center;}
+.YJNR-top i {float: left;  width: 100%;height: 3rem;line-height: 4rem;font-size: 0.9rem;color: #4b4b4b;}
+.YJNR-top em {font-size: 0.8rem;color: #bbbbbb;}
+.YJNR-1 {width: 100%;height: 6rem;line-height: 1.5rem;font-size: 0.9rem;text-align: justify;}
+.YJNR-img {width: 100%;height: 16rem;text-align: center;}
+.YJNR-img img {width: 36%;height: 7rem;margin-top: 4.5rem;}
+.YJNR-text {width: 100%;height: 16rem;line-height: 1.5rem;font-size: 0.9rem;text-align: justify;}

@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/module.css"  />
+<!--banner------------>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<!--按钮特效-->
+<link type="text/css" rel="stylesheet" href="css/reveal.css"  />
+<script type="text/javascript" src="js/jquery-1.6.2.js.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="shortcut-menu">
+	<p class="sp1"><a href="javascript:history.go(-1);" class="go-back"><em></em></a></p>
+    <p class="sp2">
+    <!--<a href="#" class="shopping_cart"><em></em></a>-->
+    <a href="#" class="share"><em></em></a>
+    </p>
+</div>
+<!--banner-->
+<div class="wrapper">
+    <div class="swipe pro-banner">
+        <ul id="slider">
+            <a href="商品内页.html"><li style="display:block"><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+        </ul>
+        <div id="pagenavi">
+            <a href="javascript:void(0);" class="active">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>	
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<script type="text/javascript">
+var active=0,
+as=document.getElementById('pagenavi').getElementsByTagName('a');
+for(var i=0;i<as.length;i++){
+    (function(){
+        var j=i;
+        as[i].onclick=function(){
+            t2.slide(j);
+            return false;
+        }
+    })();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:600, timeout:3000, before:function(index){
+        as[active].className='';
+        active=index;
+        as[active].className='active';
+    }});
+</script>
+<!-- banner结束 -->
+
+<div class="main">
+	<div class="goods-cont">
+    	<h1 class="title">欧舒丹护手霜 樱花润手霜30ml/75ml滋润保湿补水春季夏季</h1>
+        <h2 class="exp">充满异国风情特色的衣衣，时尚百搭 简约圆领，宽松蝙蝠袖，舒适自在 舒适的雪纺面料，凉快透气 松紧下摆设计</h2>
+        <p class="price">
+        	<em class="price-num">活动价：￥29.00</em>
+            <em class="activity">包邮</em>
+        </p>
+        <p class="original-price">原价 ¥299.00</p>
+        <p class="means">
+        	<span>返现￥29.00</span>
+            <span>淘宝价￥58.00</span>
+            <span>折扣5.0折</span>
+        </p>
+		<div class="Seckill-cont">
+        	<p class="sc-time">
+            	<span>剩余时间：</span>
+                <span><em>12</em>:<em>20</em>:<em>30</em></span>
+            </p>
+        </div>
+    </div>
+
+    <div class="shortcut-btn" style="border-top:1px solid #e5e5e5;margin-top:20px;">    	
+        <a href="#" data-reveal-id="myModal3"><span>安邦认证商家</span></a>
+        <a href="###"><span>查看商品详情</span></a>        
+    </div>
+</div>
+<!--抢购成功-------->
+<div class="Success">
+	<h1>
+    	<p>填写单号</p>
+        <a href="#" class="Close-btn"></a>
+    </h1>
+    <div class="s-cont">
+    	<ul class="sc-list">
+        	<li>
+        		<span class="title-name">商品名称：</span>
+                <p>帽子女小清新夏季防晒棒球帽新款刺绣字母嘻哈</p>
+            </li>
+            <li>
+        		<span class="title-name">天猫价：</span>
+                <p>￥29.00</p>
+            </li>
+            <li>
+        		<span class="title-name">订单号：</span>
+                <p class="sc-num-form"><input type="text" value=""  /></p>
+            </li>
+        </ul>
+        <p class="sc3">温馨提示：<br />
+        1、请填写已付款的订单编号，若填入未付款单号，属于违规行为且将无法获得返现；<br />
+        2、若单号被审核有误，请在120小时内进行申诉或者修改，余期将无法领回返现 <a href="#">如何获取订单编号?</a><br />
+        </p>
+    </div>
+    <div style="height:50px;clear:both"></div>
+    <div class="sc-Btn">
+    	<a href="#" class="scB1">返回首页</a>
+        <a href="#" class="scB2">确定提交</a>
+    </div>
+</div>
+<!--END------------>
+
+<!--弹出层内容--->
+<div id="myModal3" class="reveal-modal" >
+    <div class="Spe-model">        
+        <div class="buss-shop">
+        	<img src="images/adv1.jpg" class="shop-img" />
+            <p class="bs-name">商家名：广东服饰批发城</p>
+        </div>
+        
+        <div class="ok-btn">
+            <a href="###">返回去购物</a>
+            <a href="###" class="btn-default">查看商家所有商品</a>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<!--弹出层内容end--->
+
+<div class="pro-conts">
+	<!--start------->
+    <ul id="tabs">
+      <li><a href="#" name="#tab1">商品详情</a></li>
+      <li><a href="#" name="#tab2">商品评论</a></li>
+  </ul>
+
+  <div id="content">
+      <div id="tab1">
+          <img src="images/pro_details.jpg" />
+      </div>
+      <div id="tab2">
+          <!--tab2内容------------>
+          <ul class="review-list">
+          	<li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>                    
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>  
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>                  
+          </ul>
+          <!--内容END------------>
+      </div>
+
+  </div>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+  <script>
+    function resetTabs(){
+        $("#content > div").hide(); //Hide all content
+        $("#tabs a").attr("id",""); //Reset id's      
+    }
+
+    var myUrl = window.location.href; //get URL
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
+    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
+
+    (function(){
+        $("#content > div").hide(); // Initially hide all content
+        $("#tabs li:first a").attr("id","current"); // Activate first tab
+        $("#content > div:first").fadeIn(); // Show first tab content
+        
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+             return       
+            }
+            else{             
+            resetTabs();
+            $(this).attr("id","current"); // Activate this
+            $($(this).attr('name')).fadeIn(); // Show content for current tab
+            }
+        });
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+          if (myUrlTab == myUrlTabName + i) {
+              resetTabs();
+              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
+              $(myUrlTab).fadeIn(); // Show url tab content        
+          }
+        }
+    })()
+  </script>    
+    <!--End------->
+<div style="height:50px;clear:both"></div>
+<div class="foot_btn gsh-foot-btn">    
+    <a href="###" class="join-sc">查看商品详情</a>
+    <a href="抢购成功.html" class="buy-now">我要抢购</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

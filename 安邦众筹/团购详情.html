@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/module.css"  />
+<!--banner------------>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<!--按钮特效-->
+<link type="text/css" rel="stylesheet" href="css/reveal.css"  />
+<script type="text/javascript" src="js/jquery-1.6.2.js.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="shortcut-menu">
+	<p class="sp1"><a href="javascript:history.go(-1);" class="go-back"><em></em></a></p>
+    <p class="sp2">
+    <a href="#" class="shopping_cart"><em></em></a>
+    <a href="#" class="share"><em></em></a>
+    </p>
+</div>
+<!--banner-->
+<div class="wrapper">
+    <div class="swipe pro-banner">
+        <ul id="slider">
+            <a href="商品内页.html"><li style="display:block"><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner5.jpg" alt="" /></li></a>
+        </ul>
+        <div id="pagenavi">
+            <a href="javascript:void(0);" class="active">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>	
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<script type="text/javascript">
+var active=0,
+as=document.getElementById('pagenavi').getElementsByTagName('a');
+for(var i=0;i<as.length;i++){
+    (function(){
+        var j=i;
+        as[i].onclick=function(){
+            t2.slide(j);
+            return false;
+        }
+    })();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:600, timeout:3000, before:function(index){
+        as[active].className='';
+        active=index;
+        as[active].className='active';
+    }});
+</script>
+<!-- banner结束 -->
+
+<div class="main">
+	<div class="goods-cont">
+    	<h1 class="title">欧舒丹护手霜 樱花润手霜 滋润保湿补水春季夏季</h1>
+        <h2 class="exp">充满异国风情特色的衣 舒适自在 舒适的雪纺面料</h2>
+        <div class="Seckill-cont">
+        	<p class="sc-time">
+            	<span>团购距结束<!--<i>5天</i>--></span>
+                <span><em>12</em>:<em>20</em>:<em>30</em></span>
+            </p>
+            <p class="sc-num">
+            	<span class="sc-left">已售：12635 件</span>
+                <span class="sc-right">有效期：2017-07-06</span>
+            </p>
+        </div>
+        <p class="price">
+        	<em class="price-num">¥ 199.00</em>
+            <em class="activity">限时促销</em>
+        </p>
+        <p class="original-price">原价 ¥299.00</p>
+        <p class="means">
+        	<span>积分：299.00</span>
+            <span>返利：¥ 10.00</span>
+        </p>
+    </div>
+	
+    <div class="goods-service">
+    	<h1 class="common"><img src="images/icon/check_icon.png" />卖家承诺48小时内发货</h1>
+        <div class="s-num">        	
+            <p class="select-num">
+            	<em class="tit">数量</em>
+            	<span class="sn-left"><input type="button" value="" /></span>
+                <span class="sn-text"><input type="text" value="1" /></span>
+                <span class="sn-right"><input type="button" value="" /></span>                
+            </p>
+            <p class="stock">库存1000</p>            
+        </div>
+    </div>
+	
+    <div class="shortcut-btn">
+    	<a href="#" data-reveal-id="myModal1"><span>颜色尺码</span></a>
+        <a href="#" data-reveal-id="myModal2"><span>产品参数</span></a>
+        <!--<a href="批发价详情.html"><span>查看批发价</span></a>-->
+    </div>
+    <div class="other-mess">
+    	<p class="om-left">
+        	<span>运费：</span>
+            <span>上海&nbsp;到&nbsp;</span>
+            <span class="om-address">
+            	<select name="">
+                <option>黑龙江省哈尔滨</option>
+                </select>
+            	<em class="select-icon"></em>
+            </span>
+        </p>
+        <p class="om-right">快递:10.00</p>
+    </div>
+</div>
+<!--弹出层内容--->
+<div id="myModal1" class="reveal-modal" >
+    <div class="Spe-model">        
+        <div class="select-details">
+            <h1><a href="商品内页.html"><img src="images/proList_Img02.jpg" /></a></h1>
+            <h2>
+                <p class="sd1"><span>¥<big>158.00</big></span><em>限时促销</em></p>
+                <p>库存：999 件</p>
+                <p>请选择 颜色分类</p>
+            </h2>
+        </div>
+        <div class="select-classify">
+            <h1>颜色分类</h1>
+            <span><a href="#" class="on">一样一套附赠品</a></span>
+            <span><a href="#">三盒一套附赠品</a></span>
+            <span><a href="#">四盒一套附赠品</a></span>
+            <span><a href="#">五盒一套附赠品</a></span>
+        </div>        
+        <div class="ok-btn">
+            <a href="购物车.html">加入购物车</a>
+            <a href="确认订单.html" class="btn-default">立即购买</a>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<!--弹出层内容end--->
+
+<!--弹出层内容--->
+<div id="myModal2" class="reveal-modal">
+    <div class="Spe-model parameter">        
+        <h1 class="p-title">商品参数</h1>
+        <p>生产许可证编号：QS3211 0701 0218</p>
+        <p>产品标准号：Q/NNSP 0002S-2014</p>
+        <p>商品条形码: 6949488409995</p>
+        <p>厂家联系方式：4006985066</p>
+        <p>产地: 中国大陆</p>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<!--弹出层内容end--->
+
+<div class="pro-conts">
+	<!--start------->
+    <ul id="tabs">
+      <li><a href="#" name="#tab1">商品详情</a></li>
+      <li><a href="#" name="#tab2">商品评论</a></li>
+  </ul>
+
+  <div id="content">
+      <div id="tab1">
+          <img src="images/pro_details.jpg" />
+      </div>
+      <div id="tab2">
+          <!--tab2内容------------>
+          <ul class="review-list">
+          	<li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>                    
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>  
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img01.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li> 
+            <li>
+            	<h1 class="user-mess">
+                	<span class="um-tx"><a href="#"><img src="images/touxiang.jpg" /></a></span>
+                    <span class="um-name"><a href="#">珍妮***L</a>&nbsp;银牌会员&nbsp;四川</span>
+                </h1>
+                <h2 class="re-time"></h2>
+                <p class="re-cont">
+                非常好用的，水润清香，舒缓皮肤，赠品还多，超级实惠满意！
+                </p>
+                <p class="re-user-pic">                	
+                    <a href="#"><img src="images/proList_Img02.jpg" /></a>
+                    <a href="#"><img src="images/proList_Img03.jpg" /></a>
+                </p>
+                <div class="re-edit">
+                	<span class="re-left">浏览7次</span>
+                    <span class="re-right">
+                    <a href="#">我要评论</a>
+                    </span>
+                </div>
+            </li>                  
+          </ul>
+          <!--内容END------------>
+      </div>
+
+  </div>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+  <script>
+    function resetTabs(){
+        $("#content > div").hide(); //Hide all content
+        $("#tabs a").attr("id",""); //Reset id's      
+    }
+
+    var myUrl = window.location.href; //get URL
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
+    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
+
+    (function(){
+        $("#content > div").hide(); // Initially hide all content
+        $("#tabs li:first a").attr("id","current"); // Activate first tab
+        $("#content > div:first").fadeIn(); // Show first tab content
+        
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+             return       
+            }
+            else{             
+            resetTabs();
+            $(this).attr("id","current"); // Activate this
+            $($(this).attr('name')).fadeIn(); // Show content for current tab
+            }
+        });
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+          if (myUrlTab == myUrlTabName + i) {
+              resetTabs();
+              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
+              $(myUrlTab).fadeIn(); // Show url tab content        
+          }
+        }
+    })()
+  </script>    
+    <!--End------->
+<div style="height:50px;clear:both"></div>
+<div class="foot_btn">
+    <a href="###" class="favorite"><img src="images/icon/star1.png" />&nbsp;收藏</a>
+    <a href="购物车.html" class="join-sc">加入购物车</a>
+    <a href="确认订单.html" class="buy-now">立即购买</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

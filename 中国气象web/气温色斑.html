@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>气温色斑</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/swiper.min.css">
+  <link rel="stylesheet" href="style/module.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i><a href="javascript:history.back(-1)"><img src="images/close.png" alt=""></a></i><em>气温色斑</em><b style="visibility:hidden;"></b>
+  </header>
+  <!-- 主体 -->
+  <section>
+    <div class="sec-1">
+      <div class="sec-title">
+        <i>9月26日20时到9月26日22时 榆树市今日最高温</i><br>
+        <em>( 单位℃ )</em>
+      </div>
+      <div class="sec-banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/qiwen-1.png"></div>
+              <div class="swiper-slide"><img src="images/qiwen-2.png"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="table-top">
+      <i>降水（mm）</i><em>2017-09-26 20:00:00</em>
+    </div>
+    <table class="QW_table">
+      <tbody>
+        <tr>
+          <th>站点</th>
+          <th>实时气温</th>
+          <th>最高气温</th>
+          <th>最低气温</th>
+        </tr>
+        <tr>
+          <td>福安乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>新立镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>西南乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>黑林镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+          <td>福安乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>新立镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>西南乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>黑林镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+          <td>福安乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>新立镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>西南乡</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>黑林镇</td>
+          <td>14.2</td>
+          <td>14.2</td>
+          <td>3.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li onclick="list1()">
+        <span class="span2"></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li onclick="list2()">
+        <span class="span3"></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li onclick="list3()">
+        <span class="span4"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/style.js" charset="utf-8"></script>
+<script src="scripts/jquery.min.js" charset="utf-8"></script>
+<script src="scripts/swiper.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var mySwiper = new Swiper(".swiper-container",{
+    direction:"horizontal",
+    loop:true,
+    pagination:".swiper-pagination",
+    prevButton:".swiper-button-prev",
+    nextButton:".swiper-button-next",
+    autoplay:3000
+  })
+</script>
+</html>

@@ -1,0 +1,118 @@
+
+.find_nav {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+	border-bottom:1px solid #eee;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+.find_nav_left {
+    height: 49px;
+    position: relative;
+    overflow: hidden;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+}
+.find_nav_list {
+    position: absolute;
+    left: 0;
+}
+.find_nav_list ul {
+    position: relative;
+    white-space: nowrap;
+    font-size: 0;
+}
+.find_nav_list ul li {
+    display: inline-block;
+    padding: 0 13px;
+}
+.find_nav_list ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 46px;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+}
+.find_nav_cur a {
+    color: #e8332c !important;
+}
+
+.sideline {
+    display: block;
+    position: absolute;
+    border: 0;
+    height: 2px;
+    background-color: #e8332c;
+    left: 0;
+    top: 46px;
+    pointer-events: none;
+}
+.search_logo {
+    display: block;
+    width: 44px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #48a5f4;
+}
+
+
+
+.crowd-funding .find_nav_cur a{color: #19dce4 !important;}
+.crowd-funding .sideline {
+    display: block;
+    position: absolute;
+    border: 0;
+    height: 2px;
+    background-color: #19dce4;
+    left: 0;
+    top: 46px;
+    pointer-events: none;
+}
+
+
+.find_nav_order {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+	border-bottom:1px solid #eee;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+.find_nav_left_order {
+    height: 49px;
+    position: relative;
+    overflow: hidden;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+}
+.find_nav_list_order {
+    position: absolute;
+    left: 0;
+}
+.find_nav_list_order ul {
+    position: relative;
+    white-space: nowrap;
+    font-size: 0;
+}
+.find_nav_list_order ul li {
+    display: inline-block;
+    padding: 0 13px;
+}
+.find_nav_list_order ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 46px;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+}

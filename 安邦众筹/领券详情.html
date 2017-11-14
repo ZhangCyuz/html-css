@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="robots" content="all" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link type="text/css" rel="stylesheet" href="css/style.css"  />
+<link type="text/css" rel="stylesheet" href="css/module.css"  />
+<!--banner------------>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="shortcut-menu">
+	<p class="sp1"><a href="javascript:history.go(-1);" class="go-back"><em></em></a></p>
+    <p class="sp2">
+    <a href="#" class="shopping_cart"><em></em></a>
+    <a href="#" class="share"><em></em></a>
+    </p>
+</div>
+<!--banner-->
+<div class="wrapper">
+    <div class="swipe zc-banner">
+        <ul id="slider">
+            <a href="商品内页.html"><li style="display:block"><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+            <a href="商品内页.html"><li><img width="100%" src="images/banner6.jpg" alt="" /></li></a>
+        </ul>
+        <div id="pagenavi">
+            <a href="javascript:void(0);" class="active">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>	
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<script type="text/javascript">
+var active=0,
+as=document.getElementById('pagenavi').getElementsByTagName('a');
+for(var i=0;i<as.length;i++){
+    (function(){
+        var j=i;
+        as[i].onclick=function(){
+            t2.slide(j);
+            return false;
+        }
+    })();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:600, timeout:3000, before:function(index){
+        as[active].className='';
+        active=index;
+        as[active].className='active';
+    }});
+</script>
+<!-- banner结束 -->
+
+<div class="main">
+	<div class="goods-cont">
+    	<h1 class="title">可可西里云智能锁指纹密码锁-高安防高颜值</h1>
+        <h2 class="exp">有效期至: 2017-04-29 23:59:59</h2>
+        <p class="coupon">
+        	<span>
+            	<em>50</em> 元优惠券
+            	<a href="#"></a>
+            </span>
+        	
+        </p>
+        <p class="means">
+        	<span>剩余数量：200</span>
+        </p>
+    </div>
+	    	
+</div>
+
+<div class="coupon-cont">
+	<h1 class="c-title"><span>商品介绍</span></h1>
+    <p>
+    	<img src="images/pro_details2.jpg" />
+    </p>
+</div>
+
+<div style="height:50px;clear:both"></div>
+<div class="foot-nav-btn">
+    <a href="#">返回首页</a>
+    <a href="#" class="default-on">去天猫抢购</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+section {position: relative;width: 100%;background: url(../images/tq-bg.png);background-size: cover;}
+
+.sec-1 {width: 100%;height: 3rem;background: url(../images/tq-1.png);background-repeat: no-repeat;background-size: 100%;
+  text-align: center;line-height: 3rem;font-size: 1.2rem;color: #fff;opacity: 0.7;}
+.sec-1 img {vertical-align: middle;width: 5%;}
+
+.sec-2 {width: 100%;height: 2rem;line-height: 2rem;text-align: center;color: #fff;font-size: 0.8rem;}
+
+.sec-3 {width: 100%;height: 27rem;}
+.sec-3 img {float: left;width: 45%;margin-top: 15rem;}
+.sec-3 .sec-3-font{position:relative;float:left;width:48%;margin-top:14rem;font-size:9rem;
+  font-family:myFirstFont;font-weight: bold;color: #cae0f3;text-align: center;overflow: hidden;line-height: 12rem;}
+.sec-3 .sec-3-font i {position: absolute;top: -26px;left: 68%;display: block;width: 1rem;height: 1rem;}
+@font-face {
+  font-family: myFirstFont;
+  /*src: url('全真超特黑.ttf');*/
+  /*src: url('FZDHTJW_0.TTF');*/
+  /*src: url('方正正黑简体.ttf');*/
+  /*src: url('王漢宗中仿宋繁.ttf');*/
+  /*src: url('全真超特黑.ttf');*/
+  src: url('中易黑体.ttf');
+  /*src: url('全真超特黑.ttf');*/
+  /*src: url('全真超特黑.ttf');*/
+}
+
+.sec-4 {width: 100%;height: 4rem;line-height: 4rem;}
+.sec-4 span {float: left;width: 33.333%;height: 100%;font-size: 0.7rem;text-align: center;color: #fff;}
+.sec-4 img {vertical-align: middle;width: 21%;}
+.sec-4 span:first-child img {margin-bottom: 0.4rem;}
+
+.sec-5 {margin-top: 1rem;width: 100%;height: 4rem;line-height: 2rem;font-size: 0.8rem;color: #fff;background: #0b82ba;}
+.sec-5 span {float: left;width: 49.5%;height: 100%;border-right: 0.075rem solid #2991c2;}
+.sec-5 span.s {border-right:none;}
+
+.shang {width: 100%;height: 50%;}
+.shang i {float: left;width: 50%;text-indent: 1em;}
+.shang i em {display: inline-block;width: 2rem;height: 1rem;line-height: 1rem;text-align: center;background: #00d824;
+  margin-left: 0.5rem;border-radius: 0.2rem;font-size: 0.7rem;text-indent: 0;}
+.shang b {float: left;width: 45%;text-align: right;font-weight: normal;}
+
+.xia {width: 100%;height: 50%;text-indent: 1em;}
+.xia i {float: left;width: 76%;}
+.xia img {float: left;width: 15%;height: 1.5rem;margin-top: 0.25rem;vertical-align: middle;}
+
+.sec-6 {margin-top: 1rem;width: 100%;height: 20rem;font-size: 0.7rem;color: #fff;background: #0b82ba;}
+.sec-6-top {width: 100%;height: 2rem;line-height: 2rem;border-bottom: 1px solid #d7d6d6;font-size: 0.9rem;  color: #fff;}
+.sec-6-top i{float: left;width: 35%;text-indent: 1em;}
+.sec-6-top .sec-6-right {float: left;width:62%; height: 1.25rem; border: 1px solid #014e72;margin-top: 0.4rem;border-radius: 0.3rem;}
+.sec-6-top .sec-6-right span {float: left;width:25%;height: 100%;line-height: 1.25rem;text-align: center;font-size: 0.7rem;}
+
+.cur {  background: #014e72;}
+
+.sec-7 { margin-top: 1rem;  width: 100%;  height: 32rem;    background: #0b82ba;}
+.sec-con {width: 100%;height: 18rem;}
+
+/*左右滑动*/
+.lr_nb{height: 100%;width: 100%;background: #0B82BA;box-sizing: border-box;z-index: 1;max-width: 1980px;-webkit-transition:.3s all;transition:.3s all;}
+.slider_wrap.line{overflow:hidden;overflow-x:scroll;width:100%;height: 100%;-webkit-overflow-scrolling:touch;}
+.item_cell{width:300%;height: 100%;display: inline-block;margin: 0px 5px;overflow:hidden;position:relative;text-align: center;}
+.item_cell img {width: 100%;height: 100%;}
+
+/*点击变化*/
+.tq {width: 100%;height: 100%;}
+.tq {display: block;}
+.js {display: none;}
+.fl {display: none;}
+.sd {display: none;}
+@media all and (min-width: 1030px) {.item_cell {width: 14%;}}
+.item_cell i {color: #fff;}
+.slider_wrap.box{overflow:hidden;width:100%}
+.slider_wrap::-webkit-scrollbar{display:none}
+.wx_items{height: 100%;white-space:nowrap}
+.wx_items span{  display: block;width: 100%;height: 97%;text-align: center;line-height: 1.5rem;font-size: 0.6rem;overflow: hidden;}
+.lr_nb_after{height:40px;display:block;clear:both;}
+
+
+
+.sec-qi {width: 100%;height: 30rem;text-align: center;font-size: 0.9rem;color: #fff;}
+.sec-qi ul {position: relative;width: 100%;height: 100%;}
+
+.qx {width: 100%;height: 30%;position: absolute;top: 30%;left: 0%;}
+.qx img {width: 100%;height: 45%;}
+.qx-2 {margin-top: 2rem;}
+
+.sec-qi ul li {width: 13.95%;height: 95%;float: left;border-right: 1px solid #1e91c7;margin-top: 2.5%;}
+.sec-qi ul li .li-top {width: 100%;height: 30%;}
+.sec-qi ul li .li-top i {float: left;width: 100%;height: 1.5rem;line-height: 1.5rem}
+.sec-qi ul li .li-top em {float: left;width: 100%;height: 2.7rem;line-height: 2.7rem;}
+.sec-qi ul li .li-top img {width: 60%;}
+
+.sec-qi ul li .li-cen {width: 100%;height: 40%;}
+
+.sec-qi ul li .li-bom {width: 100%;height: 30%;}
+.sec-qi ul li .li-bom i {float: left;width: 100%;height: 1rem;line-height: 1rem;font-size: 0.7rem}
+.sec-qi ul li .li-bom em {float: left;width: 100%;height: 2.7rem;line-height: 2.7rem;}
+.sec-qi ul li .li-bom img {width: 60%;}
+.sec-qi ul li .li-bom b {float: left;width: 70%;height: 1.2rem;text-align: center;line-height: 1.2rem;font-size: 0.7rem;margin-left: 15%;margin-top: 0.5rem;border-radius: 0.2rem;}
+.sec-qi ul li .li-bom .b {background: #c0b502;}
+.sec-qi ul li .li-bom .y {background: #00d824;}
+
+.sec-8 {width: 100%;height: 14rem;background: #0b82ba;margin-top: 1rem;}
+.sec-8-con {width: 100%;height: 12rem;}
+.sec-8-con ul {width: 100%;height: 100%;}
+.sec-8-con ul li {position: relative;float: left;width: 49.8%;height: 100%;border-right: 1px solid #55a8cf;}
+.sec-8-con ul li:last-child {border-right: none;}
+.sec-8-con ul li span {float: left;width: 100%;height: 2rem;line-height: 2rem;}
+.sec-8-con ul li:nth-child(2) span:first-child {margin-top: 2rem;}
+.sec-8-con ul li span img {width: 15%;margin-left: 2rem;vertical-align: middle;}
+.sec-8-con ul li span i {display: inline-block;width: 34%;}
+.sec-8-con ul li span em {display: inline-block;width: 30%;color: #fff;font-size: 0.8rem}
+.sec-8-con ul li i {display: block;width: 100%;height: 2rem;line-height: 2rem;text-align: center;font-size: 0.8rem;color: #fff;}
+.left-span {font-size: 0.7rem;color: #fff;display: inline-block;width: 48%;height: 1.5rem;line-height: 1.5rem;text-indent: 0.2em;}
+.right-span {position: absolute;bottom: 3.35rem;right: -1.5rem;text-align: right;font-size: 0.7rem;color: #fff;display: inline-block;width: 48%;height: 1.5rem;line-height: 1.5rem}
+
+.banyuan {position: relative;width: 11rem;height: 5rem;border-radius: 5rem 5rem 0 0;margin-top: 2rem;margin-left: 1.5rem;
+  border: 1px solid #f7c002; border-bottom: 1px solid #57bff0;z-index: 9;overflow: hidden;}
+.cirl-1 {position: absolute;bottom: 4.75rem;left: 1.2rem;width: 0.5rem;height: 0.5rem;border-radius: 50%;background: #f7c002;z-index: 99}
+.cirl-2 {position: absolute;bottom: 4.75rem;right: -1.2rem;width: 0.5rem;height: 0.5rem;border-radius: 50%;background: #f7c002;z-index: 99}
+.taiyang {width: 16%;position: absolute;left: 6%;bottom:40%; z-index: 99;}
+.yin {width: 10rem;height: 5rem;background: #44aab4;position: absolute;top: 0;left: 0%;z-index: 0}
+.taiyang {animation: taiyang 1000s infinite linear none;}
+.yin {animation: yin 1000s infinite linear none;}
+
+.sec-9 {width: 100%;padding-bottom: 6rem;margin-top: 1rem;}
+.sec-9-con {width: 100%;height: 13rem;}
+.sec-9-con ul {width: 100%;height: 100%;}
+.sec-9-con ul li {overflow: hidden;position: relative;float: left;width: 33.123%;height: 50%;border: 1px solid #d7d6d6;border-left: none;border-top: none;}
+.sec-9-con ul li:nth-child(3) {border-right: none;}
+.sec-9-con ul li:nth-child(6) {border-right: none;}
+
+.tips {animation: li-1 2s}
+.tips-1 {animation: li-1-1 2s}
+
+.sec-9-con ul li .li-1 {position: absolute;top: 0;left: 0;width: 100%;height: 100%;text-align: center;}
+.sec-9-con ul li .li-1 img {width: 32%;height: 3rem;margin-top: 0.2rem;}
+.sec-9-con ul li .li-1 i {display: block;width: 100%;height: 1.5rem;line-height: 1.5rem;font-size: 1rem;color: #ffffff;}
+.sec-9-con ul li .li-1 em {display: block;width: 100%;height: 1rem;line-height: 1rem;font-size: 0.8rem;color: #7ebfdd;}
+.sec-9-con ul li .li-2 {position: absolute;top: 0;left: 0;width: 90%;margin-left: 5%;height: 6rem;margin-top: 1rem;font-size: 0.75rem;color: #fff;text-align: center;line-height: 1rem;display: none;}
+
+/*返回顶部*/
+.ruturnTop {position: absolute;right: 6%;bottom: 1rem;width: 15%;height: 3.5rem;background: #0b82ba;text-align: center;font-size: 0.8rem;color: #fff;border-radius: 0.3rem;}
+.ruturnTop i {display: block;width: 100%;height: 2.5rem;line-height: 1.2rem;margin-top: 0.5rem}

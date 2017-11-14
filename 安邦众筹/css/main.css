@@ -1,0 +1,206 @@
+header {
+  color: #b0120a;
+}
+
+.code{
+    -moz-border-radius:.3em;
+    -webkit-border-radius:.3em;
+    border-radius:.3em;
+    background-color:#e2e2e2;
+    color:#000;
+    font-family:'Fira mono', 'Courier New', Courier, monospace;
+    font-size:85%;
+    letter-spacing:.05em;
+    padding:1em;
+}
+
+/*input {
+    margin: .5em;
+    border: 0;
+    min-width: 100px;
+    background-color: #b0120a;
+    color: #f8f8f8;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 5px solid #e84e40;
+    padding: .5em 1em;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    outline: none;
+}
+
+input:active {
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+input:hover {
+    outline: none;
+}
+
+input:active, input:hover {
+    background-color: #e84e40;
+    border-color: #b0120a;
+}
+*/
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 4em;
+}
+
+main a,
+main a:active,
+main a:focus,
+main a:hover,
+main a:link,
+main a:visited {
+    font-family: 'fira mono';
+    text-transform: uppercase;
+    font-size:90%;
+    color:black;
+    border-bottom: 1px dotted black;
+}
+
+main header {
+    font-size: 80%;
+}
+
+section {
+    margin: 4em 0;
+}
+
+.aligncontent-center {
+    text-align: center;
+}
+
+.wrapper {
+    /*margin-top:66px;
+    padding: 1em;*/
+    background-color: transparent;
+}
+
+.main-header {
+    text-align: center;
+    font-weight:300;
+    font-size: 90%;
+}
+
+.toolbar {
+    position:absolute;
+	z-index:1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    line-height: 47px;
+	width:20%;
+}
+
+.menu-button {
+  position: relative;
+  margin-top:17px;
+  margin-left:10px;
+  height: 40px;
+  /*width: 20%;*/
+  cursor: pointer;
+  /*background:url(../images/icon/menu_btn2.png) no-repeat center center;*/
+}
+.menu-button img{width:30px;}
+.menu-button:before {
+  /*content: "";
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  border-bottom: 17px double #b0120a;
+  border-top: 6px solid #b0120a;
+  width: 30px;
+  height: 5px;*/
+  /*background:url(../images/icon/menu_btn2.png) no-repeat center center;*/
+}
+
+.menu-left {
+  float: left;
+  /*margin-right: 1.5em;*/
+}
+
+.sidebar {
+    margin: 0;
+    padding-top: 1em;
+    color: white;
+    /*background-color:#b0120a;*/
+	background:url(../images/menu_bg.jpg) center center no-repeat;
+}
+
+.sidebar h6 {
+    margin: 0 .8em;
+    padding: 0;
+    font-weight:300;
+}
+
+/*.sidebar li {
+    margin: .5em 0;
+    padding: 0 1em;
+    line-height: 32px;
+	font-size:15px;
+}*/
+.sidebar a{color:#fff;}
+.sidebar li:hover {
+    /*background-color: #e84e40;*/
+}
+
+.sidebar hr {
+    margin: 2em auto;
+    border: 0;
+    padding: 0;
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    
+}
+.navBtn {border-top:1px solid rgba(255,255,255,0.4);}
+.navBtn li{width:100%;height:45px;line-height:45px;}
+.navBtn a{display:block;width:80%;margin:0px auto;height:100%;color:#333;font-size:16px;text-align:center;border-bottom:1px solid #f6eac6;}
+.menu-top{width:100%;}
+.menu-top span{display:block;text-align:center;}
+.menu-top .menu-logo{margin:15px 0px;}
+.menu-top .menu-logo img{width:100px;height:100px;border:3px solid #fff;
+border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;}
+.menu-top .bian{margin:20px 0px 10px 0px;}
+.menu-top .bian img{width:82%;}
+
+/*卖家报名*/
+.banner-ad, .banner-ad img{width:100%;}
+.want-btn{position:absolute;width:60%;height:40px;line-height:40px;left:50%;margin-left:-30%;text-align:center;margin-top:-20px;background:#e8332c;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;}
+.want-btn a{color:#fff;display:block;width:100%;height:inherit;font-size:16px;}
+.Activity{margin-top:25px;}
+.Activity .pro-a-title span{font-size:16px;}
+.Activity .text-list{width:96%;margin:0px auto;overflow:hidden;}
+.Activity .text-list li{border-bottom:1px dotted #e5e5e5;padding-bottom:10px;overflow:hidden;}
+.Activity .text-list .t-title{line-height:30px;color:#333;font-size:15px;}
+.Activity .text-list p{color:#666;line-height:30px;}
+.Activity .text-list .t-spe-style .t-title{width:100%;text-align:left;}
+.Activity .text-list .t-spe-style p{width:33.33%;float:left;text-align:center;}
+
+/*商家报名*/
+.wb2{background:#ff8059;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

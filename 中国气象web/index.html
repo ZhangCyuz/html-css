@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/swiper.min.css">
+  <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+     <i style="visibility:hidden;"><img src="images/close.png" alt=""></i><em>榆树气象</em><b style="visibility:hidden;"></b>
+  </header>
+  <section onclick="none()">
+    <div class="sec-menu">
+      <ul>
+        <li>
+          <a href="站点实况.html">
+            <div class="li-img img1"></div>
+            <i>站点实况</i>
+          </a>
+        </li>
+        <li>
+          <a href="气温色斑.html">
+            <div class="li-img img2"></div>
+            <i>气温色斑</i>
+          </a>
+        </li>
+        <li>
+          <a href="降水色斑.html">
+            <div class="li-img img3"></div>
+            <i>降水色斑</i>
+          </a>
+        </li>
+        <li>
+          <a href="雷达拼图.html">
+            <div class="li-img img4"></div>
+            <i>雷达拼图</i>
+          </a>
+        </li>
+        <li>
+          <a href="天气预报.html">
+            <div class="li-img img5"></div>
+            <i>天气预报</i>
+          </a>
+        </li>
+        <li>
+          <a href="乡镇预报.html">
+            <div class="li-img img6"></div>
+            <i>乡镇预报</i>
+          </a>
+        </li>
+        <li>
+          <a href="预警信号.html">
+            <div class="li-img img7"></div>
+            <i>预警信号</i>
+          </a>
+        </li>
+        <li>
+          <a href="全国天气.html">
+            <div class="li-img img8"></div>
+            <i>全国天气</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sec-cen">
+      <div class="sec-cen-k">
+        <span><a href="农气服务.html"><img src="images/sec-cen-1.png" alt=""><i>农气服务</i></a></span>
+        <span class="sec-cen-k-span"><a href="气候信息.html"><img src="images/sec-cen-2.png" alt=""><i>气候信息</i></a></span>
+      </div>
+    </div>
+    <div class="sec-banner">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/sec-banner-1.png"></div>
+            <div class="swiper-slide"><img src="images/sec-banner-2.png"></div>
+            <div class="swiper-slide"><img src="images/sec-banner-3.png"></div>
+            <div class="swiper-slide"><img src="images/sec-banner-4.png"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="sec-bom">
+      <span>预警列表</span>
+    </div>
+    <div class="sec-2">
+      <a href="预警信号内容.html">
+        <div class="sec-2-cen">
+          <i>2017年8月23日19时28分继续发布大风黄色预警</i>
+          <em>2015-12-12 12时23分</em>
+        </div>
+        <div class="sec-2-right">
+          <img src="images/xiangyou.png" alt="">
+        </div>
+      </a>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="span1"></span>
+          <i>首页</i>
+        </a>
+      </li>
+      <li onclick="list1()">
+        <span class="span2"></span>
+        <i>天气实况</i>
+        <div class="li-list" id="list1">
+          <div><a href="站点实况.html">站点实况</a></div>
+          <div><a href="气温色斑.html">气温色斑</a></div>
+          <div><a href="降水色斑.html">降水色斑</a></div>
+          <div><a href="雷达拼图.html">雷达拼图</a></div>
+          <div><a href="告警订阅.html">告警订阅</a></div>
+        </div>
+      </li>
+      <li onclick="list2()">
+        <span class="span3" ></span>
+        <i>预报预警</i>
+        <div class="li-list" id="list2">
+          <div><a href="javascript:;">数值模式预报</a></div>
+          <div><a href="天气预报.html">天气预报</a></div>
+          <div><a href="乡镇预报.html">乡镇预报</a></div>
+          <div><a href="预警信号.html">预警信号</a></div>
+          <div><a href="全国天气.html">全国天气</a></div>
+        </div>
+      </li>
+      <li onclick="list3()">
+        <span class="span4"></span>
+        <i>气象服务</i>
+        <div class="li-list" id="list3">
+          <div><a href="农气服务.html">农气服务</a></div>
+          <div><a href="气候信息.html">气候信息</a></div>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="scripts/jquery.min.js" charset="utf-8"></script>
+<script src="scripts/swiper.min.js" charset="utf-8"></script>
+<script src="scripts/style.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var mySwiper = new Swiper(".swiper-container",{
+    direction:"horizontal",
+    loop:true,
+    pagination:".swiper-pagination",
+    prevButton:".swiper-button-prev",
+    nextButton:".swiper-button-next",
+    autoplay:3000
+  })
+</script>
+</html>

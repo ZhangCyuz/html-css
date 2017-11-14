@@ -1,0 +1,187 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.yun {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 53%;
+}
+.yun-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/yun-1.png);
+  background-size:80% 101%;
+  animation: yun 50s infinite linear normal;
+}
+@keyframes yun {
+  0% {background-position: 0% 0%}
+  100% {background-position: 1000% 0%}
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 39%;
+}
+.logo {
+  position: absolute;
+  top: 36%;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+}
+.logo img {
+  position: absolute;
+  top: 0%;
+  left: 40%;
+  width: 5rem;
+  height: 5rem;
+}
+.text {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text i {
+  position: absolute;
+  left: 38%;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.text em {
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.section {
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+.map {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 80%;
+}
+.map img {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 100%;
+  animation: map 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes map {
+  from {
+    left: 20%;
+    width: 60%;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+.city {
+  top: 10%;
+  width: 100%;
+  height: 80%;
+}
+.city-1 {
+  top: 5%;
+  left: 43%;
+  width: 15%;
+  height: 30%;
+  text-align: center;
+  z-index: 99;
+  background-image: url(../images/unchecked.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
+.city-name {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.city-name i {
+  position: absolute;
+  top: 19%;
+  left: 21%;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.city-name em img {
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  width: 45%;
+  height: 15%;
+}
+.city-name em {
+  position: absolute;
+  left: -2px;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+}
+.city-1:hover {
+  background: url(../images/choice.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
+.city-2:hover {
+  background: url(../images/choice.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
+.city-3:hover {
+  background: url(../images/choice.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
+.city-2 {
+  top: 30%;
+  left: 25%;
+  width: 15%;
+  height: 30%;
+  text-align: center;
+  z-index: 99;
+  background-image: url(../images/unchecked.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
+.city-3 {
+  top: 36%;
+  left: 55%;
+  width: 15%;
+  height: 30%;
+  text-align: center;
+  z-index: 99;
+  background-image: url(../images/unchecked.png);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+}
