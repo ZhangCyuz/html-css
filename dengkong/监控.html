@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>监控</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/commit.css">
+  <link rel="stylesheet" href="css/img.css">
+</head>
+<body ontouchstart>
+  <header>
+    <span class="span-1"><a href="index.html"><img src="images/head_left.png" alt=""></a></span>
+    <span class="span-2"><a href="javascript:;"><img src="images/head_logo.png" alt=""></a></span>
+    <span class="span-1"><a href="javascript:history.back(-1);"><img src="images/head_back.png" alt=""></a></span>
+  </header>
+  <section>
+    <div class="DVD_cen">
+      <div class="DVD_cen_l rh JK_cen">
+        <span class="ani"><i>阳 台</i></span>
+        <span class="ani"><i>过 厅</i></span>
+      </div>
+      <div class="DVD_cen_ok">
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+        <div class="ok"></div>
+      </div>
+      <div class="DVD_cen_l lf JK_cen">
+        <span class="ani"><i>客 厅</i></span>
+      </div>
+    </div>
+    <div class="JK_j">
+
+    </div>
+    <div class="BJ_sec">
+      <ul>
+        <li class="BJ_sec_item" onclick="BJ_sec_img(this, 0)">
+          <a href="监控.html">
+            <p class="BJ_img1_hover"></p>
+            <i>监  控</i>
+          </a>
+        </li>
+        <li class="BJ_sec_item" onclick="BJ_sec_img(this, 1)">
+          <a href="可视对讲.html">
+            <p class="BJ_img2"></p>
+            <i>可视对讲</i>
+          </a>
+        </li>
+        <li class="BJ_sec_item" onclick="BJ_sec_img(this, 2)">
+          <a href="报警.html">
+            <p class="BJ_img3"></p>
+            <i>报  警</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="foot">
+      <div class="slider_wrap line">
+        <ul class="foot_items">
+          <li class="item_cell" onclick="footImg(this, 0)">
+            <a href="javascript:;">
+              <p class="imgOn1"></p>
+              <i>客厅</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 1)">
+            <a href="javascript:;">
+              <p class="imgOff2"></p>
+              <i>主卧</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 2)">
+            <a href="javascript:;">
+              <p class="imgOff3"></p>
+              <i>餐厅</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 3)">
+            <a href="javascript:;">
+              <p class="imgOff4"></p>
+              <i>次卧</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 4)">
+            <a href="javascript:;">
+              <p class="imgOff5"></p>
+              <i>厨房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 5)">
+            <a href="javascript:;">
+              <p class="imgOff6"></p>
+              <i>影院</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 6)">
+            <a href="javascript:;">
+              <p class="imgOff7"></p>
+              <i>儿童房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 7)">
+            <a href="javascript:;">
+              <p class="imgOff8"></p>
+              <i>老人房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 8)">
+            <a href="javascript:;">
+              <p class="imgOff9"></p>
+              <i>书房</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/style.js" charset="utf-8"></script>
+<script type="text/javascript">
+function BJ_sec_img(obj, index) {
+  $('.BJ_sec_item').each(function(i){
+    $(this).find('p').removeClass('BJ_img'+(i+1)+'_hover');
+    $(this).find('p').addClass('BJ_img'+(i+1));
+  })
+
+  //加样式
+  $(obj).find('p').removeClass('BJ_img'+(index+1));
+  $(obj).find('p').addClass('BJ_img'+(index+1)+'_hover');
+}
+</script>
+</html>

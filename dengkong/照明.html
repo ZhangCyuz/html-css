@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>照明</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/commit.css">
+  <link rel="stylesheet" href="css/img.css">
+</head>
+<body ontouchstart>
+  <header>
+    <span class="span-1"><a href="index.html"><img src="images/head_left.png" alt=""></a></span>
+    <span class="span-2"><a href="javascript:;"><img src="images/head_logo.png" alt=""></a></span>
+    <span class="span-1"><a href="javascript:history.back(-1);"><img src="images/head_back.png" alt=""></a></span>
+  </header>
+  <section>
+    <div class="ZM_Ul">
+      <ul>
+        <li class="ZM_item" onclick="changeImgZm(this, 0)">
+          <p class="ZM_img_1"></p>
+          <i>电视墙灯带</i>
+        </li>
+        <li class="ZM_item" onclick="changeImgZm(this, 1)">
+          <p class="ZM_img_2"></p>
+          <i>台 灯</i>
+        </li>
+        <li class="ZM_item" onclick="changeImgZm(this, 2)">
+          <p class="ZM_img_3"></p>
+          <i>右床头灯</i>
+        </li>
+        <li class="ZM_item" onclick="changeImgZm(this, 3)">
+          <p class="ZM_img_4"></p>
+          <i>左阅读灯</i>
+        </li>
+        <li class="ZM_item" onclick="changeImgZm(this, 4)">
+          <p class="ZM_img_5"></p>
+          <i>主 灯</i>
+        </li>
+        <li class="ZM_item" onclick="changeImgZm(this, 5)">
+          <a href="插座.html">
+            <p class="ZM_img_6"></p>
+            <i>插 座</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ZM_zhu_span">
+      <span>调亮</span>
+      <span>调暗</span>
+    </div>
+    <div class="ZM_bom">
+      <ul>
+        <li class="ZM_bom_item" onclick="changeZmBomImg(this, 0)">
+          <p class="ZM_bom_img_1"></p>
+          <i>电 视</i>
+        </li>
+        <li class="ZM_bom_item" onclick="changeZmBomImg(this, 1)">
+          <p class="ZM_bom_img_2"></p>
+          <i>起 夜</i>
+        </li>
+        <li class="ZM_bom_item" onclick="changeZmBomImg(this, 2)">
+          <p class="ZM_bom_img_3"></p>
+          <i>阅 读</i>
+        </li>
+        <li class="ZM_bom_item" onclick="changeZmBomImg(this, 3)">
+          <p class="ZM_bom_img_4"></p>
+          <i>休 息</i>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="foot">
+      <div class="slider_wrap line">
+        <ul class="foot_items">
+          <li class="item_cell" onclick="footImg(this, 0)">
+            <a href="javascript:;">
+              <p class="imgOn1"></p>
+              <i>客厅</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 1)">
+            <a href="javascript:;">
+              <p class="imgOff2"></p>
+              <i>主卧</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 2)">
+            <a href="javascript:;">
+              <p class="imgOff3"></p>
+              <i>餐厅</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 3)">
+            <a href="javascript:;">
+              <p class="imgOff4"></p>
+              <i>次卧</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 4)">
+            <a href="javascript:;">
+              <p class="imgOff5"></p>
+              <i>厨房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 5)">
+            <a href="javascript:;">
+              <p class="imgOff6"></p>
+              <i>影院</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 6)">
+            <a href="javascript:;">
+              <p class="imgOff7"></p>
+              <i>儿童房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 7)">
+            <a href="javascript:;">
+              <p class="imgOff8"></p>
+              <i>老人房</i>
+            </a>
+          </li>
+          <li class="item_cell" onclick="footImg(this, 8)">
+            <a href="javascript:;">
+              <p class="imgOff9"></p>
+              <i>书房</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/style.js" charset="utf-8"></script>
+<script type="text/javascript">
+function changeImgZm(obj, index) {
+  $('.ZM_item').each(function(i){
+    $(this).find('p').removeClass('ZM_img_'+(i+1)+'_hover');
+    $(this).find('p').addClass('ZM_img_'+(i+1));
+  })
+
+  //加样式
+  $(obj).find('p').removeClass('ZM_img_'+(index+1));
+  $(obj).find('p').addClass('ZM_img_'+(index+1)+'_hover');
+}
+function changeZmBomImg(obj, index) {
+  $('.ZM_bom_item').each(function(i){
+    $(this).find('p').removeClass('ZM_bom_img_'+(i+1)+'_hover');
+    $(this).find('p').addClass('ZM_bom_img_'+(i+1));
+  })
+
+  //加样式
+  $(obj).find('p').removeClass('ZM_bom_img_'+(index+1));
+  $(obj).find('p').addClass('ZM_bom_img_'+(index+1)+'_hover');
+}
+</script>
+</html>

@@ -1,0 +1,137 @@
+/*foot*/
+.imgOn1{background: url(../images/foot_1_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn2{background: url(../images/foot_2_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn3{background: url(../images/foot_3_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn4{background: url(../images/foot_4_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn5{background: url(../images/foot_5_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn6{background: url(../images/foot_6_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn7{background: url(../images/foot_7_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn8{background: url(../images/foot_8_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOn9{background: url(../images/foot_9_hover.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff1{background: url(../images/foot_1.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff2{background: url(../images/foot_2.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff3{background: url(../images/foot_3.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff4{background: url(../images/foot_4.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff5{background: url(../images/foot_5.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff6{background: url(../images/foot_6.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff7{background: url(../images/foot_7.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff8{background: url(../images/foot_8.png) no-repeat;background-position: center;background-size: 80%;}
+.imgOff9{background: url(../images/foot_9.png) no-repeat;background-position: center;background-size: 80%;}
+
+/*首页*/
+.indexP_1_hover{background: url(../images/indexP_1_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_2_hover{background: url(../images/indexP_2_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_3_hover{background: url(../images/indexP_3_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_4_hover{background: url(../images/indexP_4_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_5_hover{background: url(../images/indexP_5_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_6_hover{background: url(../images/indexP_6_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_7_hover{background: url(../images/indexP_7_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_8_hover{background: url(../images/indexP_8_hover.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_1{background: url(../images/indexP_1.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_2{background: url(../images/indexP_2.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_3{background: url(../images/indexP_3.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_4{background: url(../images/indexP_4.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_5{background: url(../images/indexP_5.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_6{background: url(../images/indexP_6.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_7{background: url(../images/indexP_7.png) no-repeat;background-position: center;background-size: 45%;}
+.indexP_8{background: url(../images/indexP_8.png) no-repeat;background-position: center;background-size: 45%;}
+
+/*DVD*/
+.DVD_bom_p_1{background: url(../images/DVD_2.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_2{background: url(../images/DVD_3.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_3{background: url(../images/DVD_4.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_4{background: url(../images/DVD_5.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_5{background: url(../images/DVD_6.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_1_hover{background: url(../images/DVD_2_hover.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_2_hover{background: url(../images/DVD_3_hover.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_3_hover{background: url(../images/DVD_4_hover.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_4_hover{background: url(../images/DVD_5_hover.png) no-repeat;background-position: center;background-size: 82%;}
+.DVD_bom_p_5_hover{background: url(../images/DVD_6_hover.png) no-repeat;background-position: center;background-size: 82%;}
+
+/*报警*/
+.BJ_img1 {background: url(../images/baojing_img_1.png) no-repeat;background-position: center;background-size: 55%;}
+.BJ_img2 {background: url(../images/baojing_img_2.png) no-repeat;background-position: center;background-size: 55%;}
+.BJ_img3 {background: url(../images/baojing_img_3.png) no-repeat;background-position: center;background-size: 55%;}
+.BJ_img1_hover {background: url(../images/baojing_img_1_hover.png) no-repeat;background-position: center;background-size: 55%;}
+.BJ_img2_hover {background: url(../images/baojing_img_2_hover.png) no-repeat;background-position: center;background-size: 55%;}
+.BJ_img3_hover {background: url(../images/baojing_img_3_hover.png) no-repeat;background-position: center;background-size: 55%;}
+
+/*插座*/
+.czP_1_hover{background: url(../images/czP_1_hover.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_2_hover{background: url(../images/czP_2_hover.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_3_hover{background: url(../images/czP_3_hover.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_4_hover{background: url(../images/czP_4_hover.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_1{background: url(../images/czP_1.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_2{background: url(../images/czP_2.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_3{background: url(../images/czP_3.png) no-repeat;background-position: center;background-size: 36%;}
+.czP_4{background: url(../images/czP_4.png) no-repeat;background-position: center;background-size: 36%;}
+
+/*窗帘*/
+
+.CL_LeftSpan_1 {background: url(../images/CL_1.png)  no-repeat;background-position: center;background-size: 100%;}
+.CL_LeftSpan_2 {background: url(../images/CL_2.png) no-repeat;background-position: center;background-size: 100%;}
+.CL_LeftSpan_3 {background: url(../images/CL_3.png) no-repeat;background-position: center;background-size: 100%;}
+.CL_LeftSpan_1_hover {background: url(../images/CL_1_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.CL_LeftSpan_2_hover {background: url(../images/CL_2_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.CL_LeftSpan_3_hover {background: url(../images/CL_3_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+
+/*地暖*/
+.DN_First_Img_1 {background: url(../images/DN_1.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_2 {background: url(../images/DN_2.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_3 {background: url(../images/DN_3.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_4 {background: url(../images/DN_4.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_5 {background: url(../images/DN_3.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_1_hover {background: url(../images/DN_1_hover.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_2_hover {background: url(../images/DN_2_hover.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_3_hover {background: url(../images/DN_3_hover.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_4_hover {background: url(../images/DN_4_hover.png)  no-repeat;background-position: center;background-size: 80%;}
+.DN_First_Img_5_hover {background: url(../images/DN_3_hover.png)  no-repeat;background-position: center;background-size: 80%;}
+
+/*空调*/
+.KT_First_Img_1 {background: url(../images/DN_1.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_2 {background: url(../images/DN_2.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_3 {background: url(../images/DN_3.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_4 {background: url(../images/DN_4.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_1_hover {background: url(../images/DN_1_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_2_hover {background: url(../images/DN_2_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_3_hover {background: url(../images/DN_3_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.KT_First_Img_4_hover {background: url(../images/DN_4_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+/*音乐*/
+.YY_imgP_1 {background: url(../images/YY_imgP_1.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_2 {background: url(../images/YY_imgP_2.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_3 {background: url(../images/YY_imgP_3.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_4 {background: url(../images/YY_imgP_4.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_5 {background: url(../images/YY_imgP_5.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_6 {background: url(../images/YY_imgP_6.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_7 {background: url(../images/YY_imgP_7.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_8 {background: url(../images/YY_imgP_8.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_1_hover {background: url(../images/YY_imgP_1_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_2_hover {background: url(../images/YY_imgP_2_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_3_hover {background: url(../images/YY_imgP_3_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_4_hover {background: url(../images/YY_imgP_4_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_5_hover {background: url(../images/YY_imgP_5_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_6_hover {background: url(../images/YY_imgP_6_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_7_hover {background: url(../images/YY_imgP_7_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.YY_imgP_8_hover {background: url(../images/YY_imgP_8_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+
+/*照明*/
+.ZM_img_1 {background: url(../images/ZM_img_1.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_2 {background: url(../images/ZM_img_2.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_3 {background: url(../images/ZM_img_3.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_4 {background: url(../images/ZM_img_4.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_5 {background: url(../images/ZM_img_5.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_6 {background: url(../images/ZM_img_6.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_1_hover {background: url(../images/ZM_img_1_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_2_hover {background: url(../images/ZM_img_2_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_3_hover {background: url(../images/ZM_img_3_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_4_hover {background: url(../images/ZM_img_4_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_5_hover {background: url(../images/ZM_img_5_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_img_6_hover {background: url(../images/ZM_img_6_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_1 {background: url(../images/ZM_img_7.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_2 {background: url(../images/ZM_img_8.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_3 {background: url(../images/ZM_img_9.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_4 {background: url(../images/ZM_img_10.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_1_hover {background: url(../images/ZM_img_7_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_2_hover {background: url(../images/ZM_img_8_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_3_hover {background: url(../images/ZM_img_9_hover.png)  no-repeat;background-position: center;background-size: 100%;}
+.ZM_bom_img_4_hover {background: url(../images/ZM_img_10_hover.png)  no-repeat;background-position: center;background-size: 100%;}
